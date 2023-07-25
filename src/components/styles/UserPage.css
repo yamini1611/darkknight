@@ -1,0 +1,17 @@
+.first{
+    background-image: url('../assests/main7.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 525px 0 400px;
+}
+.second{
+    background-image: url('../assests/mainimg3.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 525px 0 400px;
+}
+.second button{
+    color:red ;
+}
