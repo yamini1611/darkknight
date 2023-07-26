@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Batman-font;
+    src: url('../../Fonts/batmfa__.ttf');
+}
+.Batman-admin-wallpaper{
+    background-image: url('https://w.forfun.com/fetch/eb/eb3798ed9c6bb4256af2bbd2dbc2a06b.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+.batfont{
+    font-family: Batman-font;
+}

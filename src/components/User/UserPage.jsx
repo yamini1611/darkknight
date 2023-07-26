@@ -1,6 +1,7 @@
 import React from 'react';
 import Swal from 'sweetalert2';
 import '../styles/UserPage.css';
+import { Link } from 'react-router-dom';
 
 const UserPage = () => {
   const handleReportCrime = async () => {
@@ -85,6 +86,9 @@ const UserPage = () => {
             Report A Crime
           </button>
         </div>
+      </div>
+      <div>
+        <Link to="/adminpage">Boom</Link>
       </div>
     </>
   );
