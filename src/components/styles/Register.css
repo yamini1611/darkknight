@@ -1,0 +1,67 @@
+.regmain {
+    margin: 0;
+    padding: 0;
+    background: url("../assests/main7.jpg") center/cover fixed no-repeat;
+    /* Replace "your-background-image.jpg" with the path to your background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .register-container {
+    max-width: 300px; /* Adjust the width as per your requirement */
+    margin: 0 auto;
+    padding: 10px; /* Adjust the padding as per your requirement */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f50808;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #btnreg {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff6347;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }

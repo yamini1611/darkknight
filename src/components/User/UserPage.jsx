@@ -72,9 +72,11 @@ const UserPage = () => {
 
   return (
     <>
+    <div className=' batfont'>
       <div className="container-fluid p-0">
         <div className="first">
           <h2 className="gfont text-center">The Batman Savage</h2>
+          <Link to="/Register"><button className="become-batman-btn">Join</button></Link>
         </div>
       </div>
       <div className="container-fluid p-0">
@@ -83,12 +85,13 @@ const UserPage = () => {
             className="btnreport bg-transparent"
             onClick={handleReportCrime}
           >
-            Report A Crime
+            Report
           </button>
         </div>
       </div>
       <div>
         <Link to="/adminpage">Boom</Link>
+      </div>
       </div>
     </>
   );
