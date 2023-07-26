@@ -19,6 +19,11 @@ const Register = () => {
     const nameRegex = /^[A-Za-z]{1,30}$/;
     return nameRegex.test(name);
   };
+  const isValidCode = (code) => {
+    const codeRegex = /^\d{6}$/;
+    return codeRegex.test(code);
+  }
+  
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -35,6 +40,11 @@ const Register = () => {
       validationErrors.email = "Required Field";
     } else if (!isValidEmail(email)) {
       validationErrors.email = "Enter a valid email";
+    }
+    if(code.trim()===""){
+      validationErrors.code = "Required Field";
+    }else if (!isValidCode(code)) {
+      validationErrors.code = "Vigilence Code can have 6 digits";
     }
 
     if (Object.keys(validationErrors).length === 0) {
@@ -104,6 +114,7 @@ const Register = () => {
               value={code}
               onChange={(e) => setCode(e.target.value)}
             />
+           {errors.email && <span className="error">{errors.code}</span>}
           </div>
           <button className='mt-5' type="submit" id="btnreg">Register</button>
           {/* edited by harita */}
