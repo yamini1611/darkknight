@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Register.css';
-//edited by harita
-import { Link } from 'react-router-dom';
+import '../styles/Register.css'
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -84,42 +82,40 @@ const Register = () => {
   return (
     <div className='regmain'>
       <div className=' batfont'>
-        <h2>Register</h2>
-        <form onSubmit={handleRegister}>
-          <div>
-
-            <input
-              type="text"
-              placeholder='Enter your Name'
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            {errors.name && <span className="error">{errors.name}</span>}
-          </div>
-          <div>
-
-            <input
-              type="email"
-              placeholder='Email'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            {errors.email && <span className="error">{errors.email}</span>}
-          </div>
-          <div>
-
-            <input
-              type="text"
-              placeholder='create your six digit Vigilence code '
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-            />
+      <h2>Register</h2>
+      <form onSubmit={handleRegister}>
+        <div>
+          
+          <input
+            type="text"
+            placeholder='Enter your Name'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {errors.name && <span className="error">{errors.name}</span>}
+        </div>
+        <div>
+        
+          <input
+            type="email"
+            placeholder='Email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {errors.email && <span className="error">{errors.email}</span>}
+        </div>
+        <div>
+          
+          <input
+            type="text"
+            placeholder='create your six digit Vigilence code '
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+          />
            {errors.email && <span className="error">{errors.code}</span>}
-          </div>
-          <button className='mt-5' type="submit" id="btnreg">Register</button>
-          {/* edited by harita */}
-          <div><Link to='/Login'>Login</Link></div>
-        </form>
+        </div>
+        <button className='mt-5' type="submit" id="btnreg">Register</button>
+      </form>
       </div>
     </div>
   );

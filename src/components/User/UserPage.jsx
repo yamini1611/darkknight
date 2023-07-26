@@ -81,7 +81,7 @@ const UserPage = () => {
       </div>
       <div className="container-fluid p-0">
         <div className="second text-center">
-          <button
+          <button id='btnstyle'
             className="btnreport bg-transparent"
             onClick={handleReportCrime}
           >
