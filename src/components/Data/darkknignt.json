@@ -14,12 +14,7 @@
     }
   ],
   "CrimeDetails": [
-    {
-      "code": "123456",
-      "crimeDetails": "kill the batman",
-      "files": null,
-      "id": 1
-    }
+    
   ],
   "Pistol": [
     {
