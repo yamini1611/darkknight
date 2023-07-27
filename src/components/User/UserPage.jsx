@@ -27,7 +27,7 @@ const UserPage = () => {
     if (step1.dismiss) return; 
 
     // Fetch 
-    const response = await fetch("http://localhost:3500/Register");
+    const response = await fetch("http://localhost:4000/Register");
     const registeredUsers = await response.json();
 
     
@@ -81,7 +81,7 @@ const UserPage = () => {
 
     setCrimeDetails((prevDetails) => [...prevDetails, newCrimeDetails]);
 
-    fetch("http://localhost:3500/CrimeDetails", {
+    fetch("http://localhost:4000/CrimeDetails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
