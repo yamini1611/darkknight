@@ -1,23 +1,34 @@
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-import React, { useState } from "react";
-import { Button } from 'primereact/button';
-import { Dialog } from 'primereact/dialog';
-
-export default function BatModal() {
-    const [visible, setVisible] = useState(false);
-
-    return (
-        <div className="card flex justify-content-center">
-            <Dialog header="Header" visible={visible} onHide={() => setVisible(false)}
-                style={{ width: '50vw' }} breakpoints={{ '960px': '75vw', '641px': '100vw' }}>
-                <p className="m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </Dialog>
-        </div>
-    )
+export default function BatModal(props) {
+  return (
+    <div className='bg-dark'>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header className='bg-dark' closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className='bg-dark'>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+     
+    </Modal>
+    </div>
+  );
 }
-        
+
+
+
+  
