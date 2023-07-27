@@ -13,197 +13,204 @@
       "code": "123545"
     }
   ],
-  
-    "Pistol":[
+  "CrimeDetails": [
     {
-        "id" :1,
-        "Name" :"AutoMag (pistol)",
-        "image" :"https://media.gettyimages.com/id/1300926169/photo/9mm-handgun-on-a-white-background.jpg?s=612x612&w=0&k=20&c=W0VE7BW2rFaEg1Hh6S6TNTh54FagtDx6cuuAS2Sw1VA=",
-        "points":20
-    },
-    {
-        "id":2,
-        "Name":"Horhe (pistol)",
-        "image":"https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
-        "points":30
-    },
-    {
-        "id":3,
-        "Name":"Ruger-57",
-        "image":"https://media.gettyimages.com/id/1012045224/photo/revolver-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=B4menKMTuFPwGr0mlmGLm5LgO1c5-vCsXp08SO3u7qc=",
-        "points":40
-    },
-    {
-        "id":4,
-        "Name":"SIG P229",
-        "image":"https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-        "points":45
-    },
-    {
-        "id":5,
-        "Name":"Smith & Wesson M&P",
-        "image":"https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-        "points":50
+      "code": "123456",
+      "crimeDetails": "kill the batman",
+      "files": null,
+      "id": 1
     }
-    ],
-    "ShotGun":[
-        {
-          "id":1,
-          "Name":"Franchi Sporting Purpose Automatic Shotgun 12",
-          "image":"https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-          "points":110
-        },
-        {
-          "id":2,
-          "Name":"Franchi SPAS-15",
-          "image":"https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-          "points":120
-        },
-        {
-          "id":3,
-          "Name":"M26 Modular Accessory Shotgun System",
-          "image":"https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-          "points":140
-        },
-        {
-          "id":4,
-          "Name":"USAS-12",
-          "image":"https://media.gettyimages.com/id/145091475/photo/italian-combat-shotgun.jpg?s=612x612&w=0&k=20&c=QdtX5_ni3z_yL68COm-4Jj4vUjyaxt5Hq_Ur4s2Mzic=",
-          "points":160
-        },
-        {
-          "id":5,
-          "Name":"Mossberg 590",
-          "image":"https://media.gettyimages.com/id/57658702/photo/an-old-fashioned-rifle.jpg?s=612x612&w=0&k=20&c=MDFW3HAmv9KuMz3uKcHnaKf2XDpi3YDfL4gAnvXvS9s=",
-          "points":100
-        }
-    ],
-    "SMG":[
-      {
-          "id":1,
-          "Name":"A-M20",
-          "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/9mm_SMG_-_M20_9mm_NATO.jpg/220px-9mm_SMG_-_M20_9mm_NATO.jpg",
-          "points":210
-      },
-      {
-          "id":2,
-          "Name":"FAMAE SAF",
-          "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
-          "points":220
-      },
-      {
-        "id":3,
-        "Name":"Brügger & Thomet APC",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/B%26T_APC_9_K_side_profile.jpg/220px-B%26T_APC_9_K_side_profile.jpg",
-        "points":240
-      },
-      {
-        "id":4,
-        "Name":"AR-57",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/DD_AR_57_3.JPG/220px-DD_AR_57_3.JPG",
-        "points":270
-      },
-      {
-        "id":5,
-        "Name":"Colt 9mm SMG",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/AR_Colt_9mm_right.jpg/220px-AR_Colt_9mm_right.jpg",
-        "points":290
-      }
-    ],
-    "Assault Rifle":[
-      {
-        "id":1,
-        "Name":"ArmaLite AR-18",
-        "image":"https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
-        "points":200
-      },
-      {
-        "id":2,
-        "Name":"AK-47",
-        "image":"https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
-        "points":280
-      },
-      {
-        "id":3,
-        "Name":"AK-74M",
-        "image":"https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
-        "points":240
-      },
-      {
-        "id":4,
-        "Name":"BR18",
-        "image":"https://media.gettyimages.com/id/162838005/photo/assault-rifle.jpg?s=612x612&w=0&k=20&c=9bsVAFZJJhtkz-monkR63KjtW5gCjAmfWC6anVsH4ck=",
-        "points":230
-      },
-      {
-        "id":5,
-        "Name":"Remington R5 RGP",
-        "image":"https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-        "points":210
-      }
-    ],
-    "Rifle":[
-      {
-        "id":1,
-        "Name":"M1917 Enfield",
-        "image":"https://media.gettyimages.com/id/1301303058/photo/ak-47-on-a-white-background.jpg?s=612x612&w=0&k=20&c=cAXu1-DvS821zT4HdxLVdiIZmmyYd2-SSgupelPVZN0=",
-        "points":320
-      },
-      {
-        "id":2,
-        "Name":"Mannlicher M1890 Carbine",
-        "image":"https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-        "points":350
-      },
-      {
-        "id":3,
-        "Name":"Remington 1903/A3",
-        "image":"https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
-        "points":370
-      },
-      {
-        "id":4,
-        "Name":"Remington Model 34",
-        "image":"https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
-        "points":420
-      },
-      {
-        "id":5,
-        "Name":"Schmidt-Rubin",
-        "image":"https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-        "points":440
-      }
-    ],
-    "Special Weapons" :[
-      {
-        "id":1,
-        "Name":"Steyr Mannlicher M1894",
-        "Image" :"https://tse1.mm.bing.net/th?id=OIP.NGz3NktP2VKxmob2M2EX6wHaDz&pid=Api&rs=1&c=1&qlt=95&w=201&h=103",
-        "points":560
-      },
-      {
-        "id":2,
-        "Name":"Colt Automatic Rifle",
-        "Image" :"https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Danish_LSV_M04.jpg/250px-Danish_LSV_M04.jpg",
-        "points":510
-      },
-      {
-        "id":3,
-        "Name":"EPK (Pyrkal) Machine gun",
-        "Image" :"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/EPK_Machine_Gun.jpg/250px-EPK_Machine_Gun.jpg",
-        "points":530
-      },
-      {
-        "id":4,
-        "Name":"FN MAG",
-        "Image" :"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/IDF-FN-MAG.png/250px-IDF-FN-MAG.png",
-        "points":590
-      },
-      {
-        "id":5,
-        "Name":"Heckler & Koch HK21 HK25",
-        "Image" :"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
-        "points":620
-      }
-    ]
+  ],
+  "Pistol": [
+    {
+      "id": 1,
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/1300926169/photo/9mm-handgun-on-a-white-background.jpg?s=612x612&w=0&k=20&c=W0VE7BW2rFaEg1Hh6S6TNTh54FagtDx6cuuAS2Sw1VA=",
+      "points": 20
+    },
+    {
+      "id": 2,
+      "Name": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
+      "points": 30
+    },
+    {
+      "id": 3,
+      "Name": "Ruger-57",
+      "image": "https://media.gettyimages.com/id/1012045224/photo/revolver-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=B4menKMTuFPwGr0mlmGLm5LgO1c5-vCsXp08SO3u7qc=",
+      "points": 40
+    },
+    {
+      "id": 4,
+      "Name": "SIG P229",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "points": 45
+    },
+    {
+      "id": 5,
+      "Name": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "points": 50
+    }
+  ],
+  "ShotGun": [
+    {
+      "id": 1,
+      "Name": "Franchi Sporting Purpose Automatic Shotgun 12",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "points": 110
+    },
+    {
+      "id": 2,
+      "Name": "Franchi SPAS-15",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "points": 120
+    },
+    {
+      "id": 3,
+      "Name": "M26 Modular Accessory Shotgun System",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "points": 140
+    },
+    {
+      "id": 4,
+      "Name": "USAS-12",
+      "image": "https://media.gettyimages.com/id/145091475/photo/italian-combat-shotgun.jpg?s=612x612&w=0&k=20&c=QdtX5_ni3z_yL68COm-4Jj4vUjyaxt5Hq_Ur4s2Mzic=",
+      "points": 160
+    },
+    {
+      "id": 5,
+      "Name": "Mossberg 590",
+      "image": "https://media.gettyimages.com/id/57658702/photo/an-old-fashioned-rifle.jpg?s=612x612&w=0&k=20&c=MDFW3HAmv9KuMz3uKcHnaKf2XDpi3YDfL4gAnvXvS9s=",
+      "points": 100
+    }
+  ],
+  "SMG": [
+    {
+      "id": 1,
+      "Name": "A-M20",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/9mm_SMG_-_M20_9mm_NATO.jpg/220px-9mm_SMG_-_M20_9mm_NATO.jpg",
+      "points": 210
+    },
+    {
+      "id": 2,
+      "Name": "FAMAE SAF",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
+      "points": 220
+    },
+    {
+      "id": 3,
+      "Name": "Brügger & Thomet APC",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/B%26T_APC_9_K_side_profile.jpg/220px-B%26T_APC_9_K_side_profile.jpg",
+      "points": 240
+    },
+    {
+      "id": 4,
+      "Name": "AR-57",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/DD_AR_57_3.JPG/220px-DD_AR_57_3.JPG",
+      "points": 270
+    },
+    {
+      "id": 5,
+      "Name": "Colt 9mm SMG",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/AR_Colt_9mm_right.jpg/220px-AR_Colt_9mm_right.jpg",
+      "points": 290
+    }
+  ],
+  "Assault Rifle": [
+    {
+      "id": 1,
+      "Name": "ArmaLite AR-18",
+      "image": "https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
+      "points": 200
+    },
+    {
+      "id": 2,
+      "Name": "AK-47",
+      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
+      "points": 280
+    },
+    {
+      "id": 3,
+      "Name": "AK-74M",
+      "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
+      "points": 240
+    },
+    {
+      "id": 4,
+      "Name": "BR18",
+      "image": "https://media.gettyimages.com/id/162838005/photo/assault-rifle.jpg?s=612x612&w=0&k=20&c=9bsVAFZJJhtkz-monkR63KjtW5gCjAmfWC6anVsH4ck=",
+      "points": 230
+    },
+    {
+      "id": 5,
+      "Name": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "points": 210
+    }
+  ],
+  "Rifle": [
+    {
+      "id": 1,
+      "Name": "M1917 Enfield",
+      "image": "https://media.gettyimages.com/id/1301303058/photo/ak-47-on-a-white-background.jpg?s=612x612&w=0&k=20&c=cAXu1-DvS821zT4HdxLVdiIZmmyYd2-SSgupelPVZN0=",
+      "points": 320
+    },
+    {
+      "id": 2,
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "points": 350
+    },
+    {
+      "id": 3,
+      "Name": "Remington 1903/A3",
+      "image": "https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
+      "points": 370
+    },
+    {
+      "id": 4,
+      "Name": "Remington Model 34",
+      "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
+      "points": 420
+    },
+    {
+      "id": 5,
+      "Name": "Schmidt-Rubin",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "points": 440
+    }
+  ],
+  "Special Weapons": [
+    {
+      "id": 1,
+      "Name": "Steyr Mannlicher M1894",
+      "Image": "https://tse1.mm.bing.net/th?id=OIP.NGz3NktP2VKxmob2M2EX6wHaDz&pid=Api&rs=1&c=1&qlt=95&w=201&h=103",
+      "points": 560
+    },
+    {
+      "id": 2,
+      "Name": "Colt Automatic Rifle",
+      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Danish_LSV_M04.jpg/250px-Danish_LSV_M04.jpg",
+      "points": 510
+    },
+    {
+      "id": 3,
+      "Name": "EPK (Pyrkal) Machine gun",
+      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/EPK_Machine_Gun.jpg/250px-EPK_Machine_Gun.jpg",
+      "points": 530
+    },
+    {
+      "id": 4,
+      "Name": "FN MAG",
+      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/IDF-FN-MAG.png/250px-IDF-FN-MAG.png",
+      "points": 590
+    },
+    {
+      "id": 5,
+      "Name": "Heckler & Koch HK21 HK25",
+      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
+      "points": 620
+    }
+  ]
 }

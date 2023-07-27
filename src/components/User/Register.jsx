@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../styles/Register.css'
+import React, { useState, useEffect } from 'react';
+import '../styles/Register.css';
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -7,6 +7,15 @@ const Register = () => {
   const [code, setCode] = useState("");
 
   const [errors, setErrors] = useState({});
+  const [registeredUsers, setRegisteredUsers] = useState([]);
+
+  useEffect(() => {
+    // Fetch the registered users data from the API
+    fetch("http://localhost:3500/Register")
+      .then((response) => response.json())
+      .then((data) => setRegisteredUsers(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,18 +26,18 @@ const Register = () => {
     const nameRegex = /^[A-Za-z]{1,30}$/;
     return nameRegex.test(name);
   };
+  
   const isValidCode = (code) => {
     const codeRegex = /^\d{6}$/;
     return codeRegex.test(code);
-  }
+  };
   
-
   const handleRegister = (e) => {
     e.preventDefault();
-
+  
     setErrors({});
     const validationErrors = {};
-
+  
     if (name.trim() === "") {
       validationErrors.name = "Required";
     } else if (!isValidName(name)) {
@@ -39,46 +48,62 @@ const Register = () => {
     } else if (!isValidEmail(email)) {
       validationErrors.email = "Enter a valid email";
     }
-    if(code.trim()===""){
+    if (code.trim() === "") {
       validationErrors.code = "Required Field";
-    }else if (!isValidCode(code)) {
-      validationErrors.code = "Vigilence Code can have 6 digits";
+    } else if (!isValidCode(code)) {
+      validationErrors.code = "Vigilance Code can have 6 digits";
     }
-
+  
     if (Object.keys(validationErrors).length === 0) {
-      const newUser = {
-        id: Date.now(),
-        name,
-        email,
-        code,
-      };
-
-      fetch("http://localhost:4000/Register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      })
-        .then((response) => {
-          // Handle the response
-          if (response.ok) {
-            // Registration successful
-            // Reset the form
-            setName("");
-            setEmail("");
-            setCode("");
-            console.log("Registration Successful");
-          }
+      // Check if the email already exists
+      const emailExists = registeredUsers.some((user) => user.email === email);
+      const codeExists =registeredUsers.some((user) =>user.code === code );
+  
+      if (emailExists) {
+        alert("Email already exists!");
+      }
+      else if(codeExists){
+        alert("Plese choose Another code");
+      }
+      else if(codeExists && emailExists){
+        alert("Credentials Not Valid!Please try Again");
+      }
+      
+      else {
+        // Proceed with registration if there are no errors
+  
+        const newUser = {
+          id: Date.now(),
+          name,
+          email,
+          code,
+        };
+  
+        fetch("http://localhost:3500/Register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newUser),
         })
-        .catch((error) => {
-          console.error("Error during registration:", error);
-        });
+          .then((response) => {
+            if (response.ok) {
+              setName("");
+              setEmail("");
+              setCode("");
+              console.log("Registration Successful");
+            }
+          })
+          .catch((error) => {
+            console.error("Error during registration:", error);
+          });
+      }
     } else {
+      // If there are validation errors, set the errors state
       setErrors(validationErrors);
     }
   };
-
+  
   return (
     <div className='regmain'>
       <div className=' batfont'>
@@ -108,11 +133,11 @@ const Register = () => {
           
           <input
             type="text"
-            placeholder='create your six digit Vigilence code '
+            placeholder='create your six digit Vigilance code '
             value={code}
             onChange={(e) => setCode(e.target.value)}
           />
-           {errors.email && <span className="error">{errors.code}</span>}
+           {errors.code && <span className="error">{errors.code}</span>}
         </div>
         <button className='mt-5' type="submit" id="btnreg">Register</button>
       </form>
