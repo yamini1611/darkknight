@@ -101,6 +101,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
   };
 
   return (
+    
     <Modal show={showModal} onHide={() => setShowModal(false)}>
       <Modal.Header closeButton>
         <Modal.Title>Report a Crime</Modal.Title>
