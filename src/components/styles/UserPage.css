@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Your-Batman-Font'; /* Replace 'Your-Batman-Font' with the actual font name */
-  src: url('D:/Batman_final/darkknight/src/Fonts/batmfa__.ttf') format('truetype'); /* Update the path to your font file */
+  src: url('../../Fonts/batmfa__.ttf') format('truetype'); /* Update the path to your font file */
 }
 .first h2 {
   color: rgb(172, 37, 37);
