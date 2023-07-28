@@ -16,6 +16,7 @@
 
 @font-face {
   font-family: 'Your-Batman-Font'; /* Replace 'Your-Batman-Font' with the actual font name */
+  src: url('../../Fonts/batmfa__.ttf') format('truetype'); /* Update the path to your font file */
   src: url('../../Fonts/batmfa__.ttf') format('truetype');  /* Update the path to your font file */
 }
 .first h2 {
