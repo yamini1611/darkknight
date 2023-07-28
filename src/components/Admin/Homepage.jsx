@@ -33,7 +33,7 @@ useEffect(()=>{
 
   return (
     <div className=' vh-100 batfont container-fluid'>
-<h1 className='display-3 text-white'>Rule the empire</h1>
+<h1 className='display-3 p-3 text-white'>Entering into the shadows</h1>
 
 
 <DKCard></DKCard>
