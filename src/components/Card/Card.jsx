@@ -155,12 +155,12 @@ export  function DkInvestigateCard(props) {
  <MDBCard background='dark' className='text-white'>
       <MDBCardImage overlay src={props.files} className='col-lg-3' alt='...' />
       <MDBCardOverlay>
-        <MDBCardTitle className='mt-5 pt-5'>{props.type} at {props.location}</MDBCardTitle>
+        <MDBCardTitle className='mt-5 pt-5'>{props.crimeType} at {props.location}</MDBCardTitle>
        
         <MDBBtn color='dark' onClick={()=>setModalShow(true)}>
         Resolve
       </MDBBtn>
-      <BatModal location={props.location} time={props.time} description={props.description} contact={props.contact} confidentiality={props.confidentiality} emergency={props.emergency} show={modalShow} onHide={()=>setModalShow(false)}></BatModal>
+      <BatModal crimeType={props.crimeType} location={props.location} time={props.time} description={props.description} contact={props.contact} confidentiality={props.confidentiality} emergency={props.emergency} show={modalShow} onHide={()=>setModalShow(false)}></BatModal>
       </MDBCardOverlay>
     </MDBCard>
     </div>
