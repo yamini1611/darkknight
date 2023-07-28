@@ -1,115 +1,112 @@
 import React, { useState } from 'react';
-import Swal from 'sweetalert2';
-import '../styles/UserPage.css';
+import { Modal, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../styles/UserPage.css';
 
 const UserPage = () => {
-  const [crimeDetails, setCrimeDetails] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [crimeDetails, setCrimeDetails] = useState({
+    code: '',
+    crimeType: '',
+    dateTime: '',
+    location: '',
+    description: '',
+    evidence: '',
+    vehicles: '',
+    suspect: '',
+    contact: '',
+    confidentiality: '',
+    emergency: '',
+  });
 
-  const handleReportCrime = async () => {
-    const step1 = await Swal.fire({
-      title: 'GETIN',
-      text: 'Please Enter Your Vigilence code',
-      input: 'text',
-      inputPlaceholder: 'Enter Your Vigilence code',
-      showCancelButton: true,
-      confirmButtonText: 'Next &rarr;',
-      cancelButtonText: 'Cancel',
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      focusConfirm: false,
-      preConfirm: (login) => {
+  const [errors, setErrors] = useState({
+    code: '',
+    crimeType: '',
+    dateTime: '',
+    location: '',
+    description: '',
+    contact: '',
+  });
 
-        return login;
-      },
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setCrimeDetails({ ...crimeDetails, [name]: value });
+    setErrors({ ...errors, [name]: '' }); // Clear the error message when the user starts typing again
+  };
+
+  const handleSubmit = () => {
+    const mandatoryFields = ['code', 'crimeType', 'dateTime', 'location', 'description', 'contact'];
+    let hasError = false;
+    const updatedErrors = {};
+  
+    mandatoryFields.forEach((field) => {
+      if (!crimeDetails[field]) {
+        hasError = true;
+        updatedErrors[field] = 'This field is required';
+      }
     });
-
-    if (step1.dismiss) return; 
-
-    // Fetch 
-    const response = await fetch("http://localhost:3500/Register");
-    const registeredUsers = await response.json();
-
-    
-    const isValidCode = registeredUsers.some((user) => user.code === step1.value);
-
-    if (!isValidCode) {
-      Swal.fire('Invalid Code', 'Please enter a valid vigilance code', 'error');
+  
+    if (hasError) {
+      setErrors(updatedErrors);
       return;
     }
-
-    const step2 = await Swal.fire({
-      title: 'Report a Crime',
-      text: 'Please provide details about the crime:',
-      input: 'text',
-      showCancelButton: true,
-      confirmButtonText: 'Next &rarr;',
-      cancelButtonText: 'Cancel',
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      focusConfirm: false,
-      preConfirm: (crimeDetails) => {
-        return crimeDetails;
-      },
-    });
-
-    if (step2.dismiss) return; 
-
-    const step3 = await Swal.fire({
-      title: 'Upload Additional Details',
-      text: 'Please upload an image or video file (optional):',
-      input: 'file',
-      showCancelButton: true,
-      confirmButtonText: 'Submit',
-      cancelButtonText: 'Cancel',
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      focusConfirm: false,
-      preConfirm: (file) => {
-        return file;
-      },
-    });
-
-    if (step3.dismiss) return; 
-
-
-    const newCrimeDetails = {
-      code: step1.value,
-      crimeDetails: step2.value,
-      files: step3.value ? step3.value.name : null,
-    };
-
-    setCrimeDetails((prevDetails) => [...prevDetails, newCrimeDetails]);
-
-    fetch("http://localhost:3500/CrimeDetails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newCrimeDetails),
-    })
-      .then((response) => {
-        if (response.ok) {
-          Swal.fire({
-            title: 'All done!',
-            html: `
-              Your login: ${step1.value}<br>
-              Crime Details: ${step2.value}<br>
-              ${step3.value ? `Uploaded file: ${step3.value.name}` : 'No file uploaded'}
-            `,
-            confirmButtonText: 'Close',
-            confirmButtonColor: '#3085d6',
-          });
+  
+    // Fetch the data from the 'http://localhost:4000/Register' API
+    fetch('http://localhost:4000/Register')
+      .then((response) => response.json())
+      .then((data) => {
+        // Check if the provided code exists in the fetched data
+        const codeExists = data.some((item) => item.code === crimeDetails.code);
+  
+        if (!codeExists) {
+          // Code is not valid, show an alert message
+          alert('Invalid code. Please provide a valid code.');
         } else {
-          Swal.fire('Error', 'Failed to report the crime. Please try again later.', 'error');
+          // Code is valid, proceed with crime reporting
+  
+          // Perform validation on crimeDetails if needed
+  
+          // Post the data to the API 'http://localhost:4000/CrimeDetails'
+          fetch('http://localhost:4000/CrimeDetails', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(crimeDetails),
+          })
+            .then((response) => {
+              if (response.ok) {
+                // Handle success if needed
+                console.log('Crime reported successfully');
+                setShowModal(false);
+                setCrimeDetails({ // Clear all fields by setting crimeDetails to an empty object
+                  code: '',
+                  crimeType: '',
+                  dateTime: '',
+                  location: '',
+                  description: '',
+                  evidence: '',
+                  vehicles: '',
+                  suspect: '',
+                  contact: '',
+                  confidentiality: '',
+                  emergency: '',
+                });
+              } else {
+                // Handle error if needed
+                console.error('Failed to report the crime. Please try again later.');
+              }
+            })
+            .catch((error) => {
+              console.error('Error during crime reporting:', error);
+            });
         }
       })
       .catch((error) => {
-        console.error("Error during crime reporting:", error);
-        Swal.fire('Error', 'Failed to report the crime. Please try again later.', 'error');
+        console.error('Error fetching register data:', error);
       });
   };
-
+  
   return (
     <>
       <div className='batfont'>
@@ -121,10 +118,7 @@ const UserPage = () => {
         </div>
         <div className="container-fluid p-0">
           <div className="second text-center">
-            <button id='btnstyle'
-              className="btnreport bg-transparent"
-              onClick={handleReportCrime}
-            >
+            <button id='btnstyle' className="btnreport bg-transparent" onClick={() => setShowModal(true)}>
               Report
             </button>
           </div>
@@ -133,6 +127,149 @@ const UserPage = () => {
           <Link to="/adminpage">Boom</Link>
         </div>
       </div>
+
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Report a Crime</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="formCode">
+              <Form.Label>Code</Form.Label>
+              <Form.Control
+                type="text"
+                name="code"
+                value={crimeDetails.code}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.code} // Add 'isInvalid' prop to indicate the field has an error
+              />
+              <Form.Control.Feedback type="invalid">{errors.code}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="formCrimeType">
+              <Form.Label>Type of Crime</Form.Label>
+              <Form.Control
+                as="select"
+                name="crimeType"
+                value={crimeDetails.crimeType}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.crimeType} // Add 'isInvalid' prop to indicate the field has an error
+              >
+                <option value="">Select a type</option> {/* Add an empty option */}
+                <option value="Murder">Murder</option>
+                <option value="Kidnap">Kidnap</option>
+                <option value="Theft">Theft</option>
+                <option value="Others">Others</option>
+              </Form.Control>
+              <Form.Control.Feedback type="invalid">{errors.crimeType}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="formDateTime">
+              <Form.Label>Date and Time of Incident</Form.Label>
+              <Form.Control
+                type="datetime-local"
+                name="dateTime"
+                value={crimeDetails.dateTime}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.dateTime} // Add 'isInvalid' prop to indicate the field has an error
+              />
+              <Form.Control.Feedback type="invalid">{errors.dateTime}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="formLocation">
+              <Form.Label>Location</Form.Label>
+              <Form.Control
+                type="text"
+                name="location"
+                value={crimeDetails.location}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.location} // Add 'isInvalid' prop to indicate the field has an error
+              />
+              <Form.Control.Feedback type="invalid">{errors.location}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="formDescription">
+              <Form.Label>Crime Description</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                name="description"
+                value={crimeDetails.description}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.description} // Add 'isInvalid' prop to indicate the field has an error
+              />
+              <Form.Control.Feedback type="invalid">{errors.description}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="formEvidence">
+              <Form.Label>Evidence</Form.Label>
+              <Form.Control
+                type="text"
+                name="evidence"
+                value={crimeDetails.evidence}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.evidence} // Add 'isInvalid' prop to indicate the field has an error
+              />
+              <Form.Control.Feedback type="invalid">{errors.evidence}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="formVehicles">
+              <Form.Label>Vehicles (Optional)</Form.Label>
+              <Form.Control
+                type="text"
+                name="vehicles"
+                value={crimeDetails.vehicles}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="formSuspect">
+              <Form.Label>Suspect</Form.Label>
+              <Form.Control
+                type="text"
+                name="suspect"
+                value={crimeDetails.suspect}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="formContact">
+              <Form.Label>Contact</Form.Label>
+              <Form.Control
+                type="text"
+                name="contact"
+                value={crimeDetails.contact}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.contact} // Add 'isInvalid' prop to indicate the field has an error
+              />
+              <Form.Control.Feedback type="invalid">{errors.contact}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="formConfidentiality">
+              <Form.Label>Confidentiality</Form.Label>
+              <Form.Control
+                as="select"
+                name="confidentiality"
+                value={crimeDetails.confidentiality}
+                onChange={handleInputChange}
+                required // Make the field mandatory
+                isInvalid={!!errors.confidentiality} // Add 'isInvalid' prop to indicate the field has an error
+              >
+                <option value="">Select an option</option> {/* Add an empty option */}
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+              </Form.Control>
+              <Form.Control.Feedback type="invalid">{errors.confidentiality}</Form.Control.Feedback>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleSubmit}>
+            Submit
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
