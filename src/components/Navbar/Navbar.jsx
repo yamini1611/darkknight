@@ -1,32 +1,64 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { UserContext } from '../Context/Context';
 
 const Navbar = () => {
-    const Navigate = useNavigate();
-    // const { user, handleLogout } = useContext(UserContext);
-    // const [userData, setUserData] = useState([]);
-    // const handleLogoutClick = () => {
-    //     handleLogout();
-    //     return <Navigate to="/Login" />;
-    // };
-    
+    const { user, handleLogout } = useContext(UserContext);
+    const isAdmin = user.email === 'admin@gmail.com' && user.code === '123098';
+    const [userData, setUserData] = useState([]);
+    const handleLogoutClick = () => {
+        handleLogout();
+        return <Navigate to="/Login" />;
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:3500/Register');
+                const data = await response.json();
+                setUserData(data);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
 
     return (
         <div style={{ backgroundColor: 'black' }}>
-            <div class="offcanvas offcanvas-start text-bg-dark" id="demo" >
-                <div class="offcanvas-header">
-                    <h1 class="offcanvas-title">DarkKnight </h1>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            <div className="offcanvas offcanvas-start text-bg-dark" id="demo" >
+                <div className="offcanvas-header">
+                    <h1 className="offcanvas-title">DarkKnight </h1>
+                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <Link to="" className="btn text-light">Logout</Link>
-                    {/* <button class="btn btn-secondary" type="button">A Button</button> */}
+                <div className="offcanvas-body">
+                    {user.loggedIn && !isAdmin ? (
+                        <>
+                            <button><Link to="/">UserPage</Link></button>
+                            {/* <button onClick={handleLogoutClick}>Logout</button> */}
+                            <Link className="nav-link mt-1" to="/Login" onClick={handleLogoutClick}>Logout</Link>
+
+                        </>
+                    )
+                        : (
+                            <>
+                                {!isAdmin && (
+                                    <>
+                                        <button><Link to="/adminpage">AdminPage</Link></button>
+                                        {/* <button onClick={handleLogoutClick}>Logout</button> */}
+                                        <Link className="nav-link mt-1" to="/Login" onClick={handleLogoutClick}>Logout</Link>
+
+                                    </>
+                                )}
+                            </>
+                        )}
+
                 </div>
             </div>
-
-            <button class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#demo" style={{ background: 'none' }}>
-                <i class="fa-solid fa-bars"></i>
+            <button className="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#demo" style={{ background: 'none' }}>
+                <i className="fa-solid fa-bars"></i>
             </button>
         </div>
     )

@@ -11,11 +11,15 @@
       "name": "Darshan",
       "email": "priyadarshanmanoharan@gmail.com",
       "code": "123545"
+    },
+    {
+      "id": 1690527651410,
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "code": "123098"
     }
   ],
-  "CrimeDetails": [
-    
-  ],
+  "CrimeDetails": [],
   "Pistol": [
     {
       "id": 1,

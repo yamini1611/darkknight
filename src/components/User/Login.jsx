@@ -11,9 +11,11 @@ const Login = () => {
         e.preventDefault();
         handleLogin(email, code);
         if (user.loggedIn) {
+            return <>
+                <Navigate to="/" />;
+            </>
         }
     };
-
 
     if (user.loggedIn) {
         return <>

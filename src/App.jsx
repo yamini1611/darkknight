@@ -12,9 +12,9 @@ import Weapons from "./components/SelectWeapons/Weapons";
 function App() {
   return (
     <>
+      <UserProvider>
       <BrowserRouter>
-        <Navbar />
-        <UserProvider>
+      <Navbar />
           <Routes>
             <Route path="/" active element={<UserPage />} />
             <Route path="/adminpage" element={<Homepage />} />
@@ -23,10 +23,9 @@ function App() {
             <Route path="/Investigate" element={<Investigation/>}></Route>
             <Route path="/Inventory" element={<Inventory/>}></Route>
             <Route path="/weapons" element={<Weapons/>}></Route>
-
           </Routes>
-        </UserProvider>
       </BrowserRouter>
+      </UserProvider>
     </>
   );
 }
