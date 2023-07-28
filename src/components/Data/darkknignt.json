@@ -20,14 +20,26 @@
     }
   ],
   "CrimeDetails": [
-
+    {
+      "code": "123456",
+      "crimeType": "Theft",
+      "dateTime": "2023-07-13T17:11",
+      "location": "coimbatore",
+      "description": "A robbery have taken place at coimbatore",
+      "evidence": "https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80ne",
+      "vehicles": "None",
+      "suspect": "Local thugs",
+      "contact": "9784536102",
+      "confidentiality": "public",
+      "id": 1
+    }
   ],
   "CrimeDetails": [],
   "Pistol": [
     {
       "id": 1,
       "Name": "AutoMag (pistol)",
-      "image": "https://media.gettyimages.com/id/1300926169/photo/9mm-handgun-on-a-white-background.jpg?s=612x612&w=0&k=20&c=W0VE7BW2rFaEg1Hh6S6TNTh54FagtDx6cuuAS2Sw1VA=",
+      "image": "https://images.unsplash.com/photo-1595590424283-b8f17842773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGlzdG9sfGVufDB8fDB8fHww&w=1000&q=80",
       "points": 20
     },
     {
@@ -119,7 +131,7 @@
       "points": 290
     }
   ],
-  "Assault Rifle": [
+  "AssaultRifle": [
     {
       "id": 1,
       "Name": "ArmaLite AR-18",
@@ -183,7 +195,7 @@
       "points": 440
     }
   ],
-  "Special Weapons": [
+  "SpecialWeapons": [
     {
       "id": 1,
       "Name": "Steyr Mannlicher M1894",

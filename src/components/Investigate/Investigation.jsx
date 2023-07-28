@@ -24,14 +24,14 @@ console.log(CrimeDetails)
     <div>
         {CrimeDetails.map((detail)=>(
             <>
-        <DkInvestigateCard code={detail.code} time={detail.time} desc={detail.description} contact={detail.contact} type={detail.Type} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location} files={detail.files} ></DkInvestigateCard>
+        <DkInvestigateCard files={detail.evidence} code={detail.code} time={detail.time} desc={detail.description} contact={detail.contact} crimeType={detail.crimeType} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location}  ></DkInvestigateCard>
         </>
         ))}
         </div>
         )}
         {CrimeDetails.length===0&&(
             <div>
-                <h1 className='display-4 text-center text-white'>There are no crime reports yet!</h1></div>
+                <h1 className='display-4 text-center text-white '>There are no crime reports yet!</h1></div>
         )}
     </div>
   )
