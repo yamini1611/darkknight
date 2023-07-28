@@ -1,9 +1,13 @@
 .error-toast {
-    background-color: red;
-    color:white;
-  }
-  
-  .error-toast .Toastify__close-button {
-    color: white;
-  }
-  
+  background-color: black;
+  color: white;
+}
+
+.error-toast .Toastify__close-button {
+  color: white;
+}
+
+.error-success {
+  background-color: black;
+  color: white;
+}

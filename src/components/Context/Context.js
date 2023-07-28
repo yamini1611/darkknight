@@ -13,7 +13,7 @@ const UserProvider = ({ children }) => {
 
     const handleLogin = async (email, code) => {
         try {
-            const response = await fetch('http://localhost:4000/Register');
+            const response = await fetch('http://localhost:3500/Register');
             const data = await response.json();
             const registeredUser = data.find(user => user.email === email && user.code === code);
             if (registeredUser) {
@@ -25,6 +25,7 @@ const UserProvider = ({ children }) => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
+                    className: 'error-success',
                 });
                 setUser({
                     loggedIn: true,
@@ -69,6 +70,7 @@ const UserProvider = ({ children }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            className: 'error-success',
         });
         setUser({
             loggedIn: false,
