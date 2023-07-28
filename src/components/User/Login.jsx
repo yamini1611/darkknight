@@ -29,9 +29,9 @@ const Login = () => {
                 <div className="col col-xl-10">
                     <div className="row g-0">
                         <div className="col-md-6 col-lg-7 d-flex align-items-center offset-3">
-                            <div className="card-body p-4 p-lg-5">
+                            <div className="card-body p-4 p-lg-5 bodylogin">
                                 <form onSubmit={handleSubmit} className='back offset-2'>
-                                    <h5 className=" mb-3 pb-3 text-white" style={{ letterSpacing: '1px' }}>
+                                    <h5 className=" mb-3 pb-3 text-white signin" style={{ letterSpacing: '1px' }}>
                                         Sign into your account
                                     </h5>
                                     <div className="mb-4">
@@ -41,7 +41,7 @@ const Login = () => {
                                         <input
                                             type="email"
                                             id="form2Example17"
-                                            className=""
+                                            className="inputtag"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
@@ -53,7 +53,7 @@ const Login = () => {
                                         <input
                                             type="password"
                                             id="form2Example27"
-                                            className=""
+                                            className="inputtag"
                                             value={code}
                                             onChange={(e) => setcode(e.target.value)}
                                         />

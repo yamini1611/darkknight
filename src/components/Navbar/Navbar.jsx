@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { UserContext } from '../Context/Context';
-
+import '../styles/Navbar.css';
 const Navbar = () => {
     const { user, handleLogout } = useContext(UserContext);
     const isAdmin = user.email === 'admin@gmail.com' && user.code === '123098';
@@ -28,10 +28,10 @@ const Navbar = () => {
 
     return (
         <div style={{ backgroundColor: 'black' }}>
-            <div className="offcanvas offcanvas-start text-bg-dark" id="demo" >
+            <div className="offcanvas offcanvas-start" id="demo"  >
                 <div className="offcanvas-header">
-                    <h1 className="offcanvas-title">DarkKnight </h1>
-                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    <h1 className="offcanvas-title text-white" style={{ fontSize: '25px' }}>DarkKnight </h1>
+                    <button type="button" className="btn-close btn-close-white" style={{ fontSize: '10px' }} data-bs-dismiss="offcanvas"></button>
                 </div>
                 <div className="offcanvas-body">
                     {user.loggedIn && !isAdmin ? (
@@ -47,7 +47,7 @@ const Navbar = () => {
                     )
                         : (
                             <>
-                                {!isAdmin && (
+                                {isAdmin && (
                                     <>
                                         <button><Link to="/adminpage">AdminPage</Link></button>
                                         <button className="nav-link mt-1" onClick={handleLogoutClick}>Logout</button>
@@ -59,8 +59,9 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <button className="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#demo" style={{ background: 'none' }}>
-                <i className="fa-solid fa-bars"></i>
+            <button className="btn" data-bs-toggle="offcanvas" data-bs-target="#demo" style={{ background: 'none' }}>
+                {/* <i className="fa-solid fa-bars"></i> */}
+                <i className='fas fa-ghost' style={{ fontSize: '23px', color: 'red' }}></i>
             </button>
         </div>
     )

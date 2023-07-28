@@ -9,7 +9,7 @@
 }
 
 
-h5 {
+.signin {
     text-align: center;
     margin-bottom: 20px;
     color: #f50808;
@@ -19,7 +19,7 @@ h5 {
 }
 
 
-input {
+.inputtag {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -50,7 +50,7 @@ input {
     height: 100vh;
 }
 
-.card-body {
+.bodylogin {
     font-size: 18px;
 }
 
