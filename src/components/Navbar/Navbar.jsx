@@ -37,8 +37,7 @@ const Navbar = () => {
                     {user.loggedIn && !isAdmin ? (
                         <>
                             <button><Link to="/">UserPage</Link></button>
-                            {/* <button onClick={handleLogoutClick}>Logout</button> */}
-                            <Link className="nav-link mt-1" to="/Login" onClick={handleLogoutClick}>Logout</Link>
+                            <button className="nav-link mt-1" onClick={handleLogoutClick}>Logout</button>
                             {userData.length > 0 && (
                                 <li className="nav-item" style={{ marginLeft: 600 }}>
                                     <h3 style={{ fontSize: 22.1, fontFamily: "Product Sans,Arial,Helvetica,sans-serif", color: "grey", marginTop: 11 }}><i className="fa-solid fa-user fa-flip" ></i>{userData.find(u => u.email === user.code)?.name}</h3>
@@ -51,8 +50,7 @@ const Navbar = () => {
                                 {!isAdmin && (
                                     <>
                                         <button><Link to="/adminpage">AdminPage</Link></button>
-                                        {/* <button onClick={handleLogoutClick}>Logout</button> */}
-                                        <Link className="nav-link mt-1" to="/Login" onClick={handleLogoutClick}>Logout</Link>
+                                        <button className="nav-link mt-1" onClick={handleLogoutClick}>Logout</button>
 
                                     </>
                                 )}
@@ -69,3 +67,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

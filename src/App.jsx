@@ -13,18 +13,18 @@ function App() {
   return (
     <>
       <UserProvider>
-      <BrowserRouter>
-      <Navbar />
+        <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/" active element={<UserPage />} />
             <Route path="/adminpage" element={<Homepage />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Login" element={<Login />} />
-            <Route path="/Investigate" element={<Investigation/>}></Route>
-            <Route path="/Inventory" element={<Inventory/>}></Route>
-            <Route path="/weapons" element={<Weapons/>}></Route>
+            <Route path="/Investigate" element={<Investigation />}></Route>
+            <Route path="/Inventory" element={<Inventory />}></Route>
+            <Route path="/weapons" element={<Weapons />}></Route>
           </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
       </UserProvider>
     </>
   );
