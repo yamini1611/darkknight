@@ -59,7 +59,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   },
 }));
 
-const ImageSrc = styled('span')({
+const ImageSrc = styled('span1')({
   position: 'absolute',
   left: 0,
   right: 0,
@@ -69,7 +69,7 @@ const ImageSrc = styled('span')({
   backgroundPosition: 'center 40%',
 });
 
-const Image = styled('span')(({ theme }) => ({
+const Image = styled('span1')(({ theme }) => ({
   position: 'absolute',
   left: 0,
   right: 0,
@@ -81,7 +81,7 @@ const Image = styled('span')(({ theme }) => ({
   color: theme.palette.common.white,
 }));
 
-const ImageBackdrop = styled('span')(({ theme }) => ({
+const ImageBackdrop = styled('span1')(({ theme }) => ({
   position: 'absolute',
   left: 0,
   right: 0,
@@ -92,7 +92,7 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
-const ImageMarked = styled('span')(({ theme }) => ({
+const ImageMarked = styled('span1')(({ theme }) => ({
   height: 3,
   width: 18,
   backgroundColor: theme.palette.common.white,
@@ -121,7 +121,7 @@ export default function DKCard() {
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
             <Typography
-              component="span"
+              component="span1"
               variant="subtitle1"
               color="inherit"
               sx={{
