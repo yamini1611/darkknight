@@ -64,7 +64,7 @@
     {
       "id": 3,
       "Name": "M26 Modular Accessory Shotgun System",
-      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "image": "https://media.gettyimages.com/id/157685863/photo/opening-a-410-shotgun-to-load.jpg?s=612x612&w=0&k=20&c=j3fUIUlk2ieBRLv3GPT6cZzqjpBPdGrPZq-3Woz4DTg=",
       "points": 140
     },
     {
@@ -112,7 +112,7 @@
       "points": 290
     }
   ],
-  "Assault Rifle": [
+  "Assault-Rifle": [
     {
       "id": 1,
       "Name": "ArmaLite AR-18",
@@ -176,7 +176,7 @@
       "points": 440
     }
   ],
-  "Special Weapons": [
+  "Special": [
     {
       "id": 1,
       "Name": "Steyr Mannlicher M1894",
