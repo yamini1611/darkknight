@@ -6,11 +6,19 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import {
+  MDBCard,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardOverlay,
+  MDBCardImage
+} from 'mdb-react-ui-kit';
+import { MDBBtn } from 'mdb-react-ui-kit';
+import '../../components/styles/Investigation.css';
+import BatModal from '../Modal/Modal';
+import { useState } from 'react';
+
+
 
 const images = [
   {
@@ -96,7 +104,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function DKCard() {
   return (
-    <div> 
+    <div className='container'> 
         
          <Box sx={{ display: 'block', flexWrap: 'wrap', minWidth: 300, width: '100%'}}>
       {images.map((image) => (
@@ -139,23 +147,22 @@ export default function DKCard() {
 
 
 
-export  function DkInvestigateCard() {
+export  function DkInvestigateCard(props) {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Crime
-        </Typography>
-      
-      </CardContent>
-      <CardActions>
-        <Button variant='dark'>Resolve</Button>
-      </CardActions>
-    </Card>
+    <div className='container p-5 col-lg-4 dk-invest-card'>
+ <MDBCard background='dark' className='text-white'>
+      <MDBCardImage overlay src={props.files} className='col-lg-3' alt='...' />
+      <MDBCardOverlay>
+        <MDBCardTitle className='mt-5 pt-5'>{props.type} at {props.location}</MDBCardTitle>
+       
+        <MDBBtn color='dark' onClick={()=>setModalShow(true)}>
+        Resolve
+      </MDBBtn>
+      <BatModal location={props.location} time={props.time} description={props.description} contact={props.contact} confidentiality={props.confidentiality} emergency={props.emergency} show={modalShow} onHide={()=>setModalShow(false)}></BatModal>
+      </MDBCardOverlay>
+    </MDBCard>
+    </div>
   );
 }

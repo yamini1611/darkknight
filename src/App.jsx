@@ -7,6 +7,7 @@ import UserProvider from './components/Context/Context';
 import Navbar from './components/Navbar/Navbar';
 import Investigation from "./components/Investigate/Investigation";
 import Inventory from "./components/Admin/Inventory";
+import Weapons from "./components/SelectWeapons/Weapons";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Investigate" element={<Investigation/>}></Route>
             <Route path="/Inventory" element={<Inventory/>}></Route>
+            <Route path="/weapons" element={<Weapons/>}></Route>
+
           </Routes>
         </UserProvider>
       </BrowserRouter>

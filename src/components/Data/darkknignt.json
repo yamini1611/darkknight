@@ -15,9 +15,16 @@
   ],
   "CrimeDetails": [
     {
+      "Type":"Robbery",
       "code": "123456",
-      "crimeDetails": "kill the batman",
-      "files": null,
+      "location":"Coimbatore",
+      "files": "https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "time":"4:30PM",
+      "date":"27-7-2023",
+      "description":"A robbery has taken place at coimbatore loaclity.Looks like local thugs",
+      "confidentiality":"Low",
+      "emergency":"Moderate",
+      "contact":"9784512360",
       "id": 1
     }
   ],
