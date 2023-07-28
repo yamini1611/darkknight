@@ -12,7 +12,7 @@ const Register = () => {
 
   useEffect(() => {
     // Fetch the registered users data from the API
-    fetch("http://localhost:3500/Register")
+    fetch("http://localhost:4000/Register")
       .then((response) => response.json())
       .then((data) => setRegisteredUsers(data))
       .catch((error) => console.error("Error fetching data:", error));
