@@ -14,7 +14,7 @@ const Navbar = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3500/Register');
+                const response = await fetch('http://localhost:4000/Register');
                 const data = await response.json();
                 setUserData(data);
             } catch (error) {
