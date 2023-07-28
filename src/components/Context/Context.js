@@ -25,6 +25,7 @@ const UserProvider = ({ children }) => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
+                    className: 'error-success',
                 });
                 setUser({
                     loggedIn: true,
@@ -69,6 +70,7 @@ const UserProvider = ({ children }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            className: 'error-success',
         });
         setUser({
             loggedIn: false,

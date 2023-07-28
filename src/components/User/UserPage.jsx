@@ -13,14 +13,15 @@ const UserPage = () => {
       <div className='batfont'>
         <div className="container-fluid p-0">
           <div className="first">
-            <h2 className="gfont text-center" id='textpg1'>"Crime can't hide from the watchful eyes of Gotham – Report and reveal!"</h2>
-            <Link to="/Register"><button className="become-batman-btn">Join</button></Link>
+            <h1>The Batman's EndGame!</h1>
+            <h2 className="gfont text-center" id='textpg1'>Crime can't hide from the watchful eyes of Batman – Report and reveal!</h2>
+            <Link to="/Register"><button  className="become-batman-btn">Join</button></Link>
           </div>
         </div>
         <div className="container-fluid p-0">
           <div className="second text-center">
             <h2 className="gfont text-center" id='textpg1'>
-              "Be the hero Gotham needs – report crime today!"</h2>
+              Be the hero Batman needs – report crime today!</h2>
             <button id='btnstyle' className="btnreport bg-transparent" onClick={() => setShowModal(true)}>
               <span>Report</span>
             </button>
