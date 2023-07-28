@@ -1,36 +1,43 @@
 .first{
    
-    background-image: url('../assests/main7.jpg');
+    background-image: url('../assests/batman.webp');
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 525px 0 400px;
 }
 .second{
-    background-image: url('../assests/mainimg3.jpg');
+    background-image: url('../assests/batman2.webp');
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 525px 0 400px;
 }
+
+@font-face {
+  font-family: 'Your-Batman-Font'; /* Replace 'Your-Batman-Font' with the actual font name */
+  src: url('D:/Batman_final/darkknight/src/Fonts/batmfa__.ttf') format('truetype'); /* Update the path to your font file */
+}
+.first h2 {
+  color: rgb(172, 37, 37);
+  font-family: 'Your-Batman-Font', cursive; /* Apply the custom Batman-style font */
+  font-size: 28px; /* Adjust the font size as needed */
+  text-align: center;
+  position: absolute;
+  bottom: 120px; /* Adjust the value to control the vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+}
 .second button{
     color:red ;
 }
 
-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  /* Styles to create padding for the container */
-  .container-fluid {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
-  }
+.second h2{
+  color: white;
+  font-size: 28px; 
+  font-family: 'Your-Batman-Font', cursive; /* Apply the custom Batman-style font */
+}
+
 
 
   
@@ -69,7 +76,8 @@ video {
     mask-size: auto;
     cursor: pointer;
     background-color: transparent;
-    transform: translateY(8px)
+    transform: translateY(8px);
+    font-family: 'Your-Batman-Font', cursive;
    }
    
    #btnstyle:after {
@@ -80,13 +88,15 @@ video {
     bottom: 0;
     box-shadow: 0px 0 0 0 white;
     transition: all 2s ease;
+    color: red;
+
    }
    
    #btnstyle:hover:after {
     box-shadow: 0px -13px 56px 12px #ffffffa6;
    }
    
-   /* button span {
+   button span {
     position: absolute;
     width: 100%;
     font-size: 15px;
@@ -96,16 +106,17 @@ video {
     letter-spacing: 3px;
     text-align: center;
     transform: translate(-50%,-50%);
-    color: black;
+    color: rgb(228, 10, 10);
     transition: all 2s ease;
    }
    
    button:hover span {
     color: white;
-   } */
+   } 
    
    #btnstyle:before {
     content: '';
+    color: #ff0000;
     position: absolute;
     width: 0;
     height: 100%;
@@ -119,5 +130,3 @@ video {
    #btnstyle:hover:before {
     width: 100%;
    }
-   
-   
