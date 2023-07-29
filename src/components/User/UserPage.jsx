@@ -23,11 +23,15 @@ const UserPage = () => {
         </div>
         <div className="container-fluid p-0">
           <div className="second text-center">
-            <h2 className="gfont text-center" id='textpg1'>
+            <div className='row container'>
+              <div className='col-lg-6'>
+            <h2 className="gfont text-center  " id='textpg1'>
               Be the hero Batman needs – report crime today!</h2>
-            <button id='btnstyle' className="btnreport bg-transparent" onClick={() => setShowModal(true)}>
+            <button id='btnstyle' className="btnreport bg-transparent " onClick={() => setShowModal(true)}>
               <span>Report</span>
             </button>
+            </div>
+            </div>
           </div>
         </div>
         <div>

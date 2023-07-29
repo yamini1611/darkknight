@@ -26,11 +26,7 @@ const images = [
     title: 'Investigate',
     width: '100%',
   },
-  {
-    url: '',
-    title: '',
-    width: '100%',
-  },
+
   {
     url: 'https://www.hdnicewallpapers.com/Walls/Big/Weapons/Weapons_Pistol_and_Knife_HD_Desktop_Photos.jpg',
     title: 'Inventory',
@@ -104,9 +100,9 @@ const ImageMarked = styled('span1')(({ theme }) => ({
 
 export default function DKCard() {
   return (
-    <div className='container'> 
+    <div className='container pb-5'> 
         
-         <Box sx={{ display: 'block', flexWrap: 'wrap', minWidth: 300, width: '100%'}}>
+         <Box className="pb-5" sx={{ display: 'block', flexWrap: 'wrap', minWidth: 300, width: '100%'}}>
       {images.map((image) => (
         <Link to={`/${image.title}`}>
         <ImageButton
@@ -151,8 +147,8 @@ export  function DkInvestigateCard(props) {
   const [modalShow, setModalShow] = useState(false);
 
   return (
-    <div className='container p-5 col-lg-4 dk-invest-card'>
- <MDBCard background='dark' className='text-white'>
+    <div className='container p-5 col-lg-4 dk-invest-card '>
+ <MDBCard background='dark' className='text-white '>
       <MDBCardImage overlay src={props.files} className='col-lg-3' alt='...' />
       <MDBCardOverlay>
         <MDBCardTitle className='mt-5 pt-5'>{props.crimeType} at {props.location}</MDBCardTitle>

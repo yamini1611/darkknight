@@ -18,13 +18,15 @@ fetchData();
 console.log(CrimeDetails)
     },[])
   return (
-    <div className='DarkKnight-background vh-100'>
-
+    <div className='DarkKnight-background '>
+<h1 className='display-3 text-white container-fluid'>Crime Reports</h1>
 {CrimeDetails.length>0&&(
     <div>
         {CrimeDetails.map((detail)=>(
             <>
-        <DkInvestigateCard files={detail.evidence} code={detail.code} time={detail.time} desc={detail.description} contact={detail.contact} crimeType={detail.crimeType} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location}  ></DkInvestigateCard>
+            <div >
+        <DkInvestigateCard  files={detail.evidence} code={detail.code} time={detail.dateTime} desc={detail.description} contact={detail.contact} crimeType={detail.crimeType} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location}  ></DkInvestigateCard>
+        </div>
         </>
         ))}
         </div>

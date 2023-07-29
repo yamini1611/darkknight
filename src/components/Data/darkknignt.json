@@ -46,15 +46,15 @@
       "id": 1
     },
     {
-      "code": "000000",
+      "code": "123456",
       "crimeType": "Kidnap",
-      "dateTime": "2023-07-12T00:18",
-      "location": "cbe",
-      "description": "hemanth",
-      "evidence": "me",
-      "vehicles": "bike",
-      "suspect": "darsan",
-      "contact": "42342",
+      "dateTime": "2023-07-06T20:16",
+      "location": "coimbatore",
+      "description": "Kidnapped a guy",
+      "evidence": "https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80ne",
+      "vehicles": "",
+      "suspect": "Local thugs",
+      "contact": "8300287044",
       "confidentiality": "public",
       "emergency": "",
       "id": 2
@@ -95,19 +95,19 @@
   "ShotGun": [
     {
       "id": 1,
-      "Name": "Franchi Sporting Purpose Automatic Shotgun 12",
+      "Name": "Franchi Sporting  Shotgun 12",
       "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
       "points": 110
     },
     {
       "id": 2,
       "Name": "Franchi SPAS-15",
-      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.6riYsq6RoT4BW8G2yI6YqAHaDs&pid=Api&P=0&h=180",
       "points": 120
     },
     {
       "id": 3,
-      "Name": "M26 Modular Accessory Shotgun System",
+      "Name": "M26 Modular  Shotgun System",
       "image": "https://media.gettyimages.com/id/157685863/photo/opening-a-410-shotgun-to-load.jpg?s=612x612&w=0&k=20&c=j3fUIUlk2ieBRLv3GPT6cZzqjpBPdGrPZq-3Woz4DTg=",
       "points": 140
     },
@@ -128,7 +128,7 @@
     {
       "id": 1,
       "Name": "A-M20",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/9mm_SMG_-_M20_9mm_NATO.jpg/220px-9mm_SMG_-_M20_9mm_NATO.jpg",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.jetUDEDdlqZWKmlUd0ssLwHaDJ&pid=Api&P=0&h=180",
       "points": 210
     },
     {
@@ -146,13 +146,13 @@
     {
       "id": 4,
       "Name": "AR-57",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/DD_AR_57_3.JPG/220px-DD_AR_57_3.JPG",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.ZUyb_EB5FsxTUux-9tjtXQHaDR&pid=Api&P=0&h=180",
       "points": 270
     },
     {
       "id": 5,
       "Name": "Colt 9mm SMG",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/AR_Colt_9mm_right.jpg/220px-AR_Colt_9mm_right.jpg",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
       "points": 290
     }
   ],
@@ -224,34 +224,93 @@
     {
       "id": 1,
       "Name": "Steyr Mannlicher M1894",
-      "Image": "https://tse1.mm.bing.net/th?id=OIP.NGz3NktP2VKxmob2M2EX6wHaDz&pid=Api&rs=1&c=1&qlt=95&w=201&h=103",
+      "Image": "https://tse3.mm.bing.net/th?id=OIP.jZPnYO_SwLYWQ9uifPkcqQHaEK&pid=Api&P=0&h=180",
       "points": 560
     },
     {
       "id": 2,
       "Name": "Colt Automatic Rifle",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Danish_LSV_M04.jpg/250px-Danish_LSV_M04.jpg",
+      "Image": "https://tse1.mm.bing.net/th?id=OIP.UCvsuEwK5sJILHrGxAG8ZQHaC8&pid=Api&P=0&h=180",
       "points": 510
     },
     {
       "id": 3,
       "Name": "EPK (Pyrkal) Machine gun",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/EPK_Machine_Gun.jpg/250px-EPK_Machine_Gun.jpg",
+      "Image": "https://tse4.mm.bing.net/th?id=OIP.OjUNQ6aqNxsCRWBun0WNFQHaFG&pid=Api&P=0&h=180",
       "points": 530
     },
     {
       "id": 4,
       "Name": "FN MAG",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/IDF-FN-MAG.png/250px-IDF-FN-MAG.png",
+      "Image": "https://media.gettyimages.com/id/166353037/photo/rock-river-arms-ar-15-rifle-equipped-with-combat-light.jpg?s=612x612&w=0&k=20&c=9X8g36iXeC9v-qWgj2o1BWTyET5dH2AE-Hg6g1Q9zDA=",
       "points": 590
     },
     {
       "id": 5,
       "Name": "Heckler & Koch HK21 HK25",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
+      "Image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
       "points": 620
     }
   ],
-  "Inventory": [],
-  "selectWeapons": []
+  "purchase": [
+    {
+      "id": "1690558326344-5184",
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "points": 20
+    },
+    {
+      "id": "1690558430230-4846",
+      "Name": "AK-74M",
+      "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
+      "points": 240
+    },
+    {
+      "id": "1690558477018-6733",
+      "Name": "AK-74M",
+      "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
+      "points": 240
+    },
+    {
+      "id": "1690558565145-4960",
+      "Name": "Heckler & Koch HK21 HK25",
+      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
+      "points": 620
+    },
+    {
+      "id": "1690558870168-2576",
+      "Name": "Remington 1903/A3",
+      "image": "https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
+      "points": 370
+    },
+    {
+      "id": "1690559016046-7339",
+      "Name": "AK-47",
+      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
+      "points": 280
+    },
+    {
+      "id": "1690560180498-9265",
+      "Name": "Brügger & Thomet APC",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/B%26T_APC_9_K_side_profile.jpg/220px-B%26T_APC_9_K_side_profile.jpg",
+      "points": 240
+    },
+    {
+      "id": "1690601883737-3383",
+      "Name": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "points": 30
+    },
+    {
+      "id": "1690602700010-8006",
+      "Name": "Ruger-57",
+      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
+      "points": 40
+    }
+  ],
+
+"Inventory":[
+
+],
+  "selectWeapons":[]
 }
