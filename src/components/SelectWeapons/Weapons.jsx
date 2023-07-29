@@ -4,9 +4,10 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Container } from '@mui/material';
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import { ToastContainer, toast } from 'react-toastify';
 import Badge from '@mui/material/Badge';
+import MyVideoComponent from '../Modal/DarkKnightMovie';
+import DarkKnightMovie from '../Modal/DarkKnightMovie';
 
 const Weapons = () => {
 const [pistols,setPistols] =useState('');
@@ -18,10 +19,19 @@ const [specialWeapons,setspecialWeapons] =useState('');
 
 const [select,setSelect] = useState(false);
 const [chooseWeapons,setChooseWeapons] = useState('');
+
 const selectHandler=()=>{
   if(!select){
     setSelect(true)
   }else setSelect(false)
+}
+const [fullscreen, setFullscreen] = useState(true);
+const [show, setShow] = useState(false);
+
+
+function handleShow(breakpoint) {
+  setFullscreen(breakpoint);
+  setShow(true);
 }
   const weaponsData=()=>{
     axios.get("http://localhost:4000/Pistol")
@@ -89,7 +99,7 @@ const selectHandler=()=>{
     
   },[])
   return (
-    <div className='background-color vh-100'>
+    <div className='background-color pb-5 '>
         <h1 className='p-4 quick-sand text-white '>Select Weapons</h1>
 
         <Badge badgeContent={chooseWeapons.length} className='float-end me-3' color="primary">
@@ -205,16 +215,14 @@ const selectHandler=()=>{
     </div>
     
     ))}
-    <MDBBtn style={{ backgroundColor: 'red' }} className='float-end m-5 col-lg-6 p-3  mx-auto' href='#'>
-      <MDBIcon className='me-2' fab icon='' /> Enter  <i class="fa-solid fa-bolt-lightning"></i>
-    </MDBBtn>
+
     </div>
     
     </Container>
    
     </div>
 )}
-
+<DarkKnightMovie className="background-color" show={show} fullscreen={fullscreen} onHide={() => setShow(false)} />
 <ToastContainer />
     </div>
   )
