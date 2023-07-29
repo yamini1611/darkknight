@@ -5,7 +5,7 @@ import '../styles/Inventory.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Inventory = () => {
   const [pistol, setPistol] = useState([]);
@@ -49,6 +49,7 @@ const Inventory = () => {
 
   return (
     <div id='inventorybg'>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> BatArmoryCentral</h3>
       <h3 id='weapons'>Pistols</h3>
       <CardGroup id='CardGroup'>
         {pistol.map((pistols) => (
@@ -149,17 +150,17 @@ export const Pistoldisplay = () => {
   }
   const generateRandomId = () => {
     const timestamp = new Date().getTime();
-    const randomNum = Math.floor(Math.random() * 10000); 
+    const randomNum = Math.floor(Math.random() * 10000);
     return `${timestamp}-${randomNum}`;
   };
-  
+
   const handlePurchase = async () => {
     try {
       const weaponWithId = { ...weapon, id: generateRandomId() };
-      
+
       await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!',{
-        position:'top-center'
+      toast.success('Weapon purchased successfully!', {
+        position: 'top-center'
       });
     } catch (error) {
       console.error('Error purchasing weapon:', error);
@@ -167,28 +168,13 @@ export const Pistoldisplay = () => {
   };
   return (
     <div id='pk'>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={500} width={600} id='imgpro' />
-      <p id='points'>Points: {weapon.points}</p>
-      <button id='button' onClick={handlePurchase} data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+      <p id='points'>NightStrike Tokens :{weapon.points}</p>
+      <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Purhase </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <button></button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+        
 
       </button>    </div>
   );
@@ -215,17 +201,17 @@ export const Shotgun = () => {
   }, [id]);
   const generateRandomId = () => {
     const timestamp = new Date().getTime();
-    const randomNum = Math.floor(Math.random() * 10000); 
+    const randomNum = Math.floor(Math.random() * 10000);
     return `${timestamp}-${randomNum}`;
   };
-  
+
   const handlePurchase = async () => {
     try {
       const weaponWithId = { ...weapon, id: generateRandomId() };
-      
+
       await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!',{
-        position:'top-center'
+      toast.success('Weapon purchased successfully!', {
+        position: 'top-center'
       });
     } catch (error) {
       console.error('Error purchasing weapon:', error);
@@ -241,12 +227,13 @@ export const Shotgun = () => {
 
   return (
     <div id='pk'>
-    <h3 id='pname'>{weapon.Name}</h3>
-    <img src={weapon.image} alt={weapon.Name} height={500} width={600} id='imgpro' />
-    <p id='points'>Points: {weapon.points}</p>
-    <button id='button' onClick={handlePurchase}>
-      <span id='span'>PURCHASE NOW</span>
-    </button>    </div>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+      <h3 id='pname'>{weapon.Name}</h3>
+      <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+      <p id='points'>NightStrike Tokens: {weapon.points}</p>
+      <button id='button' onClick={handlePurchase}>
+        <span id='span'>PURCHASE NOW</span>
+      </button>    </div>
   );
 };
 export const SMGdisplay = () => {
@@ -270,17 +257,17 @@ export const SMGdisplay = () => {
   }, [id]);
   const generateRandomId = () => {
     const timestamp = new Date().getTime();
-    const randomNum = Math.floor(Math.random() * 10000); 
+    const randomNum = Math.floor(Math.random() * 10000);
     return `${timestamp}-${randomNum}`;
   };
-  
+
   const handlePurchase = async () => {
     try {
       const weaponWithId = { ...weapon, id: generateRandomId() };
-      
+
       await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!',{
-        position:'top-center'
+      toast.success('Weapon purchased successfully!', {
+        position: 'top-center'
       });
     } catch (error) {
       console.error('Error purchasing weapon:', error);
@@ -296,9 +283,10 @@ export const SMGdisplay = () => {
 
   return (
     <div id='pk'>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={500} width={600} id='imgpro' />
-      <p id='points'>Points: {weapon.points}</p>
+      <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+      <p id='points'>NightStrike Tokens:{weapon.points}</p>
       <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>
       </button>    </div>
@@ -326,23 +314,23 @@ export const AssaultRifle = () => {
   }, [id]);
   const generateRandomId = () => {
     const timestamp = new Date().getTime();
-    const randomNum = Math.floor(Math.random() * 10000); 
+    const randomNum = Math.floor(Math.random() * 10000);
     return `${timestamp}-${randomNum}`;
   };
-  
+
   const handlePurchase = async () => {
     try {
       const weaponWithId = { ...weapon, id: generateRandomId() };
-      
+
       await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!',{
-        position:'top-center'
+      toast.success('Weapon purchased successfully!', {
+        position: 'top-center'
       });
     } catch (error) {
       console.error('Error purchasing weapon:', error);
     }
   };
-  
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -350,15 +338,16 @@ export const AssaultRifle = () => {
   if (!weapon) {
     return <div>Weapon not found</div>;
   }
- 
+
   return (
     <div id='pk'>
-    <h3 id='pname'>{weapon.Name}</h3>
-    <img src={weapon.image} alt={weapon.Name} height={500} width={600} id='imgpro' />
-    <p id='points'>Points: {weapon.points}</p>
-    <button id='button' onClick={handlePurchase}>
-      <span id='span'>PURCHASE NOW</span>
-    </button>    </div>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+      <h3 id='pname'>{weapon.Name}</h3>
+      <img src={weapon.image} alt={weapon.Name} height={500} width={600} id='imgpro' />
+      <p id='points'>NightStrike Tokens:{weapon.points}</p>
+      <button id='button' onClick={handlePurchase}>
+        <span id='span'>PURCHASE NOW</span>
+      </button>    </div>
   );
 };
 
@@ -383,17 +372,17 @@ export const Rifle = () => {
   }, [id]);
   const generateRandomId = () => {
     const timestamp = new Date().getTime();
-    const randomNum = Math.floor(Math.random() * 10000); 
+    const randomNum = Math.floor(Math.random() * 10000);
     return `${timestamp}-${randomNum}`;
   };
-  
+
   const handlePurchase = async () => {
     try {
       const weaponWithId = { ...weapon, id: generateRandomId() };
-      
+
       await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!',{
-        position:'top-center'
+      toast.success('Weapon purchased successfully!', {
+        position: 'top-center'
       });
     } catch (error) {
       console.error('Error purchasing weapon:', error);
@@ -409,9 +398,10 @@ export const Rifle = () => {
 
   return (
     <div id='pk'>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={500} width={600} id='imgpro' />
-      <p id='points'>Points: {weapon.points}</p>
+      <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+      <p id='points'>NightStrike Tokens:{weapon.points}</p>
       <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>
       </button>    </div>
@@ -439,17 +429,17 @@ export const Special = () => {
   }, [id]);
   const generateRandomId = () => {
     const timestamp = new Date().getTime();
-    const randomNum = Math.floor(Math.random() * 10000); 
+    const randomNum = Math.floor(Math.random() * 10000);
     return `${timestamp}-${randomNum}`;
   };
-  
+
   const handlePurchase = async () => {
     try {
       const weaponWithId = { ...weapon, id: generateRandomId() };
-      
+
       await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!',{
-        position:'top-center'
+      toast.success('Weapon purchased successfully!', {
+        position: 'top-center'
       });
     } catch (error) {
       console.error('Error purchasing weapon:', error);
@@ -465,12 +455,13 @@ export const Special = () => {
 
   return (
     <div id='pk'>
-    <h3 id='pname'>{weapon.Name}</h3>
-    <img src={weapon.Image} alt={weapon.Name} height={500} width={600} id='imgpro' />
-    <p id='points'>Points: {weapon.points}</p>
-    <button id='button' onClick={handlePurchase}>
-      <span id='span'>PURCHASE NOW</span>
-    </button>    </div>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+      <h3 id='pname'>{weapon.Name}</h3>
+      <img src={weapon.Image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+      <p id='points'>NightStrike Tokens :{weapon.points}</p>
+      <button id='button' onClick={handlePurchase}>
+        <span id='span'>PURCHASE NOW</span>
+      </button>    </div>
   );
 };
 

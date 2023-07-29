@@ -294,6 +294,48 @@
       "Name": "Ruger-57",
       "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
       "points": 40
+    },
+    {
+      "id": "1690603041699-5388",
+      "Name": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "points": 210
+    },
+    {
+      "id": "1690603069196-8817",
+      "Name": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "points": 210
+    },
+    {
+      "id": "1690603074956-351",
+      "Name": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "points": 210
+    },
+    {
+      "id": "1690603232559-6726",
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "points": 20
+    },
+    {
+      "id": "1690603393121-5017",
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "points": 20
+    },
+    {
+      "id": "1690606052360-9842",
+      "Name": "Mossberg 590",
+      "image": "https://media.gettyimages.com/id/57658702/photo/an-old-fashioned-rifle.jpg?s=612x612&w=0&k=20&c=MDFW3HAmv9KuMz3uKcHnaKf2XDpi3YDfL4gAnvXvS9s=",
+      "points": 100
+    },
+    {
+      "id": "1690606073424-3881",
+      "Name": "Mossberg 590",
+      "image": "https://media.gettyimages.com/id/57658702/photo/an-old-fashioned-rifle.jpg?s=612x612&w=0&k=20&c=MDFW3HAmv9KuMz3uKcHnaKf2XDpi3YDfL4gAnvXvS9s=",
+      "points": 100
     }
   ],
   "selectWeapons": [
@@ -311,21 +353,6 @@
       "weaponName": "Horhe (pistol)",
       "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
       "id": 3
-    },
-    {
-      "weaponName": "Franchi SPAS-15",
-      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-      "id": 4
-    },
-    {
-      "weaponName": "AutoMag (pistol)",
-      "image": "https://images.unsplash.com/photo-1595590424283-b8f17842773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGlzdG9sfGVufDB8fDB8fHww&w=1000&q=80",
-      "id": 5
-    },
-    {
-      "weaponName": "Remington R5 RGP",
-      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-      "id": 6
     }
   ]
 }
