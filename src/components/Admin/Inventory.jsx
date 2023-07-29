@@ -49,20 +49,20 @@ const Inventory = () => {
 
   return (
     <div id='inventorybg'>
-      <h3 id='weapons'>Pistols</h3>
+      <h1 className='quick-sand text-white p-2'>Pistols</h1>
       <CardGroup id='CardGroup'>
         {pistol.map((pistols) => (
           <Card className='card' id='card' key={pistols.id}>
             <Link to={`/pistoldisplay/${pistols.id}`} key={pistols.id}>
               <Card.Img src={pistols.image} alt='' height={200} width={200} id='pistolimg' className='card-img-spin' />
             </Link>
-            <h4 id='name'> {pistols.Name}</h4>
+            <h4 className='quick-sand  p-2'> {pistols.Name}</h4>
           </Card>
         ))}
       </CardGroup>
 
       <br></br><br></br>
-      <h3 id='weapons'>ShotGun</h3>
+      <h1 className='quick-sand text-white p-2'>ShotGun</h1>
       <CardGroup id='CardGroup'>
         {shotgun.map((shotgun) => (
 
@@ -73,7 +73,7 @@ const Inventory = () => {
         ))}
       </CardGroup>
       <br></br><br></br>
-      <h3 id='weapons'>SMG</h3>
+      <h1 className='quick-sand text-white p-2'>SMG</h1>
       <CardGroup id='CardGroup'>
         {SMG.map((SMG) => (
 
@@ -84,7 +84,7 @@ const Inventory = () => {
         ))}
       </CardGroup>
       <br></br><br></br>
-      <h3 id='weapons'>Assault Rifle</h3>
+      <h1 className='quick-sand text-white p-2'>Assault Rifle</h1>
       <CardGroup id='CardGroup'>
         {Assaultrifle.map((Assault) => (
           <Card key={Assault.id} className='card' id='card'>
@@ -94,7 +94,7 @@ const Inventory = () => {
         ))}
       </CardGroup>
       <br></br><br></br>
-      <h3 id='weapons'>Rifle</h3>
+      <h1 className='quick-sand text-white p-2'>Rifle</h1>
       <CardGroup id='CardGroup'>
         {Rifle.map((Rifle) => (
           <Card key={Rifle.id} className='card' id='card'>
@@ -104,7 +104,7 @@ const Inventory = () => {
         ))}
       </CardGroup>
       <br></br><br></br>
-      <h3 id='weapons'>Special Weapons</h3>
+      <h1 className='quick-sand text-white p-2'>Special Weapons</h1>
       <CardGroup id='CardGroup'>
         {special.map((specials) => (
           <Card key={specials.id} className='card' id='card'>

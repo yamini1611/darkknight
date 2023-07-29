@@ -3,7 +3,9 @@
   background-size: cover;
   padding: 35px;
 }
-
+.quick-sand{
+  font-family: 'Quicksand', sans-serif;
+}
 #weapons {
   font-family: ref;
   color: brown;

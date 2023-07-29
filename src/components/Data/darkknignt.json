@@ -212,31 +212,31 @@
     {
       "id": 1,
       "Name": "Steyr Mannlicher M1894",
-      "Image": "https://tse3.mm.bing.net/th?id=OIP.jZPnYO_SwLYWQ9uifPkcqQHaEK&pid=Api&P=0&h=180",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.jZPnYO_SwLYWQ9uifPkcqQHaEK&pid=Api&P=0&h=180",
       "points": 560
     },
     {
       "id": 2,
       "Name": "Colt Automatic Rifle",
-      "Image": "https://tse1.mm.bing.net/th?id=OIP.UCvsuEwK5sJILHrGxAG8ZQHaC8&pid=Api&P=0&h=180",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.UCvsuEwK5sJILHrGxAG8ZQHaC8&pid=Api&P=0&h=180",
       "points": 510
     },
     {
       "id": 3,
       "Name": "EPK (Pyrkal) Machine gun",
-      "Image": "https://tse4.mm.bing.net/th?id=OIP.OjUNQ6aqNxsCRWBun0WNFQHaFG&pid=Api&P=0&h=180",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.OjUNQ6aqNxsCRWBun0WNFQHaFG&pid=Api&P=0&h=180",
       "points": 530
     },
     {
       "id": 4,
       "Name": "FN MAG",
-      "Image": "https://media.gettyimages.com/id/166353037/photo/rock-river-arms-ar-15-rifle-equipped-with-combat-light.jpg?s=612x612&w=0&k=20&c=9X8g36iXeC9v-qWgj2o1BWTyET5dH2AE-Hg6g1Q9zDA=",
+      "image": "https://media.gettyimages.com/id/166353037/photo/rock-river-arms-ar-15-rifle-equipped-with-combat-light.jpg?s=612x612&w=0&k=20&c=9X8g36iXeC9v-qWgj2o1BWTyET5dH2AE-Hg6g1Q9zDA=",
       "points": 590
     },
     {
       "id": 5,
       "Name": "Heckler & Koch HK21 HK25",
-      "Image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
       "points": 620
     }
   ],
@@ -262,7 +262,7 @@
     {
       "id": "1690558565145-4960",
       "Name": "Heckler & Koch HK21 HK25",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
       "points": 620
     },
     {
