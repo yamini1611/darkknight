@@ -4,6 +4,9 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Container } from '@mui/material';
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
+import { ToastContainer, toast } from 'react-toastify';
+import Badge from '@mui/material/Badge';
 
 const Weapons = () => {
 const [pistols,setPistols] =useState('');
@@ -14,7 +17,7 @@ const [rifle,setRifle] =useState('');
 const [specialWeapons,setspecialWeapons] =useState('');
 
 const [select,setSelect] = useState(false);
-
+const [chooseWeapons,setChooseWeapons] = useState('');
 const selectHandler=()=>{
   if(!select){
     setSelect(true)
@@ -47,6 +50,38 @@ const selectHandler=()=>{
     })
   }
 
+  const selectWeapons=(weap)=>{
+    console.log(weap.name)
+    axios.get("http://localhost:4000/selectWeapons")
+    .then((response)=>{
+      setChooseWeapons(response.data)
+      console.log(response.data)
+    })
+    axios.post("http://localhost:4000/selectWeapons",{
+      weaponName:weap.Name,
+      image:weap.image
+    })
+    .then(()=>{
+      toast.success('Weapon selected!', {
+        position: 'top-center',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        className: 'error-success',
+    })
+    
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+  }
+
+  const handleWeapons=(e)=>{
+    selectWeapons(e);
+  }
   
 
   useEffect(()=>{
@@ -56,8 +91,9 @@ const selectHandler=()=>{
   return (
     <div className='background-color vh-100'>
         <h1 className='p-4 quick-sand text-white '>Select Weapons</h1>
-        
-{pistols.length>0 &&(
+
+        <Badge badgeContent={chooseWeapons.length} className='float-end me-3' color="primary">
+        <i class="fa-solid fa-gun text-white "></i>    </Badge>{pistols.length>0 &&(
   <div className='background-color text-white quick-sand'>
   <Container>
   <div className='row  background-color'>
@@ -69,9 +105,9 @@ const selectHandler=()=>{
       <Card.Body>
         <Card.Title>{pistol.Name}</Card.Title>
         <Card.Text>
-          Points:{pistol.points}
+          Damage level: <span className='text-success'><b>Low</b></span>
         </Card.Text>
-        <Button className='bg-black'>Add</Button>
+        <Button className='bg-black' onClick={()=>handleWeapons(pistol)} >Add</Button>
 
       </Card.Body>
     </Card>
@@ -89,9 +125,9 @@ const selectHandler=()=>{
       <Card.Body>
         <Card.Title>{shot.Name}</Card.Title>
         <Card.Text>
-          Points:{shot.points}
+        Damage level: <b className='text-warning'>High</b>
         </Card.Text>
-        <Button variant="primary">Select</Button>
+        <Button className='bg-black' onClick={()=>handleWeapons(shot)} >Add</Button>
       </Card.Body>
     </Card>
     </div>
@@ -107,9 +143,9 @@ const selectHandler=()=>{
       <Card.Body>
         <Card.Title>{Submg.Name}</Card.Title>
         <Card.Text>
-          Points:{Submg.points}
+        Damage level: <b className='text-secondary'> Medium</b>
         </Card.Text>
-        <Button variant="primary">Select</Button>
+        <Button className='bg-black' onClick={()=>handleWeapons(Submg)} >Add</Button>
       </Card.Body>
     </Card>
     </div>
@@ -125,9 +161,9 @@ const selectHandler=()=>{
       <Card.Body>
         <Card.Title>{assault.Name}</Card.Title>
         <Card.Text>
-          Points:{assault.points}
+        Damage level:  <b className='text-warning'>High</b>
         </Card.Text>
-        <Button variant="primary">Select</Button>
+        <Button className='bg-black' onClick={()=>handleWeapons(assault)} >Add</Button>
       </Card.Body>
     </Card>
     </div>
@@ -143,9 +179,9 @@ const selectHandler=()=>{
       <Card.Body>
         <Card.Title>{rif.Name}</Card.Title>
         <Card.Text>
-          Points:{rif.points}
+        Damage level:  <b className='text-danger'>Extremely high</b>
         </Card.Text>
-        <Button variant="primary">Select</Button>
+        <Button className='bg-black' onClick={()=>handleWeapons(rif)} >Add</Button>
       </Card.Body>
     </Card>
     </div>
@@ -161,18 +197,25 @@ const selectHandler=()=>{
       <Card.Body>
         <Card.Title>{spl.Name}</Card.Title>
         <Card.Text>
-          Points:{spl.points}
+        Damage level:  <b className='text-danger'>Deadly <i class="fa-solid fa-skull"></i></b>
         </Card.Text>
-        <Button variant="primary">Select</Button>
+        <Button className='bg-black' onClick={()=>handleWeapons(spl)} >Add</Button>
       </Card.Body>
     </Card>
     </div>
     
     ))}
+    <MDBBtn style={{ backgroundColor: 'red' }} className='float-end m-5 col-lg-6 p-3  mx-auto' href='#'>
+      <MDBIcon className='me-2' fab icon='' /> Enter  <i class="fa-solid fa-bolt-lightning"></i>
+    </MDBBtn>
     </div>
+    
     </Container>
+   
     </div>
 )}
+
+<ToastContainer />
     </div>
   )
 }

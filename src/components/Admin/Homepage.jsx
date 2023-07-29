@@ -32,7 +32,7 @@ useEffect(()=>{
 
 
   return (
-    <div className=' vh-100 batfont container-fluid'>
+    <div className='  batfont container-fluid'>
 <h1 className='display-3 p-3 text-white'>Entering into the shadows</h1>
 
 

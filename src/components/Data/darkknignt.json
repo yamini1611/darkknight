@@ -32,9 +32,22 @@
       "contact": "9784536102",
       "confidentiality": "public",
       "id": 1
+    },
+    {
+      "code": "123456",
+      "crimeType": "Kidnap",
+      "dateTime": "2023-07-06T20:16",
+      "location": "coimbatore",
+      "description": "Kidnapped a guy",
+      "evidence": "https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80ne",
+      "vehicles": "",
+      "suspect": "Local thugs",
+      "contact": "8300287044",
+      "confidentiality": "public",
+      "emergency": "",
+      "id": 2
     }
   ],
-  "CrimeDetails": [],
   "Pistol": [
     {
       "id": 1,
@@ -131,7 +144,6 @@
       "points": 290
     }
   ],
- 
   "Assault-Rifle": [
     {
       "id": 1,
@@ -199,38 +211,66 @@
   "Special": [
     {
       "id": 1,
-      "Name": "Steyr Mannlicher M1894",
-      "Image": "https://tse1.mm.bing.net/th?id=OIP.NGz3NktP2VKxmob2M2EX6wHaDz&pid=Api&rs=1&c=1&qlt=95&w=201&h=103",
+      "Name": "FlameThrower",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/001/525/203/large/patricio-garnica-camera1b.jpg?1447966537",
       "points": 560
     },
     {
       "id": 2,
-      "Name": "Colt Automatic Rifle",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Danish_LSV_M04.jpg/250px-Danish_LSV_M04.jpg",
+      "Name": "Grenade launcher",
+      "image": "data:image/jpeg;base64,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",
       "points": 510
     },
     {
       "id": 3,
-      "Name": "EPK (Pyrkal) Machine gun",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/EPK_Machine_Gun.jpg/250px-EPK_Machine_Gun.jpg",
+      "Name": "Minigun M-134",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DinSKqthfAeLxAGFoZgRp7JMEfU__sp8TBA2gPUJdvr_vUVAw9eABfDe-QLB5C4F0Iw&usqp=CAU",
       "points": 530
     },
     {
       "id": 4,
-      "Name": "FN MAG",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/IDF-FN-MAG.png/250px-IDF-FN-MAG.png",
+      "Name": "Laser Rocket Launcher",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlu-cfWuoZUZCdvooGgtu1yXaApYn5fuq7rA&usqp=CAU",
       "points": 590
     },
     {
       "id": 5,
-      "Name": "Heckler & Koch HK21 HK25",
-      "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
+      "Name": "Tank",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwli6Ni54iBsNhJGfOonpjJJ2cxVsoqfbUA&usqp=CAU",
       "points": 620
     }
   ],
-
-"Inventory":[
-
-],
-  "selectWeapons":[]
+  "Inventory": [],
+  "selectWeapons": [
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
+      "id": 1
+    },
+    {
+      "weaponName": "Franchi SPAS-15",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "id": 2
+    },
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
+      "id": 3
+    },
+    {
+      "weaponName": "Franchi SPAS-15",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "id": 4
+    },
+    {
+      "weaponName": "AutoMag (pistol)",
+      "image": "https://images.unsplash.com/photo-1595590424283-b8f17842773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGlzdG9sfGVufDB8fDB8fHww&w=1000&q=80",
+      "id": 5
+    },
+    {
+      "weaponName": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "id": 6
+    }
+  ]
 }
