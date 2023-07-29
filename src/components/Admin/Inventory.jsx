@@ -49,7 +49,7 @@ const Inventory = () => {
 
   return (
     <div id='inventorybg'>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> BatArmoryCentral</h3>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Weaponary</h3>
       <h3 id='weapons'>Pistols</h3>
       <CardGroup id='CardGroup'>
         {pistol.map((pistols) => (
