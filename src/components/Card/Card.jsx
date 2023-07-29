@@ -147,8 +147,8 @@ export  function DkInvestigateCard(props) {
   const [modalShow, setModalShow] = useState(false);
 
   return (
-    <div className='container p-5 col-lg-4 dk-invest-card'>
- <MDBCard background='dark' className='text-white'>
+    <div className='container p-5 col-lg-4 dk-invest-card '>
+ <MDBCard background='dark' className='text-white '>
       <MDBCardImage overlay src={props.files} className='col-lg-3' alt='...' />
       <MDBCardOverlay>
         <MDBCardTitle className='mt-5 pt-5'>{props.crimeType} at {props.location}</MDBCardTitle>
