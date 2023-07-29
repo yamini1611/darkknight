@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Badge from '@mui/material/Badge';
 import MyVideoComponent from '../Modal/DarkKnightMovie';
 import DarkKnightMovie from '../Modal/DarkKnightMovie';
-
+import { Link } from 'react-router-dom';
 const Weapons = () => {
 const [pistols,setPistols] =useState('');
 const [shotGun,setShotGun] =useState('');
@@ -100,6 +100,8 @@ function handleShow(breakpoint) {
   },[])
   return (
     <div className='background-color pb-5 '>
+ <Link to='/investigate'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
+
         <h1 className='p-4 quick-sand text-white '>Select Weapons</h1>
 
         <Badge badgeContent={chooseWeapons.length} className='float-end me-3' color="primary">
@@ -126,7 +128,9 @@ function handleShow(breakpoint) {
     
     ))}
     </div>
-    <div className='row  background-color'>
+      {shotGun.length>0 &&(
+            <div className='row  background-color'>
+
     <h1 className='m-3'>Shotguns</h1>
     {shotGun.map((shot)=>(
       <div className='col-lg-4 mt-2'>
@@ -143,7 +147,11 @@ function handleShow(breakpoint) {
     </div>
     
     ))}
-    </div>
+        </div>
+
+    )}
+          {SMG.length>0 &&(
+
     <div className='row  background-color'>
     <h1 className='m-3'>SMGs</h1>
     {SMG.map((Submg)=>(
@@ -162,6 +170,9 @@ function handleShow(breakpoint) {
     
     ))}
     </div>
+        )}
+      {assaultRifle.length>0 &&(
+
     <div className='row  background-color'>
     <h1 className='m-3'>Assault Rifle</h1>
     {assaultRifle.map((assault)=>(
@@ -180,6 +191,10 @@ function handleShow(breakpoint) {
     
     ))}
     </div>
+        )}
+
+{rifle.length>0 &&(
+
     <div className='row  background-color'>
     <h1 className='m-3'>Rifles</h1>
     {rifle.map((rif)=>(
@@ -198,6 +213,8 @@ function handleShow(breakpoint) {
     
     ))}
     </div>
+        )}
+      {specialWeapons.length>0 &&(
     <div className='row  background-color'>
     <h1 className='m-3'>Special Weapons</h1>
     {specialWeapons.map((spl)=>(
@@ -217,7 +234,8 @@ function handleShow(breakpoint) {
     ))}
 
     </div>
-    
+        )}
+
     </Container>
    
     </div>

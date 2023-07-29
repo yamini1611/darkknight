@@ -2,41 +2,71 @@ import React, { useEffect, useState } from 'react'
 import DKCard, { DkInvestigateCard } from '../Card/Card';
 import '../../components/styles/Investigation.css';
 import axios from 'axios';
-
-
+import { Link } from 'react-router-dom';
 const Investigation = () => {
-const [CrimeDetails,setCrimeDetails] = useState("")
-    const fetchData=()=>{
+    const [CrimeDetails, setCrimeDetails] = useState([]);
+    const [points, setPoints] = useState(0);
+
+    const fetchData = () => {
         axios.get("http://localhost:4000/CrimeDetails")
-        .then((res)=>{
-setCrimeDetails(res.data)
-        })
+            .then((res) => {
+                setCrimeDetails(res.data)
+            })
+            .catch((error) => {
+                console.error('Error fetching crime details:', error);
+            });
     }
 
-    useEffect(()=>{
-fetchData();
-console.log(CrimeDetails)
-    },[])
-  return (
-    <div className='DarkKnight-background '>
-<h1 className='display-3 text-white container-fluid'>Crime Reports</h1>
-{CrimeDetails.length>0&&(
-    <div>
-        {CrimeDetails.map((detail)=>(
-            <>
-            <div >
-        <DkInvestigateCard  files={detail.evidence} code={detail.code} time={detail.dateTime} desc={detail.description} contact={detail.contact} crimeType={detail.crimeType} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location}  ></DkInvestigateCard>
-        </div>
-        </>
-        ))}
-        </div>
-        )}
-        {CrimeDetails.length===0&&(
+    const fetchpoints = async  () => {
+      try{
+        const response = await axios.get('http://localhost:4000/points');
+        const pointsdata = response.data;
+        setPoints(pointsdata);
+      }
+      catch(error){
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    useEffect(() => {
+       fetchData();
+        fetchpoints();
+    }, [])
+
+    return (
+        <div className='DarkKnight-background'>
+                  <Link to='/adminpage'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
+
+            <h1 className='display-3 text-white container-fluid'>Crime Reports</h1>
+            {points.length>0 &&(
             <div>
-                <h1 className='display-4 text-center text-white '>There are no crime reports yet!</h1></div>
-        )}
+            {points.map((pistols) => (
+    <div>
+    
+          <div key={pistols.id}>   
+            <h4 className='quick-sand  p-2' id='point'>BatCoins :{pistols.points}</h4>
+          </div>
+      
+    </div>  ))}
+
     </div>
-  )
+)}
+            {CrimeDetails.length > 0 && (
+                <div>
+                    {CrimeDetails.map((detail) => (
+                        <div key={detail.id}>
+                            <DkInvestigateCard files={detail.evidence} code={detail.code} time={detail.dateTime} desc={detail.description} contact={detail.contact} crimeType={detail.crimeType} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location} />
+                        </div>
+                    ))}
+                </div>
+            )}
+            {CrimeDetails.length === 0 && (
+                <div>
+                    <h1 className='display-4 text-center text-white '>There are no crime reports yet!</h1>
+                </div>
+            )}
+        </div>
+    )
 }
 
-export default Investigation
+export default Investigation;

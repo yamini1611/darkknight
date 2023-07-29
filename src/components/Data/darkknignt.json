@@ -254,58 +254,57 @@
   ],
   "purchase": [
     {
-      "id": "1690558326344-5184",
-      "Name": "AutoMag (pistol)",
-      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
-      "points": 20
+      "id": "1690613043839-452",
+      "Name": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "points": 50
+    }
+  ],
+  "selectWeapons": [
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
+      "id": 1
     },
     {
-      "id": "1690558430230-4846",
-      "Name": "AK-74M",
-      "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
-      "points": 240
+      "weaponName": "Franchi SPAS-15",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "id": 2
     },
     {
-      "id": "1690558477018-6733",
-      "Name": "AK-74M",
-      "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
-      "points": 240
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
+      "id": 3
     },
     {
-      "id": "1690558565145-4960",
-      "Name": "Heckler & Koch HK21 HK25",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/HK_21_LMG_RIGHT_SIDE.jpg/250px-HK_21_LMG_RIGHT_SIDE.jpg",
-      "points": 620
+      "weaponName": "Colt 9mm SMG",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
+      "id": 4
     },
     {
-      "id": "1690558870168-2576",
-      "Name": "Remington 1903/A3",
-      "image": "https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
-      "points": 370
-    },
-    {
-      "id": "1690559016046-7339",
-      "Name": "AK-47",
-      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
-      "points": 280
-    },
-    {
-      "id": "1690560180498-9265",
-      "Name": "Brügger & Thomet APC",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/B%26T_APC_9_K_side_profile.jpg/220px-B%26T_APC_9_K_side_profile.jpg",
-      "points": 240
-    },
-    {
-      "id": "1690601883737-3383",
-      "Name": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "points": 30
-    },
-    {
-      "id": "1690602700010-8006",
-      "Name": "Ruger-57",
+      "weaponName": "Ruger-57",
       "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
-      "points": 40
+      "id": 5
+    },
+    {
+      "weaponName": "Colt 9mm SMG",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
+      "id": 6
+    },
+    {
+      "weaponName": "Heckler & Koch HK21 HK25",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
+      "id": 7
+    },
+    {
+      "weaponName": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "id": 8
+    },
+    {
+      "weaponName": "FAMAE SAF",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
+      "id": 9
     },
     {
       "id": "1690607837741-5973",
@@ -314,6 +313,9 @@
       "points": 210
     }
   ],
-  "Inventory": [],
-  "selectWeapons": []
+
+"Inventory":[
+
+],
+  "selectWeapons":[]
 }

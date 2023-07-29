@@ -7,3 +7,10 @@
 .quick-sand{
     font-family: 'Quicksand', sans-serif;
 }
+
+#point{
+    margin-left: 1100px;
+    margin-top: -50px;
+    font-size: 32px;
+    color: aliceblue;
+}
