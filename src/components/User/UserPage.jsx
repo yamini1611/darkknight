@@ -15,7 +15,10 @@ const UserPage = () => {
           <div className="first">
             <h1>The Batman's EndGame!</h1>
             <h2 className="gfont text-center" id='textpg1'>Crime can't hide from the watchful eyes of Batman – Report and reveal!</h2>
-            <Link to="/Register"><button  className="become-batman-btn">Join</button></Link>
+            <div className="explore-container">
+              <button id='Explorebtn'>Explore</button>
+            </div>
+            <Link to="/Register"><button className="become-batman-btn">Join</button></Link>
           </div>
         </div>
         <div className="container-fluid p-0">

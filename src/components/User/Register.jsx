@@ -62,15 +62,9 @@ const Register = () => {
 
       if (emailExists) {
         alert("Email already exists!");
-      }
-      else if (codeExists) {
-        alert("Plese choose Another code");
-      }
-      else if (codeExists && emailExists) {
-        alert("Credentials Not Valid!Please try Again");
-      }
-
-      else {
+      } else if (codeExists) {
+        alert("Please choose another code");
+      } else {
         // Proceed with registration if there are no errors
 
         const newUser = {
@@ -80,7 +74,7 @@ const Register = () => {
           code,
         };
 
-        fetch("http://localhost:3500/Register", {
+        fetch("http://localhost:4000/Register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -105,15 +99,17 @@ const Register = () => {
     }
   };
 
+
   return (
-    <div className='regmain'>
-      <div className=' batfont'>
+    <div className='register-container'>
+      <div className='form-container'>
         <h2>Register</h2>
         <form onSubmit={handleRegister}>
           <div>
-
+            <label htmlFor="name">Name</label>
             <input
               type="text"
+              id="name"
               placeholder='Enter your Name'
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -121,9 +117,10 @@ const Register = () => {
             {errors.name && <span className="error">{errors.name}</span>}
           </div>
           <div>
-
+            <label htmlFor="email">Email</label>
             <input
               type="email"
+              id="email"
               placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -131,17 +128,20 @@ const Register = () => {
             {errors.email && <span className="error">{errors.email}</span>}
           </div>
           <div>
-
+            <label htmlFor="code">Vigilance Code</label>
             <input
               type="text"
-              placeholder='create your six digit Vigilance code '
+              id="code"
+              placeholder='Create your six digit Vigilance code'
               value={code}
               onChange={(e) => setCode(e.target.value)}
             />
             {errors.code && <span className="error">{errors.code}</span>}
           </div>
-          <button className='mt-5' type="submit" id="btnreg">Register</button>
-          <button className='mt-5' type="submit" id="btnreg">Already Have an account?<Link to='/Login'>Login</Link></button>
+          <button type="submit">Register</button>
+          <div className="login-link">
+            Already have an account? <Link to='/Login'>Login</Link>
+          </div>
         </form>
       </div>
     </div>

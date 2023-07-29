@@ -17,6 +17,18 @@
       "name": "admin",
       "email": "admin@gmail.com",
       "code": "123098"
+    },
+    {
+      "id": 1690605951373,
+      "name": "karthikeyan",
+      "email": "karthizx21@gmail.com",
+      "code": "210820"
+    },
+    {
+      "id": 1690606054956,
+      "name": "hemanth",
+      "email": "hemanth@gmail.com",
+      "code": "000000"
     }
   ],
   "CrimeDetails": [
@@ -32,9 +44,22 @@
       "contact": "9784536102",
       "confidentiality": "public",
       "id": 1
+    },
+    {
+      "code": "000000",
+      "crimeType": "Kidnap",
+      "dateTime": "2023-07-12T00:18",
+      "location": "cbe",
+      "description": "hemanth",
+      "evidence": "me",
+      "vehicles": "bike",
+      "suspect": "darsan",
+      "contact": "42342",
+      "confidentiality": "public",
+      "emergency": "",
+      "id": 2
     }
   ],
-  
   "Pistol": [
     {
       "id": 1,
@@ -131,7 +156,6 @@
       "points": 290
     }
   ],
- 
   "Assault-Rifle": [
     {
       "id": 1,
@@ -228,9 +252,6 @@
       "points": 620
     }
   ],
-
-"Inventory":[
-
-],
-  "selectWeapons":[]
+  "Inventory": [],
+  "selectWeapons": []
 }
