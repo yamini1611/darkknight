@@ -49,15 +49,16 @@ const Inventory = () => {
 
   return (
     <div id='inventorybg'>
+      <Link to='/adminpage'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23}}><i class="fa-solid fa-backward"></i> back</Link>
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Weaponary</h3>
-      <h3 id='weapons'>Pistols</h3>
+      <h3 className='quick-sand text-white p-2 '>Pistols</h3>
       <CardGroup id='CardGroup'>
         {pistol.map((pistols) => (
           <Card className='card' id='card' key={pistols.id}>
             <Link to={`/pistoldisplay/${pistols.id}`} key={pistols.id}>
               <Card.Img src={pistols.image} alt='' height={200} width={200} id='pistolimg' className='card-img-spin' />
             </Link>
-            <h4 className='quick-sand  p-2'> {pistols.Name}</h4>
+            <h4 className='quick-sand  p-2' id='name'  > {pistols.Name}</h4>
           </Card>
         ))}
       </CardGroup>
@@ -109,7 +110,7 @@ const Inventory = () => {
       <CardGroup id='CardGroup'>
         {special.map((specials) => (
           <Card key={specials.id} className='card' id='card'>
-            <Link to={`/specialdisplay/${specials.id}`} key={specials.id}><Card.Img src={specials.Image} alt='' height={200} width={200} id='pistolimg' className='card-img-spin' /></Link>
+            <Link to={`/specialdisplay/${specials.id}`} key={specials.id}><Card.Img src={specials.image} alt='' height={200} width={200} id='pistolimg' className='card-img-spin' /></Link>
             <h4 id='name'> {specials.Name}</h4>
           </Card>
         ))}
@@ -457,7 +458,7 @@ export const Special = () => {
     <div id='pk'>
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.Image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+      <img src={weapon.image} alt={weapon.Name} height={300} width={300} id='imgpro' />
       <p id='points'>BatCoins :{weapon.points}</p>
       <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>

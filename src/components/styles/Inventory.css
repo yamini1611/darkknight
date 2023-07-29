@@ -58,13 +58,13 @@ transform: scale(1.1);
   font-family: 'Quicksand', sans-serif;
   color: rgb(64, 9, 214);
   margin-left: 700px;
-  margin-top: -250px;
+  margin-top: -130px;
 }
 #imgpro{
-  margin-top: -150px;
+  margin-top: -190px;
   padding: 0px;
-  width: 400px;
-  height:400px;
+  width: 300px;
+  height:300px;
   margin-left: 100px;
   box-shadow: rgba(218, 66, 39, 0.521) 4px 5px 4px 1px, rgba(156, 15, 5, 0.32) 3px 4px 16px 3px;
 }
@@ -143,6 +143,6 @@ transform: scale(1.1);
 
  #name{
   font-family: 'Quicksand', sans-serif;
-
+ font-weight: bolder;
  }
  

@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Badge from '@mui/material/Badge';
 import MyVideoComponent from '../Modal/DarkKnightMovie';
 import DarkKnightMovie from '../Modal/DarkKnightMovie';
-
+import { Link } from 'react-router-dom';
 const Weapons = () => {
 const [pistols,setPistols] =useState('');
 const [shotGun,setShotGun] =useState('');
@@ -100,6 +100,8 @@ function handleShow(breakpoint) {
   },[])
   return (
     <div className='background-color pb-5 '>
+ <Link to='/investigate'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
+
         <h1 className='p-4 quick-sand text-white '>Select Weapons</h1>
 
         <Badge badgeContent={chooseWeapons.length} className='float-end me-3' color="primary">

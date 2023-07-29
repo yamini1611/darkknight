@@ -5,12 +5,14 @@ import DarkKnightVideo from '../../components/assests/DarkKnightMovie.mp4';
 import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import '../../components/styles/DarkKnightMovie.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export default function DarkKnightMovie() {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const [fade, setFade] = useState(false);
-    const [points, setPoints] = useState(0); // Initialize points to 0
+    const [points, setPoints] = useState(0);
+    const history = useNavigate();
 
     function handleShow(breakpoint) {
         setFullscreen(breakpoint);
@@ -21,12 +23,26 @@ export default function DarkKnightMovie() {
         setFade(true);
     };
 
-    const history = useNavigate();
 
-    const handleVideoEnded = () => {
-        setPoints((prevPoints) => prevPoints + 100); // Add 100 points when the video ends
-        history("/adminpage");
-    };
+
+const handleVideoEnded = () => {
+    const updatedPoints = points + 100; 
+    setPoints(updatedPoints);
+    postPointsToServer(updatedPoints);
+    history('/adminpage');
+};
+
+const postPointsToServer = (points) => {
+    const url = 'http://localhost:4000/points';
+    axios.post(url, { points })
+        .then((response) => {
+            console.log('Points successfully posted to server:', response.data);
+        })
+        .catch((error) => {
+            console.error('Error posting points to server:', error);
+        });
+};
+
 
     return (
         <>

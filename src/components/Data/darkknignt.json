@@ -253,7 +253,12 @@
     }
   ],
   "purchase": [
-   
+    {
+      "id": "1690613043839-452",
+      "Name": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "points": 50
+    }
   ],
   "selectWeapons": [
     {
@@ -275,6 +280,32 @@
       "weaponName": "Colt 9mm SMG",
       "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
       "id": 4
+    },
+    {
+      "weaponName": "Ruger-57",
+      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
+      "id": 5
+    },
+    {
+      "weaponName": "Colt 9mm SMG",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
+      "id": 6
+    },
+    {
+      "weaponName": "Heckler & Koch HK21 HK25",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
+      "id": 7
+    },
+    {
+      "weaponName": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "id": 8
+    },
+    {
+      "weaponName": "FAMAE SAF",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
+      "id": 9
     }
-  ]
+  ],
+  "points": []
 }
