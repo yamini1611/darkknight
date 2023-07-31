@@ -305,7 +305,17 @@
       "weaponName": "FAMAE SAF",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
       "id": 9
+    },
+    {
+      "id": "1690607837741-5973",
+      "Name": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "points": 210
     }
   ],
-  "points": []
+
+"Inventory":[
+
+],
+  "selectWeapons":[]
 }
