@@ -31,6 +31,11 @@
       "code": "000000"
     }
   ],
+  "DarkCoins": [
+    {
+      "Coins": 4000
+    }
+  ],
   "CrimeDetails": [
     {
       "code": "123456",
@@ -63,33 +68,33 @@
   "Pistol": [
     {
       "id": 1,
-      "Name": "AutoMag (pistol)",
-      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
-      "points": 20
+      "Name": "Silver Ballers",
+      "image": "https://cdna.artstation.com/p/assets/images/images/003/896/384/large/ellijah-marin-render-colt-v4.jpg?1478309371",
+      "DarkCoins": 200
     },
     {
       "id": 2,
       "Name": "Horhe (pistol)",
       "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "points": 30
+      "DarkCoins": 300
     },
     {
       "id": 3,
       "Name": "Ruger-57",
       "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
-      "points": 40
+      "DarkCoins": 400
     },
     {
       "id": 4,
       "Name": "SIG P229",
       "image": "https://media.gettyimages.com/id/169963206/photo/gun-with-clipping-path.jpg?s=612x612&w=0&k=20&c=EL71LpXPucynZpdHuN1jLrRGVBHOjkRTSHcfzazKENk=",
-      "points": 45
+      "DarkCoins": 450
     },
     {
       "id": 5,
       "Name": "Smith & Wesson M&P",
       "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "points": 50
+      "DarkCoins": 500
     }
   ],
   "ShotGun": [
@@ -97,31 +102,31 @@
       "id": 1,
       "Name": "Franchi Sporting  Shotgun 12",
       "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-      "points": 110
+      "DarkCoins": 1100
     },
     {
       "id": 2,
       "Name": "Franchi SPAS-15",
       "image": "https://tse3.mm.bing.net/th?id=OIP.6riYsq6RoT4BW8G2yI6YqAHaDs&pid=Api&P=0&h=180",
-      "points": 120
+      "DarkCoins": 1200
     },
     {
       "id": 3,
       "Name": "M26 Modular  Shotgun System",
       "image": "https://media.gettyimages.com/id/157685863/photo/opening-a-410-shotgun-to-load.jpg?s=612x612&w=0&k=20&c=j3fUIUlk2ieBRLv3GPT6cZzqjpBPdGrPZq-3Woz4DTg=",
-      "points": 140
+      "DarkCoins": 1400
     },
     {
       "id": 4,
       "Name": "USAS-12",
       "image": "https://media.gettyimages.com/id/145091475/photo/italian-combat-shotgun.jpg?s=612x612&w=0&k=20&c=QdtX5_ni3z_yL68COm-4Jj4vUjyaxt5Hq_Ur4s2Mzic=",
-      "points": 160
+      "DarkCoins": 1600
     },
     {
       "id": 5,
       "Name": "Mossberg 590",
       "image": "https://media.gettyimages.com/id/57658702/photo/an-old-fashioned-rifle.jpg?s=612x612&w=0&k=20&c=MDFW3HAmv9KuMz3uKcHnaKf2XDpi3YDfL4gAnvXvS9s=",
-      "points": 100
+      "DarkCoins": 1000
     }
   ],
   "SMG": [
@@ -129,31 +134,31 @@
       "id": 1,
       "Name": "A-M20",
       "image": "https://tse1.mm.bing.net/th?id=OIP.jetUDEDdlqZWKmlUd0ssLwHaDJ&pid=Api&P=0&h=180",
-      "points": 210
+      "DarkCoins": 2100
     },
     {
       "id": 2,
       "Name": "FAMAE SAF",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
-      "points": 220
+      "DarkCoins": 2200
     },
     {
       "id": 3,
       "Name": "Brügger & Thomet APC",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/B%26T_APC_9_K_side_profile.jpg/220px-B%26T_APC_9_K_side_profile.jpg",
-      "points": 240
+      "DarkCoins": 2400
     },
     {
       "id": 4,
       "Name": "AR-57",
       "image": "https://tse1.mm.bing.net/th?id=OIP.ZUyb_EB5FsxTUux-9tjtXQHaDR&pid=Api&P=0&h=180",
-      "points": 270
+      "DarkCoins": 2700
     },
     {
       "id": 5,
       "Name": "Colt 9mm SMG",
       "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
-      "points": 290
+      "DarkCoins": 2900
     }
   ],
   "Assault-Rifle": [
@@ -161,31 +166,31 @@
       "id": 1,
       "Name": "ArmaLite AR-18",
       "image": "https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
-      "points": 200
+      "DarkCoins": 2000
     },
     {
       "id": 2,
       "Name": "AK-47",
       "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
-      "points": 280
+      "DarkCoins": 2800
     },
     {
       "id": 3,
       "Name": "AK-74M",
       "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
-      "points": 240
+      "DarkCoins": 2400
     },
     {
       "id": 4,
       "Name": "BR18",
       "image": "https://media.gettyimages.com/id/162838005/photo/assault-rifle.jpg?s=612x612&w=0&k=20&c=9bsVAFZJJhtkz-monkR63KjtW5gCjAmfWC6anVsH4ck=",
-      "points": 230
+      "DarkCoins": 2300
     },
     {
       "id": 5,
       "Name": "Remington R5 RGP",
       "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-      "points": 210
+      "DarkCoins": 2100
     }
   ],
   "Rifle": [
@@ -193,31 +198,31 @@
       "id": 1,
       "Name": "M1917 Enfield",
       "image": "https://media.gettyimages.com/id/1301303058/photo/ak-47-on-a-white-background.jpg?s=612x612&w=0&k=20&c=cAXu1-DvS821zT4HdxLVdiIZmmyYd2-SSgupelPVZN0=",
-      "points": 320
+      "DarkCoins": 3200
     },
     {
       "id": 2,
       "Name": "Mannlicher M1890 Carbine",
       "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "points": 350
+      "DarkCoins": 3500
     },
     {
       "id": 3,
       "Name": "Remington 1903/A3",
       "image": "https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
-      "points": 370
+      "DarkCoins": 3700
     },
     {
       "id": 4,
       "Name": "Remington Model 34",
       "image": "https://media.gettyimages.com/id/sb10066653a-001/photo/airgun-on-white-background.jpg?s=612x612&w=0&k=20&c=5tZk8HnqhoBQHeZce8OmLG0zX44u0pcNtbnerOQTlAE=",
-      "points": 420
+      "DarkCoins": 4200
     },
     {
       "id": 5,
       "Name": "Schmidt-Rubin",
       "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-      "points": 440
+      "DarkCoins": 4400
     }
   ],
   "Special": [
@@ -225,31 +230,31 @@
       "id": 1,
       "Name": "Steyr Mannlicher M1894",
       "image": "https://tse3.mm.bing.net/th?id=OIP.jZPnYO_SwLYWQ9uifPkcqQHaEK&pid=Api&P=0&h=180",
-      "points": 560
+      "DarkCoins": 5600
     },
     {
       "id": 2,
       "Name": "Colt Automatic Rifle",
       "image": "https://tse1.mm.bing.net/th?id=OIP.UCvsuEwK5sJILHrGxAG8ZQHaC8&pid=Api&P=0&h=180",
-      "points": 510
+      "DarkCoins": 5100
     },
     {
       "id": 3,
       "Name": "EPK (Pyrkal) Machine gun",
       "image": "https://tse4.mm.bing.net/th?id=OIP.OjUNQ6aqNxsCRWBun0WNFQHaFG&pid=Api&P=0&h=180",
-      "points": 530
+      "DarkCoins": 5300
     },
     {
       "id": 4,
       "Name": "FN MAG",
       "image": "https://media.gettyimages.com/id/166353037/photo/rock-river-arms-ar-15-rifle-equipped-with-combat-light.jpg?s=612x612&w=0&k=20&c=9X8g36iXeC9v-qWgj2o1BWTyET5dH2AE-Hg6g1Q9zDA=",
-      "points": 590
+      "DarkCoins": 5900
     },
     {
       "id": 5,
       "Name": "Heckler & Koch HK21 HK25",
       "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
-      "points": 620
+      "DarkCoins": 6200
     }
   ],
   "purchase": [
@@ -257,65 +262,16 @@
       "id": "1690613043839-452",
       "Name": "Smith & Wesson M&P",
       "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "points": 50
+      "DarkCoins": 500
     }
   ],
   "selectWeapons": [
     {
       "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "DarkCoins": 300,
       "id": 1
-    },
-    {
-      "weaponName": "Franchi SPAS-15",
-      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-      "id": 2
-    },
-    {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
-      "id": 3
-    },
-    {
-      "weaponName": "Colt 9mm SMG",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
-      "id": 4
-    },
-    {
-      "weaponName": "Ruger-57",
-      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
-      "id": 5
-    },
-    {
-      "weaponName": "Colt 9mm SMG",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
-      "id": 6
-    },
-    {
-      "weaponName": "Heckler & Koch HK21 HK25",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
-      "id": 7
-    },
-    {
-      "weaponName": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "id": 8
-    },
-    {
-      "weaponName": "FAMAE SAF",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
-      "id": 9
-    },
-    {
-      "id": "1690607837741-5973",
-      "Name": "Remington R5 RGP",
-      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-      "points": 210
     }
   ],
-
-"Inventory":[
-
-]
-  
+  "Inventory": []
 }
