@@ -9,11 +9,15 @@ import Investigation from "./components/Investigate/Investigation";
 import Inventory,{AssaultRifle, Pistoldisplay, Rifle, SMGdisplay, Shotgun, Special} from "./components/Admin/Inventory";
 import Weapons from "./components/SelectWeapons/Weapons";
 import CheckStatus from "./components/User/CheckStatus";
+import { CoinsProvider } from "./components/Context/darkcoins";
+import Purchase from "./components/Admin/Purchase";
 
 function App() {
   return (
     <>
       <UserProvider>
+     <CoinsProvider>
+
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -31,8 +35,11 @@ function App() {
             <Route path="/Rifledisplay/:id" element={<Rifle/>} />
             <Route path="/specialdisplay/:id" element={<Special/>} />
             <Route path="/check-status" element={<CheckStatus/>}/>
+            <Route path="/purchase" element={<Purchase/>}/>
           </Routes>
         </BrowserRouter>
+        </CoinsProvider>
+
       </UserProvider>
     </>
   );
