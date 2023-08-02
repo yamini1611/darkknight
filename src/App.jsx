@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import Investigation from "./components/Investigate/Investigation";
 import Inventory,{AssaultRifle, Pistoldisplay, Rifle, SMGdisplay, Shotgun, Special} from "./components/Admin/Inventory";
 import Weapons from "./components/SelectWeapons/Weapons";
+import CheckStatus from "./components/User/CheckStatus";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/Assaultrifledisplay/:id" element={<AssaultRifle/>} />
             <Route path="/Rifledisplay/:id" element={<Rifle/>} />
             <Route path="/specialdisplay/:id" element={<Special/>} />
+            <Route path="/check-status" element={<CheckStatus/>}/>
           </Routes>
         </BrowserRouter>
       </UserProvider>
