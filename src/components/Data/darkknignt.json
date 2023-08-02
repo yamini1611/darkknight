@@ -271,6 +271,52 @@
       "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
       "DarkCoins": 300,
       "id": 1
+    },
+    {
+      "weaponName": "Franchi SPAS-15",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "id": 2
+    },
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
+      "id": 3
+    },
+    {
+      "weaponName": "Colt 9mm SMG",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
+      "id": 4
+    },
+    {
+      "weaponName": "Ruger-57",
+      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
+      "id": 5
+    },
+    {
+      "weaponName": "Colt 9mm SMG",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
+      "id": 6
+    },
+    {
+      "weaponName": "Heckler & Koch HK21 HK25",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
+      "id": 7
+    },
+    {
+      "weaponName": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "id": 8
+    },
+    {
+      "weaponName": "FAMAE SAF",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
+      "id": 9
+    },
+    {
+      "id": "1690607837741-5973",
+      "Name": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "points": 210
     }
   ],
   "Inventory": []
