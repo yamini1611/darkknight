@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Register.css';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import { ToastContainer  , toast} from 'react-toastify';
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
-
+  const naviagte = useNavigate();
   const [errors, setErrors] = useState({});
   const [registeredUsers, setRegisteredUsers] = useState([]);
 
@@ -61,9 +62,9 @@ const Register = () => {
       const codeExists = registeredUsers.some((user) => user.code === code);
 
       if (emailExists) {
-        alert("Email already exists!");
+       toast.error("Email already exists!");
       } else if (codeExists) {
-        alert("Please choose another code");
+        toast.error("Please choose another code");
       } else {
         // Proceed with registration if there are no errors
 
@@ -86,7 +87,8 @@ const Register = () => {
               setName("");
               setEmail("");
               setCode("");
-              console.log("Registration Successful");
+              toast.success("Registration Successful");
+              naviagte('/login')
             }
           })
           .catch((error) => {
@@ -144,6 +146,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

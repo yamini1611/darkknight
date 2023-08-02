@@ -2,9 +2,10 @@ import React, { createContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/Context.css';
+import { Navigate } from 'react-router-dom';
 export const UserContext = createContext();
-
 const UserProvider = ({ children }) => {
+  
     const [user, setUser] = useState({
         loggedIn: false,
         email: '',
@@ -33,6 +34,7 @@ const UserProvider = ({ children }) => {
                     code,
 
                 });
+                <Navigate to="/" />
             } else {
                 toast.error('Login failed', {
                     position: 'top-right',
@@ -50,6 +52,7 @@ const UserProvider = ({ children }) => {
                     email: '',
                     code: '',
                 });
+              
             }
         } catch (error) {
             console.error('Error fetching user data:', error);
@@ -77,6 +80,7 @@ const UserProvider = ({ children }) => {
             email: '',
             code: '',
         });
+        <Navigate to="/" />
     };
 
 

@@ -40,9 +40,14 @@ const Navbar = () => {
                                 <div className='col-0'>
                                     <button className='btn btn-outline-success'><Link to="/"  style={{ textDecoration: "none", color: "white" }}>UserPage</Link></button>
                                 </div>
-                                <div className='col' style={{ paddingTop: 5 }}>
+                                <div className='col-0' style={{ paddingTop: 5 }}>
                                     <button className=" btn btn-outline-danger" onClick={handleLogoutClick}>Logout</button>
                                    
+                                </div>
+                                <div className='col' style={{paddingTop:8}}>
+                                <Link to="/check-status">
+                <button  className='btn btn-outline-info'>Check Status</button>
+              </Link>
                                 </div>
                             </div>
 
