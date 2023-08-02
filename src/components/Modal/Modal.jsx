@@ -1,8 +1,21 @@
+import axios from 'axios';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 
 export default function BatModal(props) {
+
+const [missionID,setMissionID]=useState(props.id);
+
+const missionOn = async()=>{
+
+await axios.put("http://localhost:4000/MissionOn/1",{
+  missionID:missionID
+})
+}
+
+
   return (
     <div className='bg-dark'>
     <Modal
@@ -25,7 +38,7 @@ export default function BatModal(props) {
 
 
 
-<Link to="/weapons"><Button className=' mx-auto d-flex '>Suit Up!</Button></Link>
+<Link to="/weapons"><Button className=' mx-auto d-flex' onClick={()=>missionOn()}>Suit Up!</Button></Link>
       </Modal.Body>
 
      

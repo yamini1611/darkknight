@@ -8,7 +8,7 @@ const Investigation = () => {
     const [points, setPoints] = useState(0);
 
     const fetchData = () => {
-        axios.get("http://localhost:4000/CrimeDetails")
+        axios.get("http://localhost:4000/CrimeDetails?status_like=false")
             .then((res) => {
                 setCrimeDetails(res.data)
             })
@@ -34,7 +34,7 @@ const Investigation = () => {
     }, [])
 
     return (
-        <div className='DarkKnight-background'>
+        <div className='DarkKnight-background min-vh-100'>
                   <Link to='/adminpage'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
 
             <h1 className='display-3 text-white container-fluid'>Crime Reports</h1>
@@ -44,7 +44,7 @@ const Investigation = () => {
     <div>
     
           <div key={pistols.id}>   
-            <h4 className='quick-sand  p-2' id='point'>BatCoins :{pistols.points}</h4>
+            <h4 className='quick-sand  p-2' id='point'>BatCoins :{pistols.DarkCoins}</h4>
           </div>
       
     </div>  ))}
@@ -55,7 +55,7 @@ const Investigation = () => {
                 <div>
                     {CrimeDetails.map((detail) => (
                         <div key={detail.id}>
-                            <DkInvestigateCard files={detail.evidence} code={detail.code} time={detail.dateTime} desc={detail.description} contact={detail.contact} crimeType={detail.crimeType} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location} />
+                            <DkInvestigateCard id={detail.id} files={detail.evidence} code={detail.code} time={detail.dateTime} desc={detail.description} contact={detail.contact} crimeType={detail.crimeType} confidentiality={detail.confidentiality} emergency={detail.emergency} description={detail.description} location={detail.location} />
                         </div>
                     ))}
                 </div>

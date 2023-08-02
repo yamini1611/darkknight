@@ -143,7 +143,7 @@ function handleShow(breakpoint) {
 
       </Card.Body>
     </Card>
-    {console.log(select)}
+    
     </div>
     
     ))}

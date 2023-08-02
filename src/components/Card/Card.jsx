@@ -156,7 +156,7 @@ export  function DkInvestigateCard(props) {
         <MDBBtn color='dark' onClick={()=>setModalShow(true)}>
         Resolve
       </MDBBtn>
-      <BatModal crimeType={props.crimeType} location={props.location} time={props.time} description={props.description} contact={props.contact} confidentiality={props.confidentiality} emergency={props.emergency} show={modalShow} onHide={()=>setModalShow(false)}></BatModal>
+      <BatModal crimeType={props.crimeType} id={props.id} location={props.location} time={props.time} description={props.description} contact={props.contact} confidentiality={props.confidentiality} emergency={props.emergency} show={modalShow} onHide={()=>setModalShow(false)}></BatModal>
       </MDBCardOverlay>
     </MDBCard>
     </div>
