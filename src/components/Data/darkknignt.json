@@ -64,7 +64,7 @@
     {
       "id": 1,
       "Name": "AutoMag (pistol)",
-      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.IcI2vZQH2ypCnJz3GuND6AHaEo&pid=Api&P=0&h=180",
       "points": 20
     },
     {
@@ -311,11 +311,12 @@
       "Name": "Remington R5 RGP",
       "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
       "points": 210
+    },
+    {
+      "weaponName": "Mossberg 590",
+      "image": "https://media.gettyimages.com/id/57658702/photo/an-old-fashioned-rifle.jpg?s=612x612&w=0&k=20&c=MDFW3HAmv9KuMz3uKcHnaKf2XDpi3YDfL4gAnvXvS9s=",
+      "id": 10
     }
   ],
-
-"Inventory":[
-
-]
-  
+  "Inventory": []
 }

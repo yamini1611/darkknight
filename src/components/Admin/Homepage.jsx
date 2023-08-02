@@ -35,7 +35,7 @@ useEffect(()=>{
     <div className='  batfont container-fluid'>
    <Link to='/'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
 
-<h1 className='display-3 p-3 text-white'>Entering into the shadows</h1>
+<h1 className='display-3 p-3 text-white' id='ad'>Entering into the shadows</h1>
 
 
 <DKCard></DKCard>

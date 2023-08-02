@@ -35,7 +35,7 @@ const UserPage = () => {
           </div>
         </div>
         <div>
-          <Link to="/adminpage">Boom</Link>
+          
         </div>
       </div>
 
