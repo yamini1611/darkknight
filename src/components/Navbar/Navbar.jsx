@@ -79,8 +79,8 @@ const Navbar = () => {
             </div>
             <button className="btn" data-bs-toggle="offcanvas" data-bs-target="#demo" style={{ background: 'none' }}>
                 {/* <i className="fa-solid fa-bars"></i> */}
-                <h2 id='logo' >darkknight</h2>
-                <img src={logo} alt=''></img>
+                <h2 id='logo'  >darkknight</h2>
+                <img src={logo} alt=''height={80} width={80} ></img>
             </button>
         </div>
     )

@@ -5,7 +5,7 @@ function SearchPage() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (searchQuery.toLowerCase() === 'batman rescue') {
+    if (searchQuery.toLowerCase() === 'darkknight') {
       window.location.href = '/Homepage';
     } else {
       window.location.href ="https://www.google.com/search?q= " +searchQuery ;

@@ -1,7 +1,7 @@
 #demo {
     background: black;
-
-
+   
+ 
 }
 @font-face {
     font-family: ref;
@@ -9,5 +9,6 @@
 }
 #logo{
 font-family: ref;
+font-size: 25px;
 color: rgb(245, 6, 6);
 }
