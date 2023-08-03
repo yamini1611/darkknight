@@ -357,6 +357,7 @@ export const AssaultRifle = () => {
 export const Rifle = () => {
   const { id } = useParams();
   const [weapon, setWeapon] = useState(null);
+  const [weapCategory,setWeapCategory] = useState(null);
   const [loading, setLoading] = useState(true);
 
 
@@ -365,7 +366,7 @@ export const Rifle = () => {
       try {
         const response = await axios.get(`http://localhost:4000/Rifle/${id}`);
         setWeapon(response.data);
-
+        setWeapCategory("Rifle")
         setLoading(false);
       } catch (error) {
         console.error('Error fetching weapon details:', error);
@@ -394,9 +395,14 @@ export const Rifle = () => {
             debitCoins = darkCoins - weapon.DarkCoins;
             console.log(debitCoins);
           })
-        axios.put("http://localhost:4000/DarkCoins", {
-          Coins: debitCoins
-        })
+          .then(()=>{
+            axios.put("http://localhost:4000/DarkCoins/1", {
+              Coins: debitCoins
+            }).catch((error)=>{
+              console.log(error)
+            })
+          })
+       
       }
     
       coinsReduce();

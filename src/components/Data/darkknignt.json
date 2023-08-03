@@ -39,11 +39,8 @@
   ],
   "DarkCoins": [
     {
-      "Coins": 4000,
+      "Coins": 10000,
       "id": 1
-    },
-    {
-      "id": 2
     }
   ],
   "CrimeDetails": [
@@ -280,6 +277,120 @@
       "Name": "Smith & Wesson M&P",
       "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
       "DarkCoins": 500
+    },
+    {
+      "id": "1691100606003-5251",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100664941-6764",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100698558-3253",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100739102-7159",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100763542-6936",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100912641-7702",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100930153-7342",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100930601-3695",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100930769-4751",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100930933-4810",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691100931072-9999",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101253127-3969",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101317007-6795",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101324510-3945",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101358613-6158",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101375195-9647",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101387915-3205",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101389434-4438",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
+    },
+    {
+      "id": "1691101389923-8872",
+      "Name": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500
     }
   ],
   "selectWeapons": [
@@ -293,7 +404,25 @@
       "weaponName": "Silver Ballers",
       "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
       "DarkCoins": 200,
-      "id": 2
+      "id": 11
+    },
+    {
+      "weaponName": "Silver Ballers",
+      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
+      "DarkCoins": 200,
+      "id": 12
+    },
+    {
+      "weaponName": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "DarkCoins": 500,
+      "id": 13
+    },
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "DarkCoins": 300,
+      "id": 14
     }
   ],
   "Inventory": [],
