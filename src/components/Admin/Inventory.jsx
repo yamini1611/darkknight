@@ -202,9 +202,7 @@ console.log(error);
 alert("Weapon is already selected");
 
             })
-            
-
-           
+    
             toast.success('Weapon purchased successfully!', {
               position: 'top-center'
             });
@@ -225,6 +223,7 @@ alert("Weapon is already selected");
 
   return (
     <div id='pk'>
+            <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
@@ -311,6 +310,7 @@ export const Shotgun = () => {
 
   return (
     <div id='pk'>
+            <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
@@ -396,6 +396,7 @@ export const SMGdisplay = () => {
 
   return (
     <div id='pk'>
+          <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
@@ -483,6 +484,7 @@ export const AssaultRifle = () => {
 
   return (
     <div id='pk'>
+      <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
@@ -511,9 +513,6 @@ export const Rifle = () => {
         setLoading(false);
       }
     };
-
-
-
 
     fetchWeaponDetails();
   }, [id]);
@@ -581,6 +580,7 @@ export const Rifle = () => {
 
   return (
     <div id='pk'>
+      <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
@@ -638,6 +638,7 @@ export const Special = () => {
 
   return (
     <div id='pk'>
+    <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>    
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
