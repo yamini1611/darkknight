@@ -28,11 +28,11 @@ const ExplorePage = () => {
             Curious to see the full list of Batman's weapons? Click the button below to view them!
           </p>
           <div className="explore-buttons">
-            <Link to="/weapons"><button className="view-weapons-btn">View Weapons</button></Link>
+            <Link to="/ExploreWeapons"><button className="view-weapons-btn">View Weapons</button></Link>
           </div>
           </div>
         </div>
-        <button className="back-to-home-btn">Back to Home</button>
+      <Link to="/"> <button className="back-to-home-btn">Back to Home</button></Link> 
       </div>
     </div>
   );

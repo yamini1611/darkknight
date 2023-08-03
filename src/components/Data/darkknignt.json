@@ -69,7 +69,7 @@
       "suspect": "meena",
       "contact": "9944050247",
       "confidentiality": "public",
-      "status": false,
+      "status": true,
       "id": 2
     }
   ],
