@@ -50,8 +50,8 @@ const Inventory = () => {
 
   return (
     <div id='inventorybg'>
-      <Link to='/adminpage'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23}}><i class="fa-solid fa-backward"></i> back</Link>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Weaponary</h3>
+      <Link to='/adminpage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Weaponry</h3>
       <h3 className='quick-sand text-white p-2 '>Pistols</h3>
       <CardGroup id='CardGroup'>
         {pistol.map((pistols) => (
@@ -156,18 +156,19 @@ export const Pistoldisplay = () => {
     return `${timestamp}-${randomNum}`;
   };
 
-  // const handlePurchase = async () => {
-  //   try {
-  //     const weaponWithId = { ...weapon, id: generateRandomId() };
+  const handlePurchase = async (w) => {
 
-  //     await axios.post('http://localhost:4000/purchase', weaponWithId);
-  //     toast.success('Weapon purchased successfully!', {
-  //       position: 'top-center'
-  //     });
-  //   } catch (error) {
-  //     console.error('Error purchasing weapon:', error);
-  //   }
-  // };
+    try {
+      const weaponWithId = { ...weapon, id: generateRandomId() };
+
+      await axios.post('http://localhost:4000/purchase', weaponWithId);
+      toast.success('Weapon purchased successfully!', {
+        position: 'top-center'
+      });
+    } catch (error) {
+      console.error('Error purchasing weapon:', error);
+    }
+  };
 
 
   return (
@@ -358,17 +359,22 @@ export const Rifle = () => {
   const [weapon, setWeapon] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     const fetchWeaponDetails = async () => {
       try {
         const response = await axios.get(`http://localhost:4000/Rifle/${id}`);
         setWeapon(response.data);
+
         setLoading(false);
       } catch (error) {
         console.error('Error fetching weapon details:', error);
         setLoading(false);
       }
     };
+
+
+
 
     fetchWeaponDetails();
   }, [id]);
@@ -380,6 +386,20 @@ export const Rifle = () => {
 
   const handlePurchase = async () => {
     try {
+      const coinsReduce = () => {
+        var darkCoins, debitCoins;
+        axios.get("http://localhost:4000/DarkCoins")
+          .then((response) => {
+            darkCoins = response.data[0].Coins;
+            debitCoins = darkCoins - weapon.DarkCoins;
+            console.log(debitCoins);
+          })
+        axios.put("http://localhost:4000/DarkCoins", {
+          Coins: debitCoins
+        })
+      }
+    
+      coinsReduce();
       const weaponWithId = { ...weapon, id: generateRandomId() };
 
       await axios.post('http://localhost:4000/purchase', weaponWithId);
