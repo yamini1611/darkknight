@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-
+import { ToastContainer , toast } from 'react-toastify';
 const CrimeForm = ({ showModal, setShowModal }) => {
   const [crimeDetails, setCrimeDetails] = useState({
     code: '',
@@ -60,6 +60,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
         } else {
          
           fetch('http://localhost:4000/CrimeDetails', {
+            
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -69,7 +70,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
             .then((response) => {
               if (response.ok) {
              
-                console.log('Crime reported successfully');
+               toast.success('Crime reported successfully');
                 setShowModal(false);
                 } else {
                
@@ -229,6 +230,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
           Submit
         </Button>
       </Modal.Footer>
+      <ToastContainer />
     </Modal>
   );
 };
