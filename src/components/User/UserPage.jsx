@@ -25,18 +25,21 @@ const UserPage = () => {
           <div className="second text-center">
             <div className='row container'>
               <div className='col-lg-6'>
-            <h2 className="gfont text-center  " id='textpg1'>
-              Be the hero Batman needs – report crime today!</h2>
-            <button id='btnstyle' className="btnreport bg-transparent " onClick={() => setShowModal(true)}>
-              <span>Report</span>
-            </button>
-            </div>
+                <h2 className="gfont text-center  " id='textpg1'>
+                  Be the hero Batman needs – report crime today!</h2>
+                <button id='btnstyle' className="btnreport bg-transparent " onClick={() => setShowModal(true)}>
+                  <span>Report</span>
+                </button>
+              </div>
+             
             </div>
           </div>
         </div>
+
         <div>
-          <Link to="/adminpage">Boom</Link>
+
         </div>
+
       </div>
 
       {/* Render the CrimeForm component */}

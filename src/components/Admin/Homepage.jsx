@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import BatModal from '../Modal/Modal';
 import { Button } from 'react-bootstrap';
 import DKCard from '../Card/Card';
-
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -32,8 +32,10 @@ useEffect(()=>{
 
 
   return (
-    <div className='  batfont container-fluid'>
-<h1 className='display-3 p-3 text-white'>Entering into the shadows</h1>
+    <div className='  batfont container-fluid pb-4' >
+   <Link to='/'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
+
+<h1 className='display-3 p-3 text-white quick-sand'>Entering into the shadows</h1>
 
 
 <DKCard></DKCard>

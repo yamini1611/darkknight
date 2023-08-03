@@ -36,21 +36,38 @@ const Navbar = () => {
                 <div className="offcanvas-body">
                     {user.loggedIn && !isAdmin ? (
                         <>
-                            <button><Link to="/">UserPage</Link></button>
-                            <button className="nav-link mt-1" onClick={handleLogoutClick}>Logout</button>
-                            {userData.length > 0 && (
-                                <li className="nav-item" style={{ marginLeft: 600 }}>
-                                    <h3 style={{ fontSize: 22.1, fontFamily: "Product Sans,Arial,Helvetica,sans-serif", color: "grey", marginTop: 11 }}><i className="fa-solid fa-user fa-flip" ></i>{userData.find(u => u.email === user.code)?.name}</h3>
-                                </li>
-                            )}
+                            <div className='row'>
+                                <div className='col-0'>
+                                    <button className='btn btn-outline-success'><Link to="/"  style={{ textDecoration: "none", color: "white" }}>UserPage</Link></button>
+                                </div>
+                                <div className='col-0' style={{ paddingTop: 5 }}>
+                                    <button className=" btn btn-outline-danger" onClick={handleLogoutClick}>Logout</button>
+                                   
+                                </div>
+                                <div className='col' style={{paddingTop:8}}>
+                                <Link to="/check-status">
+                <button  className='btn btn-outline-info'>Check Status</button>
+              </Link>
+                                </div>
+                            </div>
+
+
                         </>
                     )
                         : (
                             <>
                                 {isAdmin && (
                                     <>
-                                        <button><Link to="/adminpage">AdminPage</Link></button>
-                                        <button className="nav-link mt-1" onClick={handleLogoutClick}>Logout</button>
+                                        <div className='row'>
+                                            <div className='col-0'>
+                                                <button className='btn btn-outline-success'><Link to="/adminpage" style={{ textDecoration: "none", color: "white" }}>AdminPage</Link></button>
+
+                                            </div>
+                                            <div className='col' style={{ paddingTop: 5 }}>
+                                                <button className=" btn btn-outline-danger " onClick={handleLogoutClick}>Logout</button>
+
+                                            </div>
+                                        </div>
 
                                     </>
                                 )}

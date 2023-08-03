@@ -19,6 +19,7 @@ const [specialWeapons,setspecialWeapons] =useState('');
 
 const [select,setSelect] = useState(false);
 const [chooseWeapons,setChooseWeapons] = useState('');
+const [DarkCoins,setDarkCoins] = useState(0);
 
 const selectHandler=()=>{
   if(!select){
@@ -58,6 +59,10 @@ function handleShow(breakpoint) {
     .then((response)=>{
       setspecialWeapons(response.data)
     })
+    axios.get("http://localhost:4000/DarkCoins")
+    .then((response)=>{
+      setDarkCoins(response.data[0].Coins);
+    })
   }
 
   const selectWeapons=(weap)=>{
@@ -69,7 +74,8 @@ function handleShow(breakpoint) {
     })
     axios.post("http://localhost:4000/selectWeapons",{
       weaponName:weap.Name,
-      image:weap.image
+      image:weap.image,
+      DarkCoins:weap.DarkCoins
     })
     .then(()=>{
       toast.success('Weapon selected!', {
@@ -100,13 +106,26 @@ function handleShow(breakpoint) {
   },[])
   return (
     <div className='background-color pb-5 '>
- <Link to='/investigate'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
+      <div className='d-flex'>
+ <Link to='/investigate'  className='quick-sand text-white p-2 col-lg-10' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
+</div>
+  <div className=' d-flex p-1 container'>
 
-        <h1 className='p-4 quick-sand text-white '>Select Weapons</h1>
+        <h1 className=' quick-sand text-white col-lg-11'>Select Weapons </h1>
 
-        <Badge badgeContent={chooseWeapons.length} className='float-end me-3' color="primary">
-        <i class="fa-solid fa-gun text-white "></i>    </Badge>{pistols.length>0 &&(
-  <div className='background-color text-white quick-sand'>
+      
+        <Badge badgeContent={chooseWeapons.length}  color="primary">
+        <h1 className='p-0 quick-sand text-white'>Chosen</h1>
+          </Badge>
+       
+          </div>
+      
+
+
+
+      
+        {pistols.length>0 &&(
+  <div className='background-color text-white quick-sand container'>
   <Container>
   <div className='row  background-color'>
     <h1>Pistols</h1>
@@ -123,7 +142,7 @@ function handleShow(breakpoint) {
 
       </Card.Body>
     </Card>
-    {console.log(select)}
+    
     </div>
     
     ))}

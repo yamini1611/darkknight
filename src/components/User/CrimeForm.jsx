@@ -83,7 +83,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
                   suspect: '',
                   contact: '',
                   confidentiality: '',
-                  emergency: '',
+                  status:false
                 });
               } else {
                

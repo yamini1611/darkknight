@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navigate } from 'react-router-dom';
 const Inventory = () => {
   const [pistol, setPistol] = useState([]);
   const [shotgun, setShotgun] = useState([]);
@@ -155,29 +156,29 @@ export const Pistoldisplay = () => {
     return `${timestamp}-${randomNum}`;
   };
 
-  const handlePurchase = async () => {
-    try {
-      const weaponWithId = { ...weapon, id: generateRandomId() };
+  // const handlePurchase = async () => {
+  //   try {
+  //     const weaponWithId = { ...weapon, id: generateRandomId() };
 
-      await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!', {
-        position: 'top-center'
-      });
-    } catch (error) {
-      console.error('Error purchasing weapon:', error);
-    }
-  };
+  //     await axios.post('http://localhost:4000/purchase', weaponWithId);
+  //     toast.success('Weapon purchased successfully!', {
+  //       position: 'top-center'
+  //     });
+  //   } catch (error) {
+  //     console.error('Error purchasing weapon:', error);
+  //   }
+  // };
+
+
   return (
     <div id='pk'>
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
       <p id='points'>BatCoins:{weapon.points}</p>
-      <button id='button' onClick={handlePurchase}>
+      <Link to="/purchase"><button id='button' >
         <span id='span'>PURCHASE NOW</span>
-        
-
-      </button>    </div>
+      </button>   </Link> </div>
   );
 };
 
