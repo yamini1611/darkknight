@@ -11,6 +11,7 @@ import Weapons from "./components/SelectWeapons/Weapons";
 import CheckStatus from "./components/User/CheckStatus";
 import { CoinsProvider } from "./components/Context/darkcoins";
 import Purchase from "./components/Admin/Purchase";
+import ExplorePage from "./components/User/ExplorePage";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/specialdisplay/:id" element={<Special/>} />
             <Route path="/check-status" element={<CheckStatus/>}/>
             <Route path="/purchase" element={<Purchase/>}/>
+            <Route path="/explore" element={<ExplorePage/>}/>
           </Routes>
         </BrowserRouter>
         </CoinsProvider>
