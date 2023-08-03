@@ -39,11 +39,8 @@
   ],
   "DarkCoins": [
     {
-      "Coins": 4000,
+      "Coins": 100,
       "id": 1
-    },
-    {
-      "id": 2
     }
   ],
   "CrimeDetails": [
@@ -72,7 +69,7 @@
       "suspect": "meena",
       "contact": "9944050247",
       "confidentiality": "public",
-      "status": false,
+      "status": true,
       "id": 2
     }
   ],
@@ -276,10 +273,34 @@
   ],
   "purchase": [
     {
-      "id": "1690613043839-452",
-      "Name": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "DarkCoins": 500
+      "weaponWithId": {
+        "category": "Rifle",
+        "id": "1691104073274-9492",
+        "Name": "M1917 Enfield",
+        "image": "https://media.gettyimages.com/id/1301303058/photo/ak-47-on-a-white-background.jpg?s=612x612&w=0&k=20&c=cAXu1-DvS821zT4HdxLVdiIZmmyYd2-SSgupelPVZN0=",
+        "DarkCoins": 3200
+      },
+      "id": 1
+    },
+    {
+      "weaponWithId": {
+        "category": "Rifle",
+        "id": "1691104121385-9344",
+        "Name": "M1917 Enfield",
+        "image": "https://media.gettyimages.com/id/1301303058/photo/ak-47-on-a-white-background.jpg?s=612x612&w=0&k=20&c=cAXu1-DvS821zT4HdxLVdiIZmmyYd2-SSgupelPVZN0=",
+        "DarkCoins": 3200
+      },
+      "id": 2
+    },
+    {
+      "weaponWithId": {
+        "category": "Rifle",
+        "id": "1691106223325-5453",
+        "Name": "Mannlicher M1890 Carbine",
+        "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+        "DarkCoins": 3500
+      },
+      "id": 3
     }
   ],
   "selectWeapons": [
@@ -288,68 +309,6 @@
       "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
       "DarkCoins": 300,
       "id": 1
-    },
-    {
-      "weaponName": "Franchi SPAS-15",
-      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-      "id": 2
-    },
-    {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/691203157/photo/44-magnum-hand-gun-with-copy-space.jpg?s=612x612&w=0&k=20&c=4kOfyLvlrDYfd70hz7aAvqnfqJBG06k17DxXvJXfX6Y=",
-      "id": 3
-    },
-    {
-      "weaponName": "Colt 9mm SMG",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
-      "id": 4
-    },
-    {
-      "weaponName": "Ruger-57",
-      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
-      "id": 5
-    },
-    {
-      "weaponName": "Colt 9mm SMG",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.gp470LutOvewe9iJh_hNeQHaEK&pid=Api&P=0&h=180",
-      "id": 6
-    },
-    {
-      "weaponName": "Heckler & Koch HK21 HK25",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
-      "id": 7
-    },
-    {
-      "weaponName": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "id": 8
-    },
-    {
-      "weaponName": "FAMAE SAF",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
-      "id": 9
-    },
-    {
-      "weaponName": "Remington R5 RGP",
-      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-      "id": 10
-    },
-    {
-      "weaponName": "AK-47",
-      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
-      "id": 11
-    },
-    {
-      "id": "1690607837741-5973",
-      "Name": "Remington R5 RGP",
-      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-      "points": 210
-    },
-    {
-      "weaponName": "Ruger-57",
-      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
-      "DarkCoins": 400,
-      "id": 10
     },
     {
       "weaponName": "Silver Ballers",
@@ -368,7 +327,47 @@
       "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
       "DarkCoins": 500,
       "id": 13
+    },
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "DarkCoins": 300,
+      "id": 14
+    },
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "DarkCoins": 300,
+      "id": 15
+    },
+    {
+      "weaponName": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500,
+      "id": 16
+    },
+    {
+      "weaponName": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500,
+      "id": 17
+    },
+    {
+      "weaponName": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500,
+      "id": 18
     }
   ],
-  "Inventory": []
+  "Inventory": [],
+  "Feedback": [
+    {
+      "feedbackMessage": "thank you batman",
+      "id": 1
+    },
+    {
+      "feedbackMessage": "Thank you! Batesh!",
+      "id": 2
+    }
+  ]
 }
