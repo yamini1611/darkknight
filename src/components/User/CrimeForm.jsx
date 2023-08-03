@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { ToastContainer , toast } from 'react-toastify';
+import '../styles/CrimeForm.css'
 const CrimeForm = ({ showModal, setShowModal }) => {
   const [crimeDetails, setCrimeDetails] = useState({
     code: '',
@@ -88,7 +89,6 @@ const CrimeForm = ({ showModal, setShowModal }) => {
   };
 
   return (
-    
     <Modal show={showModal} onHide={() => setShowModal(false)}>
       <Modal.Header closeButton>
         <Modal.Title>Report a Crime</Modal.Title>
