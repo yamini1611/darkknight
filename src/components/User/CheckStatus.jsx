@@ -25,18 +25,42 @@ const CheckStatus = () => {
         } else {
           setStatusMessage('Code not found');
         }
+
+        setCodeInput('');
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
         setStatusMessage('Error fetching data');
       });
   };
-
+  
   const handleSendMessage = () => {
-    // Here, you can do whatever you want with the message, e.g., send it to the server
-    console.log('Message to Batman:', messageToBatman);
-    setMessageToBatman(''); // Clear the message after sending for a better user experience
+    
+    if (messageToBatman.trim() === '') {
+      console.log('Message is empty.');
+      return;
+    }
+  
+    const payload = { feedbackMessage: messageToBatman };
+  
+    fetch('http://localhost:4000/Feedback', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log('Feedback message sent successfully.');
+          setMessageToBatman(''); 
+        } else {
+          console.error('Error sending feedback message.');
+        }
+      })
+
   };
+  
 
   return (
     <div className="container1">

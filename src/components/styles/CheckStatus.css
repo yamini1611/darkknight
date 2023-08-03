@@ -23,7 +23,7 @@
 
 .check-status-heading {
   margin-top: 0;
-  margin-bottom: 60px; /* Add margin-bottom for spacing below the heading */
+  margin-bottom: 60px; 
   text-align: center;
   font-size: 44px;
   color: #333;
@@ -31,7 +31,7 @@
 
 .check-status-input {
   width: 100%;
-  margin-bottom: 10px; /* Add margin-bottom for spacing below the input box */
+  margin-bottom: 10px;
   padding: 20px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -41,7 +41,7 @@
 .check-status-button {
   display: block;
   width: 100%;
-  margin-top: 10px; /* Add margin-top for spacing above the button */
+  margin-top: 20px;
   padding: 12px;
   font-size: 18px;
   color: #ffffff;
@@ -65,7 +65,7 @@
 
 .message-to-batman {
   width: 100%;
-  margin-bottom: 20px; /* Add margin-bottom for spacing below the message box */
+  margin-bottom: 10px; /* Add margin-bottom for spacing below the message box */
   min-height: 150px;
   padding: 10px;
   font-size: 16px;
