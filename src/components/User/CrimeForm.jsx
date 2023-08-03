@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-
+import { ToastContainer , toast } from 'react-toastify';
 const CrimeForm = ({ showModal, setShowModal }) => {
   const [crimeDetails, setCrimeDetails] = useState({
     code: '',
@@ -13,7 +13,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
     suspect: '',
     contact: '',
     confidentiality: '',
-    emergency: '',
+    status:false
   });
 
   const [errors, setErrors] = useState({
@@ -60,6 +60,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
         } else {
          
           fetch('http://localhost:4000/CrimeDetails', {
+            
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -69,23 +70,9 @@ const CrimeForm = ({ showModal, setShowModal }) => {
             .then((response) => {
               if (response.ok) {
              
-                console.log('Crime reported successfully');
+               toast.success('Crime reported successfully');
                 setShowModal(false);
-                setCrimeDetails({
-                  // Clear all fields by setting crimeDetails to an empty object
-                  code: '',
-                  crimeType: '',
-                  dateTime: '',
-                  location: '',
-                  description: '',
-                  evidence: '',
-                  vehicles: '',
-                  suspect: '',
-                  contact: '',
-                  confidentiality: '',
-                  status:false
-                });
-              } else {
+                } else {
                
                 console.error('Failed to report the crime. Please try again later.');
               }
@@ -243,6 +230,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
           Submit
         </Button>
       </Modal.Footer>
+      <ToastContainer />
     </Modal>
   );
 };

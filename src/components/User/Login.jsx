@@ -12,14 +12,14 @@ const Login = () => {
         handleLogin(email, code);
         if (user.loggedIn) {
             return <>
-                <Navigate to="/" />;
+                <Navigate to="/Homepage" />;
             </>
         }
     };
 
     if (user.loggedIn) {
         return <>
-            <Navigate to="/" />;
+            <Navigate to="/Homepage" />;
         </>
     }
 

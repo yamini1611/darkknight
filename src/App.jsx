@@ -11,6 +11,8 @@ import Weapons from "./components/SelectWeapons/Weapons";
 import CheckStatus from "./components/User/CheckStatus";
 import { CoinsProvider } from "./components/Context/darkcoins";
 import Purchase from "./components/Admin/Purchase";
+import SearchPage from "./components/Google/Google";import ExplorePage from "./components/User/ExplorePage";
+import ExploreWeapons from "./components/User/ExploreWeapons";
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" active element={<UserPage />} />
+           <Route path="/" active element={<SearchPage />} />
+            <Route path="/Homepage"  element={<UserPage />} />
             <Route path="/adminpage" element={<Homepage />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Login" element={<Login />} />
@@ -36,6 +39,8 @@ function App() {
             <Route path="/specialdisplay/:id" element={<Special/>} />
             <Route path="/check-status" element={<CheckStatus/>}/>
             <Route path="/purchase" element={<Purchase/>}/>
+            <Route path="/explore" element={<ExplorePage/>}/>
+            <Route path="/ExploreWeapons" element={<ExploreWeapons/>}/>
           </Routes>
         </BrowserRouter>
         </CoinsProvider>

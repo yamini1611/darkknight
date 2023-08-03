@@ -50,8 +50,8 @@ const Inventory = () => {
 
   return (
     <div id='inventorybg'>
-      <Link to='/adminpage'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23}}><i class="fa-solid fa-backward"></i> back</Link>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Weaponary</h3>
+      <Link to='/adminpage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Weaponry</h3>
       <h3 className='quick-sand text-white p-2 '>Pistols</h3>
       <CardGroup id='CardGroup'>
         {pistol.map((pistols) => (
@@ -156,29 +156,59 @@ export const Pistoldisplay = () => {
     return `${timestamp}-${randomNum}`;
   };
 
-  // const handlePurchase = async () => {
-  //   try {
-  //     const weaponWithId = { ...weapon, id: generateRandomId() };
+  const handlePurchase = async (w) => {
 
-  //     await axios.post('http://localhost:4000/purchase', weaponWithId);
-  //     toast.success('Weapon purchased successfully!', {
-  //       position: 'top-center'
-  //     });
-  //   } catch (error) {
-  //     console.error('Error purchasing weapon:', error);
-  //   }
-  // };
+    try {
+      const coinsReduce = () => {
+        var darkCoins, debitCoins;
+        axios.get("http://localhost:4000/DarkCoins")
+          .then((response) => {
+            darkCoins = response.data[0].Coins;
+            debitCoins = darkCoins - weapon.DarkCoins;
+            console.log(debitCoins);
+          })
+         .then(()=>{
+
+          if(debitCoins>=0){
+            axios.put("http://localhost:4000/DarkCoins/1", {
+              Coins: debitCoins
+            }).catch((error)=>{
+              console.log(error)
+            })
+        
+            const weaponWithId = { category:'Pistol',...weapon, id: generateRandomId() };
+
+             axios.post('http://localhost:4000/purchase', {
+              weaponWithId,
+              
+            });
+            toast.success('Weapon purchased successfully!', {
+              position: 'top-center'
+            });
+          }else{
+            alert("You don't have enough dark coins to buy this weapon")
+          }
+          })
+       
+      }
+    
+      coinsReduce();
+      
+    } catch (error) {
+      console.error('Error purchasing weapon:', error);
+    }
+  };
 
 
   return (
     <div id='pk'>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
-      <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-      <p id='points'>BatCoins:{weapon.points}</p>
-      <Link to="/purchase"><button id='button' >
-        <span id='span'>PURCHASE NOW</span>
-      </button>   </Link> </div>
+    <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+    <h3 id='pname'>{weapon.Name}</h3>
+    <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <button id='button' onClick={handlePurchase}>
+      <span id='span'>PURCHASE NOW</span>
+    </button>    </div>
   );
 };
 
@@ -209,12 +239,41 @@ export const Shotgun = () => {
 
   const handlePurchase = async () => {
     try {
-      const weaponWithId = { ...weapon, id: generateRandomId() };
+      const coinsReduce = () => {
+        var darkCoins, debitCoins;
+        axios.get("http://localhost:4000/DarkCoins")
+          .then((response) => {
+            darkCoins = response.data[0].Coins;
+            debitCoins = darkCoins - weapon.DarkCoins;
+            console.log(debitCoins);
+          })
+         .then(()=>{
 
-      await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!', {
-        position: 'top-center'
-      });
+          if(debitCoins>=0){
+            axios.put("http://localhost:4000/DarkCoins/1", {
+              Coins: debitCoins
+            }).catch((error)=>{
+              console.log(error)
+            })
+        
+            const weaponWithId = { category:'Shotgun',...weapon, id: generateRandomId() };
+
+             axios.post('http://localhost:4000/purchase', {
+              weaponWithId,
+              
+            });
+            toast.success('Weapon purchased successfully!', {
+              position: 'top-center'
+            });
+          }else{
+            alert("You don't have enough dark coins to buy this weapon")
+          }
+          })
+       
+      }
+    
+      coinsReduce();
+      
     } catch (error) {
       console.error('Error purchasing weapon:', error);
     }
@@ -229,13 +288,13 @@ export const Shotgun = () => {
 
   return (
     <div id='pk'>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
-      <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-      <p id='points'>BatCoins: {weapon.points}</p>
-      <button id='button' onClick={handlePurchase}>
-        <span id='span'>PURCHASE NOW</span>
-      </button>    </div>
+    <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+    <h3 id='pname'>{weapon.Name}</h3>
+    <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <button id='button' onClick={handlePurchase}>
+      <span id='span'>PURCHASE NOW</span>
+    </button>    </div>
   );
 };
 export const SMGdisplay = () => {
@@ -265,12 +324,41 @@ export const SMGdisplay = () => {
 
   const handlePurchase = async () => {
     try {
-      const weaponWithId = { ...weapon, id: generateRandomId() };
+      const coinsReduce = () => {
+        var darkCoins, debitCoins;
+        axios.get("http://localhost:4000/DarkCoins")
+          .then((response) => {
+            darkCoins = response.data[0].Coins;
+            debitCoins = darkCoins - weapon.DarkCoins;
+            console.log(debitCoins);
+          })
+         .then(()=>{
 
-      await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!', {
-        position: 'top-center'
-      });
+          if(debitCoins>=0){
+            axios.put("http://localhost:4000/DarkCoins/1", {
+              Coins: debitCoins
+            }).catch((error)=>{
+              console.log(error)
+            })
+        
+            const weaponWithId = { category:'SMG',...weapon, id: generateRandomId() };
+
+             axios.post('http://localhost:4000/purchase', {
+              weaponWithId,
+              
+            });
+            toast.success('Weapon purchased successfully!', {
+              position: 'top-center'
+            });
+          }else{
+            alert("You don't have enough dark coins to buy this weapon")
+          }
+          })
+       
+      }
+    
+      coinsReduce();
+      
     } catch (error) {
       console.error('Error purchasing weapon:', error);
     }
@@ -285,13 +373,13 @@ export const SMGdisplay = () => {
 
   return (
     <div id='pk'>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
-      <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-      <p id='points'>BatCoins:{weapon.points}</p>
-      <button id='button' onClick={handlePurchase}>
-        <span id='span'>PURCHASE NOW</span>
-      </button>    </div>
+    <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+    <h3 id='pname'>{weapon.Name}</h3>
+    <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <button id='button' onClick={handlePurchase}>
+      <span id='span'>PURCHASE NOW</span>
+    </button>    </div>
   );
 };
 
@@ -322,12 +410,41 @@ export const AssaultRifle = () => {
 
   const handlePurchase = async () => {
     try {
-      const weaponWithId = { ...weapon, id: generateRandomId() };
+      const coinsReduce = () => {
+        var darkCoins, debitCoins;
+        axios.get("http://localhost:4000/DarkCoins")
+          .then((response) => {
+            darkCoins = response.data[0].Coins;
+            debitCoins = darkCoins - weapon.DarkCoins;
+            console.log(debitCoins);
+          })
+         .then(()=>{
 
-      await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!', {
-        position: 'top-center'
-      });
+          if(debitCoins>=0){
+            axios.put("http://localhost:4000/DarkCoins/1", {
+              Coins: debitCoins
+            }).catch((error)=>{
+              console.log(error)
+            })
+        
+            const weaponWithId = { category:'AssaultRifle',...weapon, id: generateRandomId() };
+
+             axios.post('http://localhost:4000/purchase', {
+              weaponWithId,
+              
+            });
+            toast.success('Weapon purchased successfully!', {
+              position: 'top-center'
+            });
+          }else{
+            alert("You don't have enough dark coins to buy this weapon")
+          }
+          })
+       
+      }
+    
+      coinsReduce();
+      
     } catch (error) {
       console.error('Error purchasing weapon:', error);
     }
@@ -343,20 +460,22 @@ export const AssaultRifle = () => {
 
   return (
     <div id='pk'>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
-      <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={500} width={600} id='imgpro' />
-      <p id='points'>BatCoins:{weapon.points}</p>
-      <button id='button' onClick={handlePurchase}>
-        <span id='span'>PURCHASE NOW</span>
-      </button>    </div>
+    <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+    <h3 id='pname'>{weapon.Name}</h3>
+    <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <button id='button' onClick={handlePurchase}>
+      <span id='span'>PURCHASE NOW</span>
+    </button>    </div>
   );
 };
 
 export const Rifle = () => {
   const { id } = useParams();
   const [weapon, setWeapon] = useState(null);
+  const [weapCategory,setWeapCategory] = useState(null);
   const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     const fetchWeaponDetails = async () => {
@@ -370,6 +489,9 @@ export const Rifle = () => {
       }
     };
 
+
+
+
     fetchWeaponDetails();
   }, [id]);
   const generateRandomId = () => {
@@ -379,17 +501,53 @@ export const Rifle = () => {
   };
 
   const handlePurchase = async () => {
-    try {
-      const weaponWithId = { ...weapon, id: generateRandomId() };
 
-      await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!', {
-        position: 'top-center'
-      });
-    } catch (error) {
+
+    try {
+
+
+      const coinsReduce = () => {
+        var darkCoins, debitCoins;
+        axios.get("http://localhost:4000/DarkCoins")
+          .then((response) => {
+            darkCoins = response.data[0].Coins;
+            debitCoins = darkCoins - weapon.DarkCoins;
+            console.log(debitCoins);
+          })
+         .then(()=>{
+
+          if(debitCoins>=0){
+            axios.put("http://localhost:4000/DarkCoins/1", {
+              Coins: debitCoins
+            }).catch((error)=>{
+              console.log(error)
+            })
+        
+            const weaponWithId = { category:'Rifle',...weapon, id: generateRandomId() };
+
+             axios.post('http://localhost:4000/purchase', {
+              weaponWithId,
+              
+            });
+            toast.success('Weapon purchased successfully!', {
+              position: 'top-center'
+            });
+          }else{
+            alert("You don't have enough dark coins to buy this weapon")
+          }
+          })
+       
+      }
+    
+      coinsReduce();
+      
+
+      
+    } catch(error) {
       console.error('Error purchasing weapon:', error);
     }
-  };
+  }
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -403,7 +561,7 @@ export const Rifle = () => {
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-      <p id='points'>BatCoins:{weapon.points}</p>
+      <p id='points'>BatCoins:{weapon.DarkCoins}</p>
       <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>
       </button>    </div>
@@ -457,13 +615,13 @@ export const Special = () => {
 
   return (
     <div id='pk'>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
-      <h3 id='pname'>{weapon.Name}</h3>
-      <img src={weapon.image} alt={weapon.Name} height={300} width={300} id='imgpro' />
-      <p id='points'>BatCoins :{weapon.points}</p>
-      <button id='button' onClick={handlePurchase}>
-        <span id='span'>PURCHASE NOW</span>
-      </button>    </div>
+    <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
+    <h3 id='pname'>{weapon.Name}</h3>
+    <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
+    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <button id='button' onClick={handlePurchase}>
+      <span id='span'>PURCHASE NOW</span>
+    </button>    </div>
   );
 };
 
