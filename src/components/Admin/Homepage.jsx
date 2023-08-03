@@ -32,7 +32,7 @@ useEffect(()=>{
 
 
   return (
-    <div className='  batfont container-fluid pb-4' >
+    <div className='  batfont container-fluid pb-4  min-vh-100' >
    <Link to='/'  className='quick-sand text-white p-2 ' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
 
 <h1 className='display-3 p-3 text-white quick-sand'>Entering into the shadows</h1>
