@@ -258,6 +258,36 @@
       "Name": "Smith & Wesson M&P",
       "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
       "points": 50
+    },
+    {
+      "id": "1690624541635-7646",
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "points": 20
+    },
+    {
+      "id": "1690624542403-6677",
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "points": 20
+    },
+    {
+      "id": "1690624587594-380",
+      "Name": "Steyr Mannlicher M1894",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.jZPnYO_SwLYWQ9uifPkcqQHaEK&pid=Api&P=0&h=180",
+      "points": 560
+    },
+    {
+      "id": "1690624775442-1580",
+      "Name": "Franchi Sporting  Shotgun 12",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "points": 110
+    },
+    {
+      "id": "1690625363442-2664",
+      "Name": "EPK (Pyrkal) Machine gun",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.OjUNQ6aqNxsCRWBun0WNFQHaFG&pid=Api&P=0&h=180",
+      "points": 530
     }
   ],
   "selectWeapons": [
@@ -305,7 +335,30 @@
       "weaponName": "FAMAE SAF",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
       "id": 9
+    },
+    {
+      "weaponName": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "id": 10
+    },
+    {
+      "weaponName": "AK-47",
+      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
+      "id": 11
     }
   ],
-  "points": []
+  "points": [
+    {
+      "points": 100,
+      "id": 1
+    },
+    {
+      "points": 100,
+      "id": 2
+    },
+    {
+      "points": 100,
+      "id": 3
+    }
+  ]
 }
