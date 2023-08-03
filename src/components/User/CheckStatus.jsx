@@ -16,9 +16,9 @@ const CheckStatus = () => {
         const crime = data.find((crime) => crime.code === codeInput);
         if (crime) {
           if (crime.status) {
-            setStatusMessage('Mission Completed');
+            setStatusMessage('Your Mission is Completed Successfully');
           } else {
-            setStatusMessage('Mission In Progress');
+            setStatusMessage('Your Mission is In Progress');
           }
         } else {
           setStatusMessage('Code not found');
