@@ -3,3 +3,11 @@
 
 
 }
+@font-face {
+    font-family: ref;
+    src: url('../../Fonts/batmfa__.ttf');
+}
+#logo{
+font-family: ref;
+color: rgb(245, 6, 6);
+}

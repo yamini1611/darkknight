@@ -477,6 +477,7 @@ export const Special = () => {
 
   return (
     <div id='pk'>
+      
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={300} width={300} id='imgpro' />
