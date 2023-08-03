@@ -13,7 +13,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
     suspect: '',
     contact: '',
     confidentiality: '',
-    emergency: '',
+    status:false
   });
 
   const [errors, setErrors] = useState({
@@ -71,21 +71,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
              
                 console.log('Crime reported successfully');
                 setShowModal(false);
-                setCrimeDetails({
-                  // Clear all fields by setting crimeDetails to an empty object
-                  code: '',
-                  crimeType: '',
-                  dateTime: '',
-                  location: '',
-                  description: '',
-                  evidence: '',
-                  vehicles: '',
-                  suspect: '',
-                  contact: '',
-                  confidentiality: '',
-                  status:false
-                });
-              } else {
+                } else {
                
                 console.error('Failed to report the crime. Please try again later.');
               }
