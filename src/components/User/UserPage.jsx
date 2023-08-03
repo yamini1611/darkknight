@@ -31,9 +31,7 @@ const UserPage = () => {
                   <span>Report</span>
                 </button>
               </div>
-              <Link to="/check-status">
-                <button className="check-status-btn">Check Status</button>
-              </Link>
+             
             </div>
           </div>
         </div>

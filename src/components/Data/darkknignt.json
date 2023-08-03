@@ -29,6 +29,12 @@
       "name": "hemanth",
       "email": "hemanth@gmail.com",
       "code": "000000"
+    },
+    {
+      "id": 1690978957877,
+      "name": "yamini",
+      "email": "yamini@gmail.com",
+      "code": "156126"
     }
   ],
   "DarkCoins": [
@@ -48,19 +54,19 @@
       "suspect": "Local thugs",
       "contact": "9784536102",
       "confidentiality": "public",
-      "status": false,
+      "status": true,
       "id": 1
     },
     {
-      "code": "123456",
-      "crimeType": "Kidnap",
-      "dateTime": "2023-07-06T20:16",
-      "location": "coimbatore",
-      "description": "Kidnapped a guy",
+      "code": "156126",
+      "crimeType": "Murder",
+      "dateTime": "2023-08-01T18:52",
+      "location": "cbe",
+      "description": "murdered me",
       "evidence": "https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80ne",
-      "vehicles": "none",
-      "suspect": "Local thugs",
-      "contact": "8300287044",
+      "vehicles": "",
+      "suspect": "meena",
+      "contact": "9944050247",
       "confidentiality": "public",
       "status": true,
       "id": 2
@@ -76,7 +82,7 @@
     {
       "id": 1,
       "Name": "Silver Ballers",
-      "image": "https://cdna.artstation.com/p/assets/images/images/003/896/384/large/ellijah-marin-render-colt-v4.jpg?1478309371",
+      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
       "DarkCoins": 200
     },
     {
@@ -270,6 +276,43 @@
       "Name": "Smith & Wesson M&P",
       "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
       "DarkCoins": 500
+    },
+    {
+      "id": "1690987571566-533",
+      "Name": "Ruger-57",
+      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
+      "DarkCoins": 400
+     
+    },
+    {
+      "id": "1690624541635-7646",
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "points": 20
+    },
+    {
+      "id": "1690624542403-6677",
+      "Name": "AutoMag (pistol)",
+      "image": "https://media.gettyimages.com/id/87186804/photo/gun.jpg?s=612x612&w=0&k=20&c=Tir7uYUNyF9S2XVeeQTVDCwURAWaOri1FMa_BA8wJ6k=",
+      "points": 20
+    },
+    {
+      "id": "1690624587594-380",
+      "Name": "Steyr Mannlicher M1894",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.jZPnYO_SwLYWQ9uifPkcqQHaEK&pid=Api&P=0&h=180",
+      "points": 560
+    },
+    {
+      "id": "1690624775442-1580",
+      "Name": "Franchi Sporting  Shotgun 12",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "points": 110
+    },
+    {
+      "id": "1690625363442-2664",
+      "Name": "EPK (Pyrkal) Machine gun",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.OjUNQ6aqNxsCRWBun0WNFQHaFG&pid=Api&P=0&h=180",
+      "points": 530
     }
   ],
   "selectWeapons": [
@@ -320,10 +363,44 @@
       "id": 9
     },
     {
+      "weaponName": "Remington R5 RGP",
+      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
+      "id": 10
+    },
+    {
+      "weaponName": "AK-47",
+      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
+      "id": 11
+    },
+    {
       "id": "1690607837741-5973",
       "Name": "Remington R5 RGP",
       "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
       "points": 210
+    },
+    {
+      "weaponName": "Ruger-57",
+      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
+      "DarkCoins": 400,
+      "id": 10
+    },
+    {
+      "weaponName": "Silver Ballers",
+      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
+      "DarkCoins": 200,
+      "id": 11
+    },
+    {
+      "weaponName": "Silver Ballers",
+      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
+      "DarkCoins": 200,
+      "id": 12
+    },
+    {
+      "weaponName": "Smith & Wesson M&P",
+      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+      "DarkCoins": 500,
+      "id": 13
     }
   ],
   "Inventory": []
