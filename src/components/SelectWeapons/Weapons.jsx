@@ -108,7 +108,6 @@ function handleShow(breakpoint) {
     <div className='background-color pb-5 '>
       <div className='d-flex'>
  <Link to='/investigate'  className='quick-sand text-white p-2 col-lg-10' style={{textDecoration:"none" , fontSize:23 }}><i class="fa-solid fa-backward"></i> back</Link>
-<h3 className='col-lg-2 text-white quick-sand'> Dark Coins={DarkCoins}</h3>
 </div>
   <div className=' d-flex p-1 container'>
 

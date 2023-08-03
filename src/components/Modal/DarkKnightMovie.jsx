@@ -6,19 +6,17 @@ import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import '../../components/styles/DarkKnightMovie.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useCoins } from '../Context/darkcoins'; 
 
 export default function DarkKnightMovie() {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const [fade, setFade] = useState(false);
-    const [points, setPoints] = useState(0);
+    const { coins, updateCoins } = useCoins(); // Use coins and updateCoins from context
     const history = useNavigate();
 
     // these variables are for updating the status as completed
     var code,crimeType,dateTime,location,description,evidence,vehicles,suspect,contact,confidentiality;
-    
-
-
 
     //this variable is for updating the current mission status
     const [missionID,setmissionID]=useState();
@@ -39,12 +37,17 @@ export default function DarkKnightMovie() {
 
 
 
-const handleVideoEnded = () => {
-    const updatedPoints = points + 100; 
-    setPoints(updatedPoints);
-    postPointsToServer(updatedPoints);
-    history('/adminpage');
-};
+    const handleVideoEnded = async () => {
+        console.log('Current Coins:', coins);
+        const updatedPoints = 100;
+
+        updateCoins(updatedPoints); // Update the coins using the context
+        console.log('Updated Coins:', coins);
+        history('/adminpage');
+    };
+    
+
+ 
 
  const complaintStatus = async()=>{
     console.log(missionID);
@@ -80,16 +83,7 @@ const handleVideoEnded = () => {
    
 }
 
-const postPointsToServer = (points) => {
-    const url = 'http://localhost:4000/points';
-    axios.post(url, { points })
-        .then((response) => {
-            console.log('Points successfully posted to server:', response.data);
-        })
-        .catch((error) => {
-            console.error('Error posting points to server:', error);
-        });
-};
+
 
 useEffect(()=>{
 
@@ -125,9 +119,7 @@ useEffect(()=>{
                     ></video>
                 </Modal>
             </div>
-            <div className='points'>
-                Dark Coins: {points}
-            </div>
+          
         </>
     );
 }
