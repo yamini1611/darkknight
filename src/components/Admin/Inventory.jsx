@@ -177,9 +177,9 @@ export const Pistoldisplay = () => {
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
       <p id='points'>BatCoins:{weapon.points}</p>
-      <Link to="/purchase"><button id='button' >
+     <button id='button' >
         <span id='span'>PURCHASE NOW</span>
-      </button>   </Link> </div>
+      </button>    </div>
   );
 };
 
@@ -366,7 +366,6 @@ export const Rifle = () => {
       try {
         const response = await axios.get(`http://localhost:4000/Rifle/${id}`);
         setWeapon(response.data);
-        setWeapCategory("Rifle")
         setLoading(false);
       } catch (error) {
         console.error('Error fetching weapon details:', error);
@@ -386,7 +385,11 @@ export const Rifle = () => {
   };
 
   const handlePurchase = async () => {
+
+
     try {
+
+
       const coinsReduce = () => {
         var darkCoins, debitCoins;
         axios.get("http://localhost:4000/DarkCoins")
@@ -395,27 +398,40 @@ export const Rifle = () => {
             debitCoins = darkCoins - weapon.DarkCoins;
             console.log(debitCoins);
           })
-          .then(()=>{
+         .then(()=>{
+
+          if(debitCoins>=0){
             axios.put("http://localhost:4000/DarkCoins/1", {
               Coins: debitCoins
             }).catch((error)=>{
               console.log(error)
             })
+        
+            const weaponWithId = { category:'Rifle',...weapon, id: generateRandomId() };
+
+             axios.post('http://localhost:4000/purchase', {
+              weaponWithId,
+              
+            });
+            toast.success('Weapon purchased successfully!', {
+              position: 'top-center'
+            });
+          }else{
+            alert("You don't have enough dark coins to buy this weapon")
+          }
           })
        
       }
     
       coinsReduce();
-      const weaponWithId = { ...weapon, id: generateRandomId() };
+      
 
-      await axios.post('http://localhost:4000/purchase', weaponWithId);
-      toast.success('Weapon purchased successfully!', {
-        position: 'top-center'
-      });
-    } catch (error) {
+      
+    } catch(error) {
       console.error('Error purchasing weapon:', error);
     }
-  };
+  }
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -429,7 +445,7 @@ export const Rifle = () => {
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-      <p id='points'>BatCoins:{weapon.points}</p>
+      <p id='points'>BatCoins:{weapon.DarkCoins}</p>
       <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>
       </button>    </div>
