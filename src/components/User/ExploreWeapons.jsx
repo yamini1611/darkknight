@@ -16,7 +16,6 @@ const ExploreWeapons = () => {
     const [assaultRifle, setAssaultRifle] = useState('');
     const [rifle, setRifle] = useState('');
     const [specialWeapons, setspecialWeapons] = useState('');
-
     const [select, setSelect] = useState(false);
     const [chooseWeapons, setChooseWeapons] = useState('');
     const [DarkCoins, setDarkCoins] = useState(0);
@@ -110,19 +109,11 @@ const ExploreWeapons = () => {
                 <Link to='/explore' className='quick-sand text-white p-2 col-lg-10' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
             </div>
             <div className=' d-flex p-1 container'>
-
                 <h1 className=' quick-sand text-white col-lg-11'>Batman's Weapons </h1>
-
-
                 <Badge badgeContent={chooseWeapons.length} color="primary">
-
                 </Badge>
 
             </div>
-
-
-
-
 
             {pistols.length > 0 && (
                 <div className='background-color text-white quick-sand container'>
@@ -138,18 +129,13 @@ const ExploreWeapons = () => {
                                             <Card.Text>
                                                 Damage level: <span className='text-success'><b>Low</b></span>
                                             </Card.Text>
-
-
                                         </Card.Body>
                                     </Card>
-
                                 </div>
-
                             ))}
                         </div>
                         {shotGun.length > 0 && (
                             <div className='row  background-color'>
-
                                 <h1 className='m-3'>Shotguns</h1>
                                 {shotGun.map((shot) => (
                                     <div className='col-lg-4 mt-2'>
@@ -163,13 +149,10 @@ const ExploreWeapons = () => {
                                             </Card.Body>
                                         </Card>
                                     </div>
-
                                 ))}
                             </div>
-
                         )}
                         {SMG.length > 0 && (
-
                             <div className='row  background-color'>
                                 <h1 className='m-3'>SMGs</h1>
                                 {SMG.map((Submg) => (
@@ -184,12 +167,10 @@ const ExploreWeapons = () => {
                                             </Card.Body>
                                         </Card>
                                     </div>
-
                                 ))}
                             </div>
                         )}
                         {assaultRifle.length > 0 && (
-
                             <div className='row  background-color'>
                                 <h1 className='m-3'>Assault Rifle</h1>
                                 {assaultRifle.map((assault) => (
@@ -204,13 +185,11 @@ const ExploreWeapons = () => {
                                             </Card.Body>
                                         </Card>
                                     </div>
-
                                 ))}
                             </div>
                         )}
 
                         {rifle.length > 0 && (
-
                             <div className='row  background-color'>
                                 <h1 className='m-3'>Rifles</h1>
                                 {rifle.map((rif) => (
@@ -225,7 +204,6 @@ const ExploreWeapons = () => {
                                             </Card.Body>
                                         </Card>
                                     </div>
-
                                 ))}
                             </div>
                         )}
@@ -244,14 +222,10 @@ const ExploreWeapons = () => {
                                             </Card.Body>
                                         </Card>
                                     </div>
-
                                 ))}
-
                             </div>
                         )}
-
                     </Container>
-
                 </div>
             )}
             <ToastContainer />

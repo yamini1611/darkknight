@@ -4,8 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../styles/Context.css';
 import { Navigate } from 'react-router-dom';
 export const UserContext = createContext();
+
 const UserProvider = ({ children }) => {
-  
     const [user, setUser] = useState({
         loggedIn: false,
         email: '',
@@ -46,13 +46,11 @@ const UserProvider = ({ children }) => {
                     progress: undefined,
                     className: 'error-toast',
                 });
-
                 setUser({
                     loggedIn: false,
                     email: '',
                     code: '',
                 });
-              
             }
         } catch (error) {
             console.error('Error fetching user data:', error);
@@ -63,7 +61,6 @@ const UserProvider = ({ children }) => {
             });
         }
     };
-
     const handleLogout = () => {
         toast.success('Logged out successful!', {
             position: 'top-center',
@@ -82,8 +79,6 @@ const UserProvider = ({ children }) => {
         });
         <Navigate to="/Homepage" />
     };
-
-
 
     return (
         <UserContext.Provider value={{ user, handleLogin, handleLogout }}>

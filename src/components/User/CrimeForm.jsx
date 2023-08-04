@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { ToastContainer , toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import '../styles/CrimeForm.css'
 const CrimeForm = ({ showModal, setShowModal }) => {
   const [crimeDetails, setCrimeDetails] = useState({
@@ -14,7 +14,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
     suspect: '',
     contact: '',
     confidentiality: '',
-    status:false
+    status: false
   });
 
   const [errors, setErrors] = useState({
@@ -29,31 +29,29 @@ const CrimeForm = ({ showModal, setShowModal }) => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setCrimeDetails({ ...crimeDetails, [name]: value });
-    setErrors({ ...errors, [name]: '' }); 
+    setErrors({ ...errors, [name]: '' });
   };
 
   const handleSubmit = () => {
     const mandatoryFields = ['code', 'crimeType', 'dateTime', 'location', 'description', 'contact'];
     let hasError = false;
     const updatedErrors = {};
-  
+
     mandatoryFields.forEach((field) => {
       if (!crimeDetails[field]) {
         hasError = true;
         updatedErrors[field] = 'This fields required';
       }
     });
-  
     if (hasError) {
       setErrors(updatedErrors);
       return;
     }
-  
+
     fetch('http://localhost:4000/Register')
       .then((response) => response.json())
       .then((data) => {
         const codeExists = data.some((item) => item.code === crimeDetails.code);
-  
         if (!codeExists) {
           alert('Invalid code. Please provide a valid code.');
         } else {
@@ -68,8 +66,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               if (response.ok) {
                 toast.success('Crime reported successfully');
                 setShowModal(false);
-  
-          
+
                 setCrimeDetails({
                   code: '',
                   crimeType: '',
@@ -96,7 +93,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
         console.error('Error fetching register data:', error);
       });
   };
-  
+
 
   return (
     <Modal show={showModal} onHide={() => setShowModal(false)} id="customModal">
@@ -113,7 +110,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               value={crimeDetails.code}
               onChange={handleInputChange}
               required
-              isInvalid={!!errors.code} 
+              isInvalid={!!errors.code}
             />
             <Form.Control.Feedback type="invalid">{errors.code}</Form.Control.Feedback>
           </Form.Group>
@@ -125,9 +122,9 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               value={crimeDetails.crimeType}
               onChange={handleInputChange}
               required
-              isInvalid={!!errors.crimeType} 
+              isInvalid={!!errors.crimeType}
             >
-              <option value="">Select a type</option> 
+              <option value="">Select a type</option>
               <option value="Murder">Murder</option>
               <option value="Kidnap">Kidnap</option>
               <option value="Theft">Theft</option>
@@ -142,8 +139,8 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               name="dateTime"
               value={crimeDetails.dateTime}
               onChange={handleInputChange}
-              required 
-              isInvalid={!!errors.dateTime} 
+              required
+              isInvalid={!!errors.dateTime}
             />
             <Form.Control.Feedback type="invalid">{errors.dateTime}</Form.Control.Feedback>
           </Form.Group>
@@ -154,8 +151,8 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               name="location"
               value={crimeDetails.location}
               onChange={handleInputChange}
-              required 
-              isInvalid={!!errors.location} 
+              required
+              isInvalid={!!errors.location}
             />
             <Form.Control.Feedback type="invalid">{errors.location}</Form.Control.Feedback>
           </Form.Group>
@@ -167,8 +164,8 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               name="description"
               value={crimeDetails.description}
               onChange={handleInputChange}
-              required 
-              isInvalid={!!errors.description} 
+              required
+              isInvalid={!!errors.description}
             />
             <Form.Control.Feedback type="invalid">{errors.description}</Form.Control.Feedback>
           </Form.Group>
@@ -180,7 +177,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               value={crimeDetails.evidence}
               onChange={handleInputChange}
               required
-              isInvalid={!!errors.evidence} 
+              isInvalid={!!errors.evidence}
             />
             <Form.Control.Feedback type="invalid">{errors.evidence}</Form.Control.Feedback>
           </Form.Group>
@@ -209,8 +206,8 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               name="contact"
               value={crimeDetails.contact}
               onChange={handleInputChange}
-              required 
-              isInvalid={!!errors.contact} 
+              required
+              isInvalid={!!errors.contact}
             />
             <Form.Control.Feedback type="invalid">{errors.contact}</Form.Control.Feedback>
           </Form.Group>
@@ -221,10 +218,10 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               name="confidentiality"
               value={crimeDetails.confidentiality}
               onChange={handleInputChange}
-              required 
-              isInvalid={!!errors.confidentiality} 
+              required
+              isInvalid={!!errors.confidentiality}
             >
-              <option value="">Select an option</option> 
+              <option value="">Select an option</option>
               <option value="public">Public</option>
               <option value="private">Private</option>
             </Form.Control>

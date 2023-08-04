@@ -5,7 +5,6 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
-
 import {
   MDBCard,
   MDBCardTitle,
@@ -17,8 +16,6 @@ import { MDBBtn } from 'mdb-react-ui-kit';
 import '../../components/styles/Investigation.css';
 import BatModal from '../Modal/Modal';
 import { useState } from 'react';
-
-
 
 const images = [
   {
@@ -100,65 +97,59 @@ const ImageMarked = styled('span1')(({ theme }) => ({
 
 export default function DKCard() {
   return (
-    <div className='container pb-5'> 
-        
-         <Box className="pb-5" sx={{ display: 'block', flexWrap: 'wrap', minWidth: 300, width: '100%'}}>
-      {images.map((image) => (
-        <Link to={`/${image.title}`}>
-        <ImageButton
-          focusRipple
-          key={image.title}
-          style={{
-            width: image.width,
-            borderRadius:'5px'
-          }}
-        >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-          <ImageBackdrop className="MuiImageBackdrop-root" />
-          <Image>
-            <Typography
-              component="span1"
-              variant="subtitle1"
-              color="inherit"
-              sx={{
-                position: 'relative',
-                p: 4,
-                pt: 2,
-                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+    <div className='container pb-5'>
+      <Box className="pb-5" sx={{ display: 'block', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+        {images.map((image) => (
+          <Link to={`/${image.title}`}>
+            <ImageButton
+              focusRipple
+              key={image.title}
+              style={{
+                width: image.width,
+                borderRadius: '5px'
               }}
             >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
-          </Image>
-        </ImageButton>
-        </Link>
-      ))}
-    </Box>
-    
+              <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+              <ImageBackdrop className="MuiImageBackdrop-root" />
+              <Image>
+                <Typography
+                  component="span1"
+                  variant="subtitle1"
+                  color="inherit"
+                  sx={{
+                    position: 'relative',
+                    p: 4,
+                    pt: 2,
+                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                  }}
+                >
+                  {image.title}
+                  <ImageMarked className="MuiImageMarked-root" />
+                </Typography>
+              </Image>
+            </ImageButton>
+          </Link>
+        ))}
+      </Box>
     </div>
-
   );
 }
 
-
-
-export  function DkInvestigateCard(props) {
+export function DkInvestigateCard(props) {
   const [modalShow, setModalShow] = useState(false);
   var imageLink = "https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80ne";
   return (
     <div className='container p-5 col-lg-4 dk-invest-card '>
- <MDBCard background='dark' className='text-white '>
-      <MDBCardImage overlay src={imageLink} className='col-lg-3' alt='...' />
-      <MDBCardOverlay>
-        <MDBCardTitle className='mt-5 pt-5'>{props.crimeType} at {props.location}</MDBCardTitle>
-       
-        <MDBBtn color='dark' onClick={()=>setModalShow(true)}>
-        Resolve
-      </MDBBtn>
-      <BatModal crimeType={props.crimeType} id={props.id} location={props.location} time={props.time} description={props.description} contact={props.contact} confidentiality={props.confidentiality} emergency={props.emergency} show={modalShow} onHide={()=>setModalShow(false)}></BatModal>
-      </MDBCardOverlay>
-    </MDBCard>
+      <MDBCard background='dark' className='text-white '>
+        <MDBCardImage overlay src={imageLink} className='col-lg-3' alt='...' />
+        <MDBCardOverlay>
+          <MDBCardTitle className='mt-5 pt-5'>{props.crimeType} at {props.location}</MDBCardTitle>
+          <MDBBtn color='dark' onClick={() => setModalShow(true)}>
+            Resolve
+          </MDBBtn>
+          <BatModal crimeType={props.crimeType} id={props.id} location={props.location} time={props.time} description={props.description} contact={props.contact} confidentiality={props.confidentiality} emergency={props.emergency} show={modalShow} onHide={() => setModalShow(false)}></BatModal>
+        </MDBCardOverlay>
+      </MDBCard>
     </div>
   );
 }
