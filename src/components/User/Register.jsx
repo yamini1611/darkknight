@@ -101,6 +101,7 @@ const Register = () => {
   return (
     <div className='register-container'>
       <div className='form-container'>
+      <Link to='/Homepage' className='quick-sand  p-2 ' style={{ textDecoration: "none", fontSize: 23 ,color:'black'}}><i  style={{color:'black'}}  class="fa-solid fa-backward"></i> back</Link>
         <h2>Register</h2>
         <form onSubmit={handleRegister}>
           <div>

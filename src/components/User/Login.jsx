@@ -24,12 +24,15 @@ const Login = () => {
     }
 
     return (
+        
         <section className="vh-110 regmain" id="close" style={{ fontSize: 22.1 }} >
             <div className="container py-5 h-100">
                 <div className="col col-xl-10">
                     <div className="row g-0">
                         <div className="col-md-6 col-lg-7 d-flex align-items-center offset-3">
                             <div className="card-body p-4 p-lg-5 bodylogin">
+                            <Link to='/Homepage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
+
                                 <form onSubmit={handleSubmit} className='back offset-2'>
                                     <h5 className=" mb-3 pb-3 text-white signin" style={{ letterSpacing: '1px' }}>
                                         Sign into your account
