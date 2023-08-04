@@ -28,26 +28,26 @@ const Navbar = () => {
 
 
     return (
-        <div style={{ backgroundColor: 'black' }}>
-            <div className="offcanvas offcanvas-start" id="demo"  >
+        <div style={{ backgroundColor: 'black'  }}>
+            <div className="offcanvas offcanvas-start" id="demo" style={{ width:150}} >
                 <div className="offcanvas-header">
                   
                     <button type="button" className="btn-close btn-close-white" style={{ fontSize: '10px' }} data-bs-dismiss="offcanvas"></button>
                 </div>
-                <div className="offcanvas-body">
+                <div className="offcanvas-body" >
                     {user.loggedIn && !isAdmin ? (
                         <>
                             <div className='row'>
                                 <div className='col-0'>
-                                    <Link to="/Homepage" style={{ textDecoration: "none", color: "white" , fontSize:25 }}>UserPage  <i class="fa-solid fa-user-tie"></i></Link>
+                                    <Link to="/Homepage" style={{ textDecoration: "none", color: "white" , fontSize:21 }}>UserPage  <i class="fa-solid fa-user-tie"></i></Link>
                                 </div>
                                 <div className='col-0' style={{ paddingTop: 5 }}>
-                                    <h1 style={{ textDecoration: "none", color: "white" , fontSize:25 }} onClick={handleLogoutClick}>Logout<i class="fa-solid fa-right-from-bracket"></i></h1>
+                                    <h1 style={{ textDecoration: "none", color: "white" , fontSize:21 }} onClick={handleLogoutClick}>Logout<i class="fa-solid fa-right-from-bracket"></i></h1>
 
                                 </div>
                                 <div className='col' style={{ paddingTop: 8 }}>
                                     <Link to="/check-status" style={{ textDecoration: "none"}}>
-                                        <h3 style={{ textDecoration: "none", color: "white" , fontSize:25 }} >Check Status</h3>
+                                        <h3 style={{ textDecoration: "none", color: "white" , fontSize:21 }} >Check Status</h3>
                                     </Link>
                                 </div>
                             </div>
@@ -61,11 +61,15 @@ const Navbar = () => {
                                     <>
                                         <div className='row'>
                                             <div className='col-0'>
-                                                <Link to="/adminpage" style={{ textDecoration: "none", color: "white", fontSize: 25 }}>Admin <i class="fa-solid fa-user-secret"></i></Link>
+                                                <Link to="/adminpage" style={{ textDecoration: "none", color: "white", fontSize: 21 }}>Admin <i class="fa-solid fa-user-secret"></i></Link>
 
                                             </div>
                                             <div className='col' style={{ paddingTop: 5 }}>
-                                                <Link to="/Homepage" style={{ textDecoration: "none", color: "white", fontSize: 25 }} onClick={handleLogoutClick}>Logout  <i class="fa-solid fa-right-from-bracket"></i></Link>
+                                                <Link to="/Homepage" style={{ textDecoration: "none", color: "white", fontSize: 21 }} onClick={handleLogoutClick}>Logout  <i class="fa-solid fa-right-from-bracket"></i></Link>
+
+                                            </div>
+                                            <div className='col' style={{ paddingTop: 5 }}>
+                                                <Link to="/Feedback" style={{ textDecoration: "none", color: "white", fontSize: 21 }} >Feedback  <i class="fa-solid fa-comment-dots"></i></Link>
 
                                             </div>
                                         </div>
