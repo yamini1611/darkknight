@@ -14,7 +14,7 @@ function SearchPage() {
 
   return (
     <div id='batbg'>
- <div id="search-container">
+ <div id="search-container ">
     <img id="search-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"></img>
   <br></br>
   <form id="search-form"  onSubmit={handleSearch}>
