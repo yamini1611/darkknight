@@ -55,7 +55,7 @@
       "suspect": "Local thugs",
       "contact": "9784536102",
       "confidentiality": "public",
-      "status": true,
+      "status": false,
       "id": 1
     },
     {
@@ -371,42 +371,6 @@
   ],
   "selectWeapons": [
     {
-      "weaponName": "Silver Ballers",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 200,
-      "id": 1
-    },
-    {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 300,
-      "id": 2
-    },
-    {
-      "weaponName": "A-M20",
-      "image": "https://tse1.mm.bing.net/th?id=OIP.jetUDEDdlqZWKmlUd0ssLwHaDJ&pid=Api&P=0&h=180",
-      "DarkCoins": 2100,
-      "id": 3
-    },
-    {
-      "weaponName": "FAMAE SAF",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
-      "DarkCoins": 2200,
-      "id": 4
-    },
-    {
-      "weaponName": "Silver Ballers",
-      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
-      "DarkCoins": 200,
-      "id": 11
-    },
-    {
-      "weaponName": "Silver Ballers",
-      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
-      "DarkCoins": 200,
-      "id": 12
-    },
-    {
       "weaponName": "Smith & Wesson M&P",
       "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
       "DarkCoins": 500,
@@ -449,112 +413,22 @@
       "id": 19
     },
     {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 300,
-      "id": 20
-    },
-    {
-      "weaponName": "Franchi SPAS-15",
-      "image": "https://tse3.mm.bing.net/th?id=OIP.6riYsq6RoT4BW8G2yI6YqAHaDs&pid=Api&P=0&h=180",
-      "DarkCoins": 1200,
-      "id": 21
-    },
-    {
-      "weaponName": "FAMAE SAF",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
-      "DarkCoins": 2200,
-      "id": 22
-    },
-    {
-      "weaponName": "AK-47",
-      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
-      "DarkCoins": 2800,
-      "id": 23
-    },
-    {
-      "weaponName": "Mannlicher M1890 Carbine",
-      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "DarkCoins": 3500,
-      "id": 24
-    },
-    {
-      "weaponName": "Heckler & Koch HK21 HK25",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
-      "DarkCoins": 6200,
-      "id": 25
-    },
-    {
       "weaponName": "Silver Ballers",
       "image": "https://tse2.mm.bing.net/th?id=OIP.nIkGHniyTbUKYkVrIdENewHaE8&pid=Api&P=0&h=180",
       "DarkCoins": 200,
-      "id": 26
+      "id": 20
     },
     {
       "weaponName": "Horhe (pistol)",
       "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
       "DarkCoins": 300,
-      "id": 27
+      "id": 21
     },
     {
-      "weaponName": "Franchi SPAS-15",
-      "image": "https://tse3.mm.bing.net/th?id=OIP.6riYsq6RoT4BW8G2yI6YqAHaDs&pid=Api&P=0&h=180",
-      "DarkCoins": 1200,
-      "id": 28
-    },
-    {
-      "weaponName": "Mossberg 590",
-      "image": "https://media.gettyimages.com/id/57658702/photo/an-old-fashioned-rifle.jpg?s=612x612&w=0&k=20&c=MDFW3HAmv9KuMz3uKcHnaKf2XDpi3YDfL4gAnvXvS9s=",
-      "DarkCoins": 1000,
-      "id": 29
-    },
-    {
-      "weaponName": "FAMAE SAF",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Famae-saf.jpg/220px-Famae-saf.jpg",
-      "DarkCoins": 2200,
-      "id": 30
-    },
-    {
-      "weaponName": "Brügger & Thomet APC",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/B%26T_APC_9_K_side_profile.jpg/220px-B%26T_APC_9_K_side_profile.jpg",
-      "DarkCoins": 2400,
-      "id": 31
-    },
-    {
-      "weaponName": "ArmaLite AR-18",
-      "image": "https://media.gettyimages.com/id/1301486218/photo/fn-scar-on-white-background.jpg?s=612x612&w=0&k=20&c=5dAHxhh2Y1trb8rGanJnMOYJHC9VoI4BS-S__8asEkA=",
-      "DarkCoins": 2000,
-      "id": 32
-    },
-    {
-      "weaponName": "AK-47",
-      "image": "https://media.gettyimages.com/id/182717773/photo/ak-47.jpg?s=612x612&w=0&k=20&c=b3ZtAl0Av8SVkcYxY8-RZEFdJR5KdEIV-1haYbIRgXM=",
-      "DarkCoins": 2800,
-      "id": 33
-    },
-    {
-      "weaponName": "Mannlicher M1890 Carbine",
-      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "DarkCoins": 3500,
-      "id": 34
-    },
-    {
-      "weaponName": "Schmidt-Rubin",
-      "image": "https://media.gettyimages.com/id/1214933965/photo/lightweight-magazine-fed-gas-operated-semi-automatic-rifle.jpg?s=612x612&w=0&k=20&c=CW6eELInY1Erlt_zDpJHZNTvE2vK83jMegb9_hcKQuo=",
-      "DarkCoins": 4400,
-      "id": 35
-    },
-    {
-      "weaponName": "EPK (Pyrkal) Machine gun",
-      "image": "https://tse4.mm.bing.net/th?id=OIP.OjUNQ6aqNxsCRWBun0WNFQHaFG&pid=Api&P=0&h=180",
-      "DarkCoins": 5300,
-      "id": 36
-    },
-    {
-      "weaponName": "Heckler & Koch HK21 HK25",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.ZVYtie0wWijjtVkjfGJ5YwHaDs&pid=Api&P=0&h=180",
-      "DarkCoins": 6200,
-      "id": 37
+      "weaponName": "Franchi Sporting  Shotgun 12",
+      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+      "DarkCoins": 1100,
+      "id": 22
     }
   ],
   "Inventory": [],

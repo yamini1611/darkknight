@@ -182,7 +182,7 @@ const Weapons = () => {
             toast.success('Weapon selected!', {
             });
             axios.post("http://localhost:4000/selectWeapons", {
-              weaponName:var_weapons.Name,
+              weaponName: var_weapons.Name,
               image: var_weapons.image,
               DarkCoins: var_weapons.DarkCoins
             })
@@ -241,7 +241,7 @@ const Weapons = () => {
 
         {console.log(chooseWeapons)}
         <Badge badgeContent={chooseWeapons.length} color="primary">
-          <h1 className='p-0 quick-sand text-white'>Chosen</h1>
+          <Link to="/selected"> <h1 className='p-0 quick-sand text-white'>Chosen</h1></Link>
         </Badge>
 
       </div>
@@ -285,7 +285,7 @@ const Weapons = () => {
                         <Card.Text>
                           Damage level: <b className='text-warning'>High</b>
                         </Card.Text>
-                        <Button className='bg-black' onClick={() => handleWeapons("ShotGun",shot.id)} >Add</Button>
+                        <Button className='bg-black' onClick={() => handleWeapons("ShotGun", shot.id)} >Add</Button>
                       </Card.Body>
                     </Card>
                   </div>
@@ -307,7 +307,7 @@ const Weapons = () => {
                         <Card.Text>
                           Damage level: <b className='text-secondary'> Medium</b>
                         </Card.Text>
-                        <Button className='bg-black' onClick={() => handleWeapons("SMG",Submg.id)} >Add</Button>
+                        <Button className='bg-black' onClick={() => handleWeapons("SMG", Submg.id)} >Add</Button>
                       </Card.Body>
                     </Card>
                   </div>
@@ -328,7 +328,7 @@ const Weapons = () => {
                         <Card.Text>
                           Damage level:  <b className='text-warning'>High</b>
                         </Card.Text>
-                        <Button className='bg-black' onClick={() => handleWeapons("Assault-Rifle",assault.id)} >Add</Button>
+                        <Button className='bg-black' onClick={() => handleWeapons("Assault-Rifle", assault.id)} >Add</Button>
                       </Card.Body>
                     </Card>
                   </div>
@@ -350,7 +350,7 @@ const Weapons = () => {
                         <Card.Text>
                           Damage level:  <b className='text-danger'>Extremely high</b>
                         </Card.Text>
-                        <Button className='bg-black' onClick={() => handleWeapons("Rifle",rif.id)} >Add</Button>
+                        <Button className='bg-black' onClick={() => handleWeapons("Rifle", rif.id)} >Add</Button>
                       </Card.Body>
                     </Card>
                   </div>
@@ -370,7 +370,7 @@ const Weapons = () => {
                         <Card.Text>
                           Damage level:  <b className='text-danger'>Deadly <i class="fa-solid fa-skull"></i></b>
                         </Card.Text>
-                        <Button className='bg-black' onClick={() => handleWeapons("Special",spl.id)} >Add</Button>
+                        <Button className='bg-black' onClick={() => handleWeapons("Special", spl.id)} >Add</Button>
                       </Card.Body>
                     </Card>
                   </div>
