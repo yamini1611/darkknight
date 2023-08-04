@@ -1,71 +1,68 @@
 import React, { useContext, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { UserContext } from '../Context/Context';
-import '../styles/Login.css';
+import '../styles/Login.css'; // Assuming you have custom styles for Login component
 
 const Login = () => {
     const [email, setEmail] = useState('');
-    const [code, setcode] = useState('');
+    const [code, setCode] = useState('');
     const { user, handleLogin } = useContext(UserContext);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         handleLogin(email, code);
         if (user.loggedIn) {
-            return <>
-                <Navigate to="/Homepage" />;
-            </>
+            return <Navigate to="/Homepage" />;
         }
     };
 
     if (user.loggedIn) {
-        return <>
-            <Navigate to="/Homepage" />;
-        </>
+        return <Navigate to="/Homepage" />;
     }
 
     return (
-        <section className="vh-110 regmain" id="close" style={{ fontSize: 22.1 }} >
-            <div className="container py-5 h-100">
-                <div className="col col-xl-10">
-                    <div className="row g-0">
-                        <div className="col-md-6 col-lg-7 d-flex align-items-center offset-3">
-                            <div className="card-body p-4 p-lg-5 bodylogin">
-                                <form onSubmit={handleSubmit} className='back offset-2'>
-                                    <h5 className=" mb-3 pb-3 text-white signin" style={{ letterSpacing: '1px' }}>
-                                        Sign into your account
-                                    </h5>
-                                    <div className="mb-4">
-                                        <label className="text-white ps-2 fs-7" htmlFor="form2Example17">
+        
+        <section className="vh-100 regmain bg-secondary d-flex align-items-center justify-content-center">
+            <div className="container py-5">
+                <div className="row justify-content-center">
+                    <div className="col-md-6 col-lg-5">
+                        <div className="card shadow">
+                            <div className="card-body p-4">
+                            <Link to='/Homepage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
+
+                                <form onSubmit={handleSubmit}>
+                                    <h5 className="mb-4 text-center text-dark">Sign into your account</h5>
+                                    <div className="mb-3">
+                                        <label htmlFor="email" className="form-label text-dark fs-7">
                                             Email
                                         </label>
                                         <input
                                             type="email"
-                                            id="form2Example17"
-                                            className="inputtag"
+                                            id="email"
+                                            className="form-control"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
                                     </div>
-                                    <div className=" mb-4">
-                                        <label className="text-white ps-2 fs-7" htmlFor="form2Example27">
-                                            code
+                                    <div className="mb-3">
+                                        <label htmlFor="code" className="form-label text-dark fs-7">
+                                            Code
                                         </label>
                                         <input
                                             type="password"
-                                            id="form2Example27"
-                                            className="inputtag"
+                                            id="code"
+                                            className="form-control"
                                             value={code}
-                                            onChange={(e) => setcode(e.target.value)}
+                                            onChange={(e) => setCode(e.target.value)}
                                         />
                                     </div>
-
-                                    <div className="pt-1 mb-4">
-                                        <button className="btn text-white" id='btnreg' type="submit" >
+                                    <div className="d-grid gap-2">
+                                        <button className="btn btn-danger" type="submit">
                                             Login
                                         </button>
                                     </div>
                                 </form>
-                                <p className="mb-5 pb-lg-2 register offset-3" style={{ color: '#393f81' }}>
+                                <p className="mt-3 mb-0 text-center text-dark fs-7">
                                     Don't have an account? <Link to="/Register">Register here</Link>
                                 </p>
                             </div>

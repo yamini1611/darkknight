@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/CheckStatus.css';
-
+import { ToastContainer , toast } from 'react-toastify';
 const CheckStatus = () => {
   const [codeInput, setCodeInput] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
@@ -24,6 +24,7 @@ const CheckStatus = () => {
         } else {
           setStatusMessage('Code not found');
         }
+
 
       })
       .catch((error) => {
@@ -50,7 +51,7 @@ const CheckStatus = () => {
     })
       .then((response) => {
         if (response.ok) {
-          console.log('Feedback message sent successfully.');
+         toast.success('Feedback message sent successfully.');
           setMessageToBatman(''); 
         } else {
           console.error('Error sending feedback message.');
@@ -89,6 +90,7 @@ const CheckStatus = () => {
           </div>
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };
