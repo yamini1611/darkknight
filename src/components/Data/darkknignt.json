@@ -325,23 +325,17 @@
       "id": 12
     },
     {
-      "weaponName": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "DarkCoins": 500,
-      "id": 13
-    },
-    {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 300,
-      "id": 14
-    },
-    {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 300,
-      "id": 15
-    },
+      "weaponWithId": {
+        "category": "Pistol",
+        "id": "1691113148457-3103",
+        "Name": "Ruger-57",
+        "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
+        "DarkCoins": 400
+      },
+      "id": 8
+    }
+  ],
+  "selectWeapons": [
     {
       "weaponName": "Mannlicher M1890 Carbine",
       "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
