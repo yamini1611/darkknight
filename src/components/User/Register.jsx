@@ -12,7 +12,6 @@ const Register = () => {
   const [registeredUsers, setRegisteredUsers] = useState([]);
 
   useEffect(() => {
-    // Fetch the registered users data from the API
     fetch("http://localhost:4000/Register")
       .then((response) => response.json())
       .then((data) => setRegisteredUsers(data))
@@ -57,7 +56,6 @@ const Register = () => {
     }
 
     if (Object.keys(validationErrors).length === 0) {
-      // Check if the email already exists
       const emailExists = registeredUsers.some((user) => user.email === email);
       const codeExists = registeredUsers.some((user) => user.code === code);
 
@@ -66,7 +64,6 @@ const Register = () => {
       } else if (codeExists) {
         toast.error("Please choose another code");
       } else {
-        // Proceed with registration if there are no errors
 
         const newUser = {
           id: Date.now(),
@@ -96,7 +93,6 @@ const Register = () => {
           });
       }
     } else {
-      // If there are validation errors, set the errors state
       setErrors(validationErrors);
     }
   };

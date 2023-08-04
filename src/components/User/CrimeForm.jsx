@@ -69,7 +69,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
                 toast.success('Crime reported successfully');
                 setShowModal(false);
   
-                // Clear all fields after successful submission
+          
                 setCrimeDetails({
                   code: '',
                   crimeType: '',
@@ -113,7 +113,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               value={crimeDetails.code}
               onChange={handleInputChange}
               required
-              isInvalid={!!errors.code} // Add 'isInvalid' prop to indicate the field has an error
+              isInvalid={!!errors.code} 
             />
             <Form.Control.Feedback type="invalid">{errors.code}</Form.Control.Feedback>
           </Form.Group>
