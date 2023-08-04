@@ -16,8 +16,7 @@ const Inventory = () => {
   const [Rifle, setRifle] = useState([]);
   const [special, setSpecial] = useState([]);
 
-
-
+  
   useEffect(() => {
     FetchDetails();
   }, []);
@@ -170,6 +169,7 @@ export const Pistoldisplay = () => {
          .then(()=>{
 
           if(debitCoins>=0){
+            
             axios.put("http://localhost:4000/DarkCoins/1", {
               Coins: debitCoins
             }).catch((error)=>{
@@ -177,11 +177,34 @@ export const Pistoldisplay = () => {
             })
         
             const weaponWithId = { category:'Pistol',...weapon, id: generateRandomId() };
-
-             axios.post('http://localhost:4000/purchase', {
-              weaponWithId,
+            var sameWeapons;
+            axios.get("http://localhost:4000/purchase")
+            .then((response)=>{
+              sameWeapons=response.data;
+            }).then(()=>{
               
-            });
+              sameWeapons.forEach(weapons => {
+                // console.log(weapon.Name)
+                console.log(weapons.weaponWithId.Name)
+                if(weapon===weapons.weaponWithId.Name){
+                    alert("Weapon is already selected");
+                    
+                }else   axios.post('http://localhost:4000/purchase', {
+                  weaponWithId,
+                  
+                }).catch((err)=>{
+                  console.log(err)
+                })
+                
+              });
+            }).catch((error)=>{
+console.log(error);
+alert("Weapon is already selected");
+
+            })
+            
+
+           
             toast.success('Weapon purchased successfully!', {
               position: 'top-center'
             });
