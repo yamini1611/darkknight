@@ -34,7 +34,7 @@ const Navbar = () => {
     <>
       {isGooglePage ? null : (
         <div style={{ backgroundColor: 'black' }}>
-          <div className="offcanvas offcanvas-start" id="demo">
+          <div className="offcanvas offcanvas-start" id="demo" style={{width:180}}>
             <div className="offcanvas-header">
               <button
                 type="button"
@@ -89,6 +89,15 @@ const Navbar = () => {
                             Logout  <i className="fa-solid fa-right-from-bracket"></i>
                           </Link>
                         </div>
+                        <div className='col-0' style={{ paddingTop: 5 }}>
+                          <Link
+                            to="/Feedback"
+                            style={{ textDecoration: "none", color: "white", fontSize: 25 }}
+                          
+                          >
+                            Feedback <i class="fa-solid fa-comment-dots"></i>
+                          </Link>
+                        </div>
                       </div>
                     </>
                   )}
@@ -100,10 +109,14 @@ const Navbar = () => {
             className="btn"
             data-bs-toggle="offcanvas"
             data-bs-target="#demo"
-            style={{ background: 'none' }}
+            style={{ background: 'none'  ,marginBottom:15}}
           >
-            <h2 id='logo'>darkknight</h2>
+            <div className='d-flex'>
             <img src={logo} alt='' height={80} width={80} ></img>
+            <h2 id='logo' style={{marginLeft:500, marginTop:20}} >darkknight</h2>
+           
+            </div>
+          
           </button>
         </div>
       )}

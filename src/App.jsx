@@ -14,6 +14,7 @@ import Purchase from "./components/Admin/Purchase";
 import SearchPage from "./components/Google/Google";import ExplorePage from "./components/User/ExplorePage";
 import ExploreWeapons from "./components/User/ExploreWeapons";
 import SelectedWeapons from "./components/SelectWeapons/SelectedWeapon";
+import Feedback from "./components/Admin/Feedback";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
            <Route path="/" active element={<SearchPage />} />
             <Route path="/Homepage"  element={<UserPage />} />
             <Route path="/adminpage" element={<Homepage />} />
+            <Route path="/Feedback" element={<Feedback />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Investigate" element={<Investigation />}></Route>

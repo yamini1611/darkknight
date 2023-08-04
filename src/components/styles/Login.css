@@ -2,32 +2,30 @@
     margin: 0;
     padding: 0;
     background: url("../assests/main7.jpg") center/cover fixed no-repeat;
+    /* Replace "your-background-image.jpg" with the path to your background image */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-}
-
-
-.signin {
+  }
+  
+  
+  h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #f50808;
-    background-color: black;
-    font-size: 20px;
-    padding-top: 10px;
-}
+  }
+  
 
-
-.inputtag {
+  input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-#btnreg {
+  }
+  
+  #btnreg {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -37,27 +35,92 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-#btnreg:hover {
+  }
+  
+  button:hover {
     background-color: #ff6347;
-}
-
-.regmain {
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .register-container {
+    margin: 0;
+    padding: 0;
+    background: url("../assests/main7.jpg") center/cover fixed no-repeat;
+    /* Replace "your-background-image.jpg" with the path to your background image */
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-}
-
-.bodylogin {
-    font-size: 18px;
-}
-
-.back {
-    background-color: black;
-}
-
-.register {
-    font-size: 15px;
-}
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-container {
+    width: 320px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f50808;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #ff6347;
+  }
+  
+  .form-container .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .form-container .login-link {
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-container .login-link a {
+    color: #f50808;
+    text-decoration: none;
+  }
+  
+  .form-container .login-link a:hover {
+    text-decoration: underline;
+  }
+  
