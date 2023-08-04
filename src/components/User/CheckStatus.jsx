@@ -1,4 +1,3 @@
-// CheckStatus.js
 import React, { useState } from 'react';
 import '../styles/CheckStatus.css';
 

@@ -13,6 +13,7 @@ import { CoinsProvider } from "./components/Context/darkcoins";
 import Purchase from "./components/Admin/Purchase";
 import SearchPage from "./components/Google/Google";import ExplorePage from "./components/User/ExplorePage";
 import ExploreWeapons from "./components/User/ExploreWeapons";
+import SelectedWeapons from "./components/SelectWeapons/SelectedWeapon";
 import Feedback from "./components/Admin/Feedback";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="/purchase" element={<Purchase/>}/>
             <Route path="/explore" element={<ExplorePage/>}/>
             <Route path="/ExploreWeapons" element={<ExploreWeapons/>}/>
+            <Route path="/selected" element={<SelectedWeapons/>}/>
           </Routes>
         </BrowserRouter>
         </CoinsProvider>
