@@ -55,7 +55,7 @@
       "suspect": "Local thugs",
       "contact": "9784536102",
       "confidentiality": "public",
-      "status": false,
+      "status": true,
       "id": 1
     },
     {
@@ -71,20 +71,6 @@
       "confidentiality": "public",
       "status": true,
       "id": 2
-    },
-    {
-      "code": "123456",
-      "crimeType": "Kidnap",
-      "dateTime": "2023-08-17T09:16",
-      "location": "coimbatore",
-      "description": "Mass extremist protest",
-      "evidence": "https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JpbWluYWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80ne",
-      "vehicles": "none",
-      "suspect": "None",
-      "contact": "8300287044",
-      "confidentiality": "private",
-      "status": true,
-      "id": 3
     }
   ],
   "MissionOn": [
@@ -371,12 +357,6 @@
   ],
   "selectWeapons": [
     {
-      "weaponName": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "DarkCoins": 500,
-      "id": 13
-    },
-    {
       "weaponName": "Horhe (pistol)",
       "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
       "DarkCoins": 300,
@@ -429,6 +409,24 @@
       "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
       "DarkCoins": 1100,
       "id": 22
+    },
+    {
+      "weaponName": "Silver Ballers",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.nIkGHniyTbUKYkVrIdENewHaE8&pid=Api&P=0&h=180",
+      "DarkCoins": 200,
+      "id": 23
+    },
+    {
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "DarkCoins": 300,
+      "id": 24
+    },
+    {
+      "weaponName": "Silver Ballers",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.nIkGHniyTbUKYkVrIdENewHaE8&pid=Api&P=0&h=180",
+      "DarkCoins": 200,
+      "id": 25
     }
   ],
   "Inventory": [],
