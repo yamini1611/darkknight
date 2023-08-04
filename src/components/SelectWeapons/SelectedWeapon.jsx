@@ -4,6 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 const SelectedWeapons = () => {
     const [selectedWeapons, setSelectedWeapons] = useState([]);
@@ -38,6 +39,9 @@ const SelectedWeapons = () => {
 
     return (
         <div className='background-color text-white quick-sand container-fluid min-vh-100  '>
+             <div className='d-flex'>
+        <Link to='/investigate' className='quick-sand text-white p-2 col-lg-10' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
+      </div>
             <div className='container'>
             <h1 className='quick-sand text-white col-lg-11'>Selected Weapons</h1>
             <div className='row background-color'>
@@ -47,9 +51,7 @@ const SelectedWeapons = () => {
                             <Card.Img variant="top" src={weapon.image} style={{ width: '18rem', height: '21rem' }} />
                             <Card.Body>
                                 <Card.Title>{weapon.weaponName}</Card.Title>
-                                <Card.Text>
-                                    Damage level: <span className='text-success'><b>{weapon.damageLevel}</b></span>
-                                </Card.Text>
+                             
                                 <Button className='bg-black' onClick={() => handleRemove(weapon.id)}>Remove</Button>
                             </Card.Body>
                         </Card>

@@ -39,7 +39,7 @@
   ],
   "DarkCoins": [
     {
-      "Coins": 6800,
+      "Coins": 1490400,
       "id": 1
     }
   ],
@@ -55,7 +55,7 @@
       "suspect": "Local thugs",
       "contact": "9784536102",
       "confidentiality": "public",
-      "status": true,
+      "status": false,
       "id": 1
     },
     {
@@ -75,7 +75,7 @@
   ],
   "MissionOn": [
     {
-      "missionID": 2,
+      "missionID": 1,
       "id": 1
     }
   ],
@@ -273,12 +273,6 @@
   ],
   "purchase": [
     {
-      "id": "1690613043839-452",
-      "Name": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "DarkCoins": 500
-    },
-    {
       "id": "1690987571566-533",
       "Name": "Ruger-57",
       "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
@@ -313,51 +307,82 @@
         "DarkCoins": 2400
       },
       "id": "mAxCYKI"
-    }
-  ],
-  "selectWeapons": [
-    {
-      "weaponName": "Silver Ballers",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.nIkGHniyTbUKYkVrIdENewHaE8&pid=Api&P=0&h=180",
-      "DarkCoins": 200,
-      "id": 11
     },
     {
-      "weaponName": "Silver Ballers",
-      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
-      "DarkCoins": 200,
-      "id": 12
+      "weaponWithId": {
+        "category": "Shotgun",
+        "id": "1691183503164-5015",
+        "Name": "Franchi SPAS-15",
+        "image": "https://tse3.mm.bing.net/th?id=OIP.6riYsq6RoT4BW8G2yI6YqAHaDs&pid=Api&P=0&h=180",
+        "DarkCoins": 1200
+      },
+      "id": "bVipChB"
+    },
+    {
+      "weaponWithId": {
+        "category": "Shotgun",
+        "id": "1691183636131-7614",
+        "Name": "Franchi Sporting  Shotgun 12",
+        "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+        "DarkCoins": 1100
+      },
+      "id": "82PFte-"
+    },
+    {
+      "id": "1691183648441-8643",
+      "Name": "FN MAG",
+      "image": "https://media.gettyimages.com/id/166353037/photo/rock-river-arms-ar-15-rifle-equipped-with-combat-light.jpg?s=612x612&w=0&k=20&c=9X8g36iXeC9v-qWgj2o1BWTyET5dH2AE-Hg6g1Q9zDA=",
+      "DarkCoins": 5900
+    },
+    {
+      "weaponWithId": {
+        "category": "Shotgun",
+        "id": "1691184495288-5473",
+        "Name": "Franchi Sporting  Shotgun 12",
+        "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
+        "DarkCoins": 1100
+      },
+      "id": "1l0jFW8"
     },
     {
       "weaponWithId": {
         "category": "Pistol",
-        "id": "1691113148457-3103",
-        "Name": "Ruger-57",
-        "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
-        "DarkCoins": 400
+        "id": "1691184649367-1743",
+        "Name": "Smith & Wesson M&P",
+        "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+        "DarkCoins": 500
       },
-      "id": 8
+      "id": "_WVdsHH"
+    },
+    {
+      "weaponWithId": {
+        "category": "Pistol",
+        "id": "1691184654569-4097",
+        "Name": "Smith & Wesson M&P",
+        "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
+        "DarkCoins": 500
+      },
+      "id": "UClcv5r"
     }
   ],
   "selectWeapons": [
     {
-      "weaponName": "Mannlicher M1890 Carbine",
-      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "DarkCoins": 3500,
-      "id": 16
+      "weaponName": "Horhe (pistol)",
+      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
+      "DarkCoins": 300,
+      "id": 1
     },
     {
-      "weaponName": "Mannlicher M1890 Carbine",
-      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "DarkCoins": 3500,
-      "id": 17
-    },
-    {
-      "weaponName": "Mannlicher M1890 Carbine",
-      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "DarkCoins": 3500,
-      "id": 18
+      "weaponName": "Franchi SPAS-15",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.6riYsq6RoT4BW8G2yI6YqAHaDs&pid=Api&P=0&h=180",
+      "DarkCoins": 1200,
+      "id": 2
     }
   ],
-  "Inventory": []
+  "FeedBack": [
+    {
+      "feedbackMessage": "Idhula onnu illa...Keela potru\n",
+      "id": 1
+    }
+  ]
 }

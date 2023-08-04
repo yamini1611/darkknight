@@ -50,7 +50,7 @@ const Inventory = () => {
   return (
     <div id='inventorybg'>
       <Link to='/adminpage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
-      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Weaponry</h3>
+      <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}> Armory</h3>
       <h3 className='quick-sand text-white p-2 '>Pistols</h3>
       <CardGroup id='CardGroup'>
         {pistol.map((pistols) => (
@@ -158,18 +158,17 @@ export const Pistoldisplay = () => {
   const handlePurchase = async (w) => {
 
     try {
+
       const coinsReduce = () => {
         var darkCoins, debitCoins;
         axios.get("http://localhost:4000/DarkCoins")
           .then((response) => {
             darkCoins = response.data[0].Coins;
             debitCoins = darkCoins - weapon.DarkCoins;
-            console.log(debitCoins);
           })
          .then(()=>{
 
           if(debitCoins>=0){
-            
             axios.put("http://localhost:4000/DarkCoins/1", {
               Coins: debitCoins
             }).catch((error)=>{
@@ -177,32 +176,11 @@ export const Pistoldisplay = () => {
             })
         
             const weaponWithId = { category:'Pistol',...weapon, id: generateRandomId() };
-            var sameWeapons;
-            axios.get("http://localhost:4000/purchase")
-            .then((response)=>{
-              sameWeapons=response.data;
-            }).then(()=>{
-              
-              sameWeapons.forEach(weapons => {
-                // console.log(weapon.Name)
-                console.log(weapons.weaponWithId.Name)
-                if(weapon===weapons.weaponWithId.Name){
-                    toast.error("Weapon is already selected");
-                    
-                }else   axios.post('http://localhost:4000/purchase', {
-                  weaponWithId,
-                  
-                }).catch((err)=>{
-                  console.log(err)
-                })
-                
-              });
-            }).catch((error)=>{
-console.log(error);
-toast.error("Weapon is already selected");
 
-            })
-    
+             axios.post('http://localhost:4000/purchase', {
+              weaponWithId,
+              
+            });
             toast.success('Weapon purchased successfully!', {
               position: 'top-center'
             });
@@ -214,7 +192,7 @@ toast.error("Weapon is already selected");
       }
     
       coinsReduce();
-      
+       
     } catch (error) {
       console.error('Error purchasing weapon:', error);
     }
@@ -227,7 +205,7 @@ toast.error("Weapon is already selected");
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins} <i class="fa-solid fa-coins"></i></p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
