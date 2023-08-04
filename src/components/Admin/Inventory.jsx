@@ -187,7 +187,7 @@ export const Pistoldisplay = () => {
                 // console.log(weapon.Name)
                 console.log(weapons.weaponWithId.Name)
                 if(weapon===weapons.weaponWithId.Name){
-                    alert("Weapon is already selected");
+                    toast.error("Weapon is already selected");
                     
                 }else   axios.post('http://localhost:4000/purchase', {
                   weaponWithId,
@@ -199,7 +199,7 @@ export const Pistoldisplay = () => {
               });
             }).catch((error)=>{
 console.log(error);
-alert("Weapon is already selected");
+toast.error("Weapon is already selected");
 
             })
     
@@ -207,7 +207,7 @@ alert("Weapon is already selected");
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -288,7 +288,7 @@ export const Shotgun = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -374,7 +374,7 @@ export const SMGdisplay = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -461,7 +461,7 @@ export const AssaultRifle = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -555,7 +555,7 @@ export const Rifle = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
