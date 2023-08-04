@@ -227,7 +227,7 @@ alert("Weapon is already selected");
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -314,7 +314,7 @@ export const Shotgun = () => {
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -400,7 +400,7 @@ export const SMGdisplay = () => {
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -488,7 +488,7 @@ export const AssaultRifle = () => {
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -584,7 +584,7 @@ export const Rifle = () => {
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-      <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+      <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
       <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>
       </button>    </div>
@@ -642,7 +642,7 @@ export const Special = () => {
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>

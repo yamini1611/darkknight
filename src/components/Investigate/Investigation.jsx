@@ -34,7 +34,7 @@ const Investigation = () => {
             <div>
                 <div>
                     <h4 className='quick-sand p-2' id='point'>
-                        BatCoins: {coins}
+                        Dark Coins: {coins}
                     </h4>
                 </div>
             </div>
