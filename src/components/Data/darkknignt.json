@@ -320,13 +320,43 @@
       "weaponName": "Silver Ballers",
       "image": "https://tse2.mm.bing.net/th?id=OIP.nIkGHniyTbUKYkVrIdENewHaE8&pid=Api&P=0&h=180",
       "DarkCoins": 200,
-      "id": 1
+      "id": 11
     },
     {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 300,
-      "id": 2
+      "weaponName": "Silver Ballers",
+      "image": "https://o.remove.bg/downloads/b78c5f1f-1c8e-4fd9-bf6e-b858f794314f/ellijah-marin-render-colt-v4-removebg-preview.png",
+      "DarkCoins": 200,
+      "id": 12
+    },
+    {
+      "weaponWithId": {
+        "category": "Pistol",
+        "id": "1691113148457-3103",
+        "Name": "Ruger-57",
+        "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
+        "DarkCoins": 400
+      },
+      "id": 8
+    }
+  ],
+  "selectWeapons": [
+    {
+      "weaponName": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500,
+      "id": 16
+    },
+    {
+      "weaponName": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500,
+      "id": 17
+    },
+    {
+      "weaponName": "Mannlicher M1890 Carbine",
+      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
+      "DarkCoins": 3500,
+      "id": 18
     }
   ],
   "Inventory": []

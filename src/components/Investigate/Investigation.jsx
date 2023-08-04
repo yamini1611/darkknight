@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Investigation = () => {
     const [CrimeDetails, setCrimeDetails] = useState([]);
     const { coins } = useCoins(); // Use the coins value from the context
-
+    const [coin,setCoin] = useState();
     const fetchData = () => {
         axios.get("http://localhost:4000/CrimeDetails?status_like=false")
             .then((res) => {
@@ -18,9 +18,18 @@ const Investigation = () => {
                 console.error('Error fetching crime details:', error);
             });
     }
+    axios.get("http://localhost:4000/DarkCoins")
+    .then((res)=>{
+        setCoin(res.data[0].Coins);
+        
+    }
+    
+    )
+  
 
     useEffect(() => {
         fetchData();
+       
     }, [])
 
     return (
@@ -32,10 +41,10 @@ const Investigation = () => {
             <h1 className='display-3 text-white container-fluid'>Crime Reports</h1>
             
             <div>
-                <div>
-                    <h4 className='quick-sand p-2' id='point'>
-                        Dark Coins: {coins}
-                    </h4>
+                <div >
+                    <h5 className='quick-sand ' id='point'>
+                        DarkCoins : {coin}
+                    </h5>
                 </div>
             </div>
 
@@ -52,7 +61,6 @@ const Investigation = () => {
                                 contact={detail.contact}
                                 crimeType={detail.crimeType}
                                 confidentiality={detail.confidentiality}
-                                emergency={detail.emergency}
                                 description={detail.description}
                                 location={detail.location}
                             />
