@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useCoins } from '../Context/darkcoins'; // Import the useCoins function
-import DKCard, { DkInvestigateCard } from '../Card/Card';
+import { DkInvestigateCard } from '../Card/Card';
 import '../../components/styles/Investigation.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -34,7 +34,7 @@ const Investigation = () => {
             <div>
                 <div>
                     <h4 className='quick-sand p-2' id='point'>
-                        BatCoins: {coins}
+                        Dark Coins: {coins}
                     </h4>
                 </div>
             </div>

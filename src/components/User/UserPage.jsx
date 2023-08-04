@@ -1,8 +1,7 @@
-// UserPage.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import CrimeForm from './CrimeForm'; // Import the newly created component
+import CrimeForm from './CrimeForm'; 
 import '../styles/UserPage.css';
 
 const UserPage = () => {

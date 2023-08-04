@@ -16,8 +16,7 @@ const Inventory = () => {
   const [Rifle, setRifle] = useState([]);
   const [special, setSpecial] = useState([]);
 
-
-
+  
   useEffect(() => {
     FetchDetails();
   }, []);
@@ -170,6 +169,7 @@ export const Pistoldisplay = () => {
          .then(()=>{
 
           if(debitCoins>=0){
+            
             axios.put("http://localhost:4000/DarkCoins/1", {
               Coins: debitCoins
             }).catch((error)=>{
@@ -177,16 +177,37 @@ export const Pistoldisplay = () => {
             })
         
             const weaponWithId = { category:'Pistol',...weapon, id: generateRandomId() };
-
-             axios.post('http://localhost:4000/purchase', {
-              weaponWithId,
+            var sameWeapons;
+            axios.get("http://localhost:4000/purchase")
+            .then((response)=>{
+              sameWeapons=response.data;
+            }).then(()=>{
               
-            });
+              sameWeapons.forEach(weapons => {
+                // console.log(weapon.Name)
+                console.log(weapons.weaponWithId.Name)
+                if(weapon===weapons.weaponWithId.Name){
+                    toast.error("Weapon is already selected");
+                    
+                }else   axios.post('http://localhost:4000/purchase', {
+                  weaponWithId,
+                  
+                }).catch((err)=>{
+                  console.log(err)
+                })
+                
+              });
+            }).catch((error)=>{
+console.log(error);
+toast.error("Weapon is already selected");
+
+            })
+    
             toast.success('Weapon purchased successfully!', {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -202,10 +223,11 @@ export const Pistoldisplay = () => {
 
   return (
     <div id='pk'>
+            <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -266,7 +288,7 @@ export const Shotgun = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -288,10 +310,11 @@ export const Shotgun = () => {
 
   return (
     <div id='pk'>
+            <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -351,7 +374,7 @@ export const SMGdisplay = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -373,10 +396,11 @@ export const SMGdisplay = () => {
 
   return (
     <div id='pk'>
+          <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -437,7 +461,7 @@ export const AssaultRifle = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -460,10 +484,11 @@ export const AssaultRifle = () => {
 
   return (
     <div id='pk'>
+      <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>
@@ -488,9 +513,6 @@ export const Rifle = () => {
         setLoading(false);
       }
     };
-
-
-
 
     fetchWeaponDetails();
   }, [id]);
@@ -533,7 +555,7 @@ export const Rifle = () => {
               position: 'top-center'
             });
           }else{
-            alert("You don't have enough dark coins to buy this weapon")
+            toast.error("You don't have enough dark coins to buy this weapon")
           }
           })
        
@@ -558,10 +580,11 @@ export const Rifle = () => {
 
   return (
     <div id='pk'>
+      <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
       <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
       <h3 id='pname'>{weapon.Name}</h3>
       <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-      <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+      <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
       <button id='button' onClick={handlePurchase}>
         <span id='span'>PURCHASE NOW</span>
       </button>    </div>
@@ -615,10 +638,11 @@ export const Special = () => {
 
   return (
     <div id='pk'>
+    <Link to='/Inventory' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>    
     <h3 style={{ textAlign: "center", fontFamily: "Quicksand, sans-serif", fontSize: 55, color: "white" }}>DarkKnight Armory</h3>
     <h3 id='pname'>{weapon.Name}</h3>
     <img src={weapon.image} alt={weapon.Name} height={400} width={400} id='imgpro' />
-    <p id='points'>BatCoins:{weapon.DarkCoins}</p>
+    <p id='points'>DarkCoins:{weapon.DarkCoins}</p>
     <button id='button' onClick={handlePurchase}>
       <span id='span'>PURCHASE NOW</span>
     </button>    </div>

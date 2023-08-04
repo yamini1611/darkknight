@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { ToastContainer , toast } from 'react-toastify';
+import '../styles/CrimeForm.css'
 const CrimeForm = ({ showModal, setShowModal }) => {
   const [crimeDetails, setCrimeDetails] = useState({
     code: '',
@@ -35,32 +36,28 @@ const CrimeForm = ({ showModal, setShowModal }) => {
     const mandatoryFields = ['code', 'crimeType', 'dateTime', 'location', 'description', 'contact'];
     let hasError = false;
     const updatedErrors = {};
-
+  
     mandatoryFields.forEach((field) => {
       if (!crimeDetails[field]) {
         hasError = true;
-        updatedErrors[field] = 'This field is required';
+        updatedErrors[field] = 'This fields required';
       }
     });
-
+  
     if (hasError) {
       setErrors(updatedErrors);
       return;
     }
-
+  
     fetch('http://localhost:4000/Register')
       .then((response) => response.json())
       .then((data) => {
-        
         const codeExists = data.some((item) => item.code === crimeDetails.code);
-
+  
         if (!codeExists) {
-         
           alert('Invalid code. Please provide a valid code.');
         } else {
-         
           fetch('http://localhost:4000/CrimeDetails', {
-            
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -69,11 +66,24 @@ const CrimeForm = ({ showModal, setShowModal }) => {
           })
             .then((response) => {
               if (response.ok) {
-             
-               toast.success('Crime reported successfully');
+                toast.success('Crime reported successfully');
                 setShowModal(false);
-                } else {
-               
+  
+          
+                setCrimeDetails({
+                  code: '',
+                  crimeType: '',
+                  dateTime: '',
+                  location: '',
+                  description: '',
+                  evidence: '',
+                  vehicles: '',
+                  suspect: '',
+                  contact: '',
+                  confidentiality: '',
+                  status: false,
+                });
+              } else {
                 console.error('Failed to report the crime. Please try again later.');
               }
             })
@@ -86,10 +96,10 @@ const CrimeForm = ({ showModal, setShowModal }) => {
         console.error('Error fetching register data:', error);
       });
   };
+  
 
   return (
-    
-    <Modal show={showModal} onHide={() => setShowModal(false)}>
+    <Modal show={showModal} onHide={() => setShowModal(false)} id="customModal">
       <Modal.Header closeButton>
         <Modal.Title>Report a Crime</Modal.Title>
       </Modal.Header>
@@ -103,7 +113,7 @@ const CrimeForm = ({ showModal, setShowModal }) => {
               value={crimeDetails.code}
               onChange={handleInputChange}
               required
-              isInvalid={!!errors.code} // Add 'isInvalid' prop to indicate the field has an error
+              isInvalid={!!errors.code} 
             />
             <Form.Control.Feedback type="invalid">{errors.code}</Form.Control.Feedback>
           </Form.Group>

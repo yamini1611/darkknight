@@ -1,4 +1,3 @@
-// CheckStatus.js
 import React, { useState } from 'react';
 import '../styles/CheckStatus.css';
 
@@ -26,7 +25,6 @@ const CheckStatus = () => {
           setStatusMessage('Code not found');
         }
 
-        setCodeInput('');
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
