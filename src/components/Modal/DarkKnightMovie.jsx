@@ -7,6 +7,8 @@ import '../../components/styles/DarkKnightMovie.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useCoins } from '../Context/darkcoins';
+import { useCoins } from '../Context/darkcoins'; 
+import DarkKnightVideo2 from '../../components/assests/Batman_video_2_Trim_Trim.mp4'
 
 export default function DarkKnightMovie() {
     const [fullscreen, setFullscreen] = useState(true);
@@ -93,9 +95,9 @@ export default function DarkKnightMovie() {
                     <MDBIcon className='me-2' fab icon='' /> Enter{' '}
                     <i class='fa-solid fa-bolt-lightning'></i>
                 </MDBBtn>
-                <Modal className='background-color bg-black' show={show} fullscreen={fullscreen}>
+                <Modal className=' bg-white' show={show} fullscreen={fullscreen}>
                     <video
-                        src={DarkKnightVideo}
+                        src={DarkKnightVideo2}
                         className='mx-auto bg-black'
                         style={{
                             position: 'fixed',

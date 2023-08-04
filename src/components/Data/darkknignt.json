@@ -39,7 +39,7 @@
   ],
   "DarkCoins": [
     {
-      "Coins": 6800,
+      "Coins": 1490400,
       "id": 1
     }
   ],
@@ -273,12 +273,6 @@
   ],
   "purchase": [
     {
-      "id": "1690613043839-452",
-      "Name": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "DarkCoins": 500
-    },
-    {
       "id": "1690987571566-533",
       "Name": "Ruger-57",
       "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
@@ -341,5 +335,10 @@
       "id": 19
     }
   ],
-  "Inventory": []
+  "FeedBack": [
+    {
+      "feedbackMessage": "Idhula onnu illa...Keela potru\n",
+      "id": 1
+    }
+  ]
 }
