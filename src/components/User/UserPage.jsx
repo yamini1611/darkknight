@@ -17,7 +17,7 @@ const UserPage = () => {
             <div className="explore-container">
             <Link to="/explore"><button id='Explorebtn'>Explore</button></Link>
             </div>
-            <Link to="/Register"><button className="become-batman-btn">Join</button></Link>
+            <Link to="/Login"><button className="become-batman-btn">Join</button></Link>
           </div>
         </div>
         <div className="container-fluid p-0">
