@@ -112,6 +112,7 @@ const Navbar = () => {
             style={{ background: 'none'  ,marginBottom:15}}
           >
             <div className='d-flex'>
+            {/* <i class="fa-solid fa-bars text-white"></i> */}
             <img src={logo} alt='' height={80} width={80} ></img>
             <h2 id='logo' style={{marginLeft:500, marginTop:20}} >darkknight</h2>
            
