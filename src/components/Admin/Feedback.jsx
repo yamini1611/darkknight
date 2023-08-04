@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import '../styles/Feedback.css'
+import '../styles/Feedback.css';
+import { Link } from "react-router-dom";
 const Feedback = () => {
     const [feedback, setFeedback] = useState([]);
 
@@ -21,6 +22,8 @@ const Feedback = () => {
     }
     return (
         <div  id='ro'>
+                  <Link to='/Homepage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
+
             <h2>Feedbacks</h2>
               <div  className="row" >
             {feedback.map((feed) => (
