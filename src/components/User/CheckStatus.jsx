@@ -25,6 +25,7 @@ const CheckStatus = () => {
           setStatusMessage('Code not found');
         }
 
+
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
