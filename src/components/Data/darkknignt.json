@@ -85,6 +85,20 @@
       "confidentiality": "private",
       "status": true,
       "id": 3
+    },
+    {
+      "code": "123456",
+      "crimeType": "Murder",
+      "dateTime": "2023-08-04T12:47",
+      "location": "coimbatore",
+      "description": "Loot at police station",
+      "evidence": "None",
+      "vehicles": "none",
+      "suspect": "None",
+      "contact": "8300287044",
+      "confidentiality": "public",
+      "status": false,
+      "id": 4
     }
   ],
   "MissionOn": [
@@ -371,64 +385,16 @@
   ],
   "selectWeapons": [
     {
-      "weaponName": "Smith & Wesson M&P",
-      "image": "https://media.gettyimages.com/id/182815514/photo/revolver-with-bullets-on-white-background.jpg?s=612x612&w=0&k=20&c=BLJreiqbRU7J4HHzmm_mcJ5vyWtugbEiXjQ_DU9IFdM=",
-      "DarkCoins": 500,
-      "id": 13
-    },
-    {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 300,
-      "id": 14
-    },
-    {
-      "weaponName": "Horhe (pistol)",
-      "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
-      "DarkCoins": 300,
-      "id": 15
-    },
-    {
       "weaponName": "Mannlicher M1890 Carbine",
       "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
       "DarkCoins": 3500,
       "id": 16
     },
     {
-      "weaponName": "Mannlicher M1890 Carbine",
-      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "DarkCoins": 3500,
-      "id": 17
-    },
-    {
-      "weaponName": "Mannlicher M1890 Carbine",
-      "image": "https://media.gettyimages.com/id/145091433/photo/semi-automatic-m1-carbine-a-standard-firearm-for-the-u-s-military-in-the-world-war-ii-era.jpg?s=612x612&w=0&k=20&c=MXytS6ZKnTmGOKyQqr4g0oYMVJFOhLWgF8PvkiPTYVc=",
-      "DarkCoins": 3500,
-      "id": 18
-    },
-    {
-      "weaponName": "Ruger-57",
-      "image": "https://media.gettyimages.com/id/972858742/photo/handgun-pistol-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=EGFsH9wJ5YRJ9g3OquDtcyCsPS1qeA4r1zHuiU8jV7o=",
-      "DarkCoins": 400,
-      "id": 19
-    },
-    {
-      "weaponName": "Silver Ballers",
-      "image": "https://tse2.mm.bing.net/th?id=OIP.nIkGHniyTbUKYkVrIdENewHaE8&pid=Api&P=0&h=180",
-      "DarkCoins": 200,
-      "id": 20
-    },
-    {
       "weaponName": "Horhe (pistol)",
       "image": "https://media.gettyimages.com/id/655046581/photo/gun-revolver.jpg?s=612x612&w=0&k=20&c=bKODw3K8KJIGhFq25mHyjsooceBWVLUxEoTlzWxNnw8=",
       "DarkCoins": 300,
-      "id": 21
-    },
-    {
-      "weaponName": "Franchi Sporting  Shotgun 12",
-      "image": "https://media.gettyimages.com/id/145091474/photo/italian-spas-12-combat-shotgun.jpg?s=612x612&w=0&k=20&c=mxPNooRIc7lRr8fJqRQtqBgbxGY_EKbXcwZeqADGoaU=",
-      "DarkCoins": 1100,
-      "id": 22
+      "id": 18
     }
   ],
   "Inventory": [],

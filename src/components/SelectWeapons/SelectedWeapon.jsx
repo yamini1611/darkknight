@@ -37,7 +37,8 @@ const SelectedWeapons = () => {
     };
 
     return (
-        <div className='background-color text-white quick-sand container'>
+        <div className='background-color text-white quick-sand container-fluid min-vh-100  '>
+            <div className='container'>
             <h1 className='quick-sand text-white col-lg-11'>Selected Weapons</h1>
             <div className='row background-color'>
                 {selectedWeapons.map((weapon) => (
@@ -54,6 +55,7 @@ const SelectedWeapons = () => {
                         </Card>
                     </div>
                 ))}
+            </div>
             </div>
             <ToastContainer />
         </div>
