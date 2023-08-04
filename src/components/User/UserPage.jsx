@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import CrimeForm from './CrimeForm'; 
+import CrimeForm from './CrimeForm';
 import '../styles/UserPage.css';
 
 const UserPage = () => {
@@ -15,7 +15,7 @@ const UserPage = () => {
             <h1>The Batman's EndGame!</h1>
             <h2 className="gfont text-center" id='textpg1'>Crime can't hide from the watchful eyes of Batman – Report and reveal!</h2>
             <div className="explore-container">
-            <Link to="/explore"><button id='Explorebtn'>Explore</button></Link>
+              <Link to="/explore"><button id='Explorebtn'>Explore</button></Link>
             </div>
             <Link to="/Login"><button className="become-batman-btn">Join</button></Link>
           </div>
@@ -30,17 +30,13 @@ const UserPage = () => {
                   <span>Report</span>
                 </button>
               </div>
-             
+
             </div>
           </div>
         </div>
-
         <div>
-
         </div>
-
       </div>
-
       <CrimeForm showModal={showModal} setShowModal={setShowModal} />
     </>
   );

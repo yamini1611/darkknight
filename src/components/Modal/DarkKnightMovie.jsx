@@ -6,6 +6,7 @@ import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import '../../components/styles/DarkKnightMovie.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useCoins } from '../Context/darkcoins';
 import { useCoins } from '../Context/darkcoins'; 
 import DarkKnightVideo2 from '../../components/assests/Batman_video_2_Trim_Trim.mp4'
 
@@ -17,15 +18,15 @@ export default function DarkKnightMovie() {
     const history = useNavigate();
 
     // these variables are for updating the status as completed
-    var code,crimeType,dateTime,location,description,evidence,vehicles,suspect,contact,confidentiality;
+    var code, crimeType, dateTime, location, description, evidence, vehicles, suspect, contact, confidentiality;
 
     //this variable is for updating the current mission status
-    const [missionID,setmissionID]=useState();
+    const [missionID, setmissionID] = useState();
 
     axios.get("http://localhost:4000/MissionOn")
-.then((response)=>{
-    setmissionID(response.data[0].missionID)
-})
+        .then((response) => {
+            setmissionID(response.data[0].missionID)
+        })
 
     function handleShow(breakpoint) {
         setFullscreen(breakpoint);
@@ -36,8 +37,6 @@ export default function DarkKnightMovie() {
         setFade(true);
     };
 
-
-
     const handleVideoEnded = async () => {
         console.log('Current Coins:', coins);
         const updatedPoints = 100;
@@ -46,50 +45,43 @@ export default function DarkKnightMovie() {
         console.log('Updated Coins:', coins);
         history('/adminpage');
     };
-    
 
- 
+    const complaintStatus = async () => {
+        console.log(missionID);
+        handleShow(true, 'xxl-down')
+        await axios.get(`http://localhost:4000/CrimeDetails/${missionID}`)
+            .then((response) => {
+                console.log(response.data.code)
+                code = (response.data.code);
+                crimeType = (response.data.crimeType);
+                dateTime = (response.data.dateTime);
+                location = (response.data.location);
+                description = (response.data.description);
+                evidence = (response.data.evidence);
+                vehicles = (response.data.vehicles);
+                suspect = (response.data.suspect);
+                contact = (response.data.contact);
+                confidentiality = (response.data.confidentiality);
+            })
 
- const complaintStatus = async()=>{
-    console.log(missionID);
-    handleShow(true, 'xxl-down')
-   await axios.get(`http://localhost:4000/CrimeDetails/${missionID}`)
-   .then((response)=>{
-    console.log(response.data.code)
-        code=(response.data.code);
-        crimeType=(response.data.crimeType);
-        dateTime=(response.data.dateTime);
-        location=(response.data.location);
-        description=(response.data.description);
-        evidence=(response.data.evidence);
-        vehicles=(response.data.vehicles);
-        suspect=(response.data.suspect);
-        contact=(response.data.contact);
-        confidentiality=(response.data.confidentiality);
-   })
+        axios.put(`http://localhost:4000/CrimeDetails/${missionID}`, {
+            code: code,
+            crimeType: crimeType,
+            dateTime: dateTime,
+            location: location,
+            description: description,
+            evidence: evidence,
+            vehicles: vehicles,
+            suspect: suspect,
+            contact: contact,
+            confidentiality: confidentiality,
+            status: true
+        })
 
-   axios.put(`http://localhost:4000/CrimeDetails/${missionID}`,{
-    code:code,
-    crimeType:crimeType,
-    dateTime:dateTime,
-    location:location,
-    description:description,
-    evidence:evidence,
-    vehicles:vehicles,
-    suspect:suspect,
-    contact:contact,
-    confidentiality:confidentiality,
-    status:true
-   })
-   
-}
+    }
+    useEffect(() => {
 
-var videos=[DarkKnightVideo2,DarkKnightVideo]
-
-useEffect(()=>{
-
-},[])
-
+    }, [])
 
     return (
         <>
@@ -120,7 +112,6 @@ useEffect(()=>{
                     ></video>
                 </Modal>
             </div>
-          
         </>
     );
 }

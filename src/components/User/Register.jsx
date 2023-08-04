@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Register.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { ToastContainer  , toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -54,24 +54,20 @@ const Register = () => {
     } else if (!isValidCode(code)) {
       validationErrors.code = "Vigilance Code can have 6 digits";
     }
-
     if (Object.keys(validationErrors).length === 0) {
       const emailExists = registeredUsers.some((user) => user.email === email);
       const codeExists = registeredUsers.some((user) => user.code === code);
-
       if (emailExists) {
-       toast.error("Email already exists!");
+        toast.error("Email already exists!");
       } else if (codeExists) {
         toast.error("Please choose another code");
       } else {
-
         const newUser = {
           id: Date.now(),
           name,
           email,
           code,
         };
-
         fetch("http://localhost:4000/Register", {
           method: "POST",
           headers: {
@@ -101,7 +97,7 @@ const Register = () => {
   return (
     <div className='register-container'>
       <div className='form-container'>
-      <Link to='/Homepage' className='quick-sand  p-2 ' style={{ textDecoration: "none", fontSize: 23 ,color:'black'}}><i  style={{color:'black'}}  class="fa-solid fa-backward"></i> back</Link>
+        <Link to='/Homepage' className='quick-sand  p-2 ' style={{ textDecoration: "none", fontSize: 23, color: 'black' }}><i style={{ color: 'black' }} class="fa-solid fa-backward"></i> back</Link>
         <h2>Register</h2>
         <form onSubmit={handleRegister}>
           <div>

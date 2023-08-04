@@ -6,47 +6,41 @@ import { Link } from 'react-router-dom';
 
 export default function BatModal(props) {
 
-const [missionID,setMissionID]=useState(props.id);
+  const [missionID, setMissionID] = useState(props.id);
 
-const missionOn = async()=>{
+  const missionOn = async () => {
 
-await axios.put("http://localhost:4000/MissionOn/1",{
-  missionID:missionID
-})
-}
-
+    await axios.put("http://localhost:4000/MissionOn/1", {
+      missionID: missionID
+    })
+  }
 
   return (
     <div className='bg-dark'>
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header className='bg-dark text-white' closeButton>
-      <h4 className='text-white'>Crime Details</h4>
-      </Modal.Header>
-      <Modal.Body className='bg-dark text-white quick-sand'>
-    
-     <h5>Category: {props.crimeType}</h5>
-     <h5>Time: {props.time}</h5>
-     <h5>Location: {props.location}</h5>
-     <h5>Description: {props.description}</h5>
-     <h5>Contact: {props.contact}</h5>
-     <h5>Confidentiality: {props.confidentiality}</h5>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header className='bg-dark text-white' closeButton>
+          <h4 className='text-white'>Crime Details</h4>
+        </Modal.Header>
+        <Modal.Body className='bg-dark text-white quick-sand'>
 
+          <h5>Category: {props.crimeType}</h5>
+          <h5>Time: {props.time}</h5>
+          <h5>Location: {props.location}</h5>
+          <h5>Description: {props.description}</h5>
+          <h5>Contact: {props.contact}</h5>
+          <h5>Confidentiality: {props.confidentiality}</h5>
 
-
-<Link to="/weapons"><Button className=' mx-auto d-flex' onClick={()=>missionOn()}>Suit Up!</Button></Link>
-      </Modal.Body>
-
-     
-    </Modal>
+          <Link to="/weapons"><Button className=' mx-auto d-flex' onClick={() => missionOn()}>Suit Up!</Button></Link>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }
 
 
 
-  

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { UserContext } from '../Context/Context';
-import '../styles/Login.css'; // Assuming you have custom styles for Login component
+import '../styles/Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -11,9 +11,6 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         handleLogin(email, code);
-        if (user.loggedIn) {
-            return <Navigate to="/Homepage" />;
-        }
     };
 
     if (user.loggedIn) {
@@ -21,15 +18,13 @@ const Login = () => {
     }
 
     return (
-        
         <section className="vh-100 regmain bg-secondary d-flex align-items-center justify-content-center">
             <div className="container py-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6 col-lg-5">
                         <div className="card shadow">
                             <div className="card-body p-4">
-                            <Link to='/Homepage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
-
+                                <Link to='/Homepage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
                                 <form onSubmit={handleSubmit}>
                                     <h5 className="mb-4 text-center text-dark">Sign into your account</h5>
                                     <div className="mb-3">

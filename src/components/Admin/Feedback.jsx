@@ -25,20 +25,15 @@ const Feedback = () => {
                   <Link to='/Homepage' className='quick-sand text-white p-2 ' style={{ textDecoration: "none", fontSize: 23 }}><i class="fa-solid fa-backward"></i> back</Link>
 
             <h2>Feedbacks</h2>
-              <div  className="row" >
-            {feedback.map((feed) => (
-
-              
+            <div className="row" >
+                {feedback.map((feed) => (
                     <div className="col-4" id='colf'>
                         <div className="card " id='cardfeedback' key={feed.id}>
-
                             <h3>{feed.feedbackMessage}</h3>
                         </div>
                     </div>
-))}
-                </div>
-            
-
+                ))}
+            </div>
         </div>
     )
 }

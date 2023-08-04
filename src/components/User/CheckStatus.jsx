@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/CheckStatus.css';
-import { ToastContainer , toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 const CheckStatus = () => {
   const [codeInput, setCodeInput] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
@@ -24,24 +24,21 @@ const CheckStatus = () => {
         } else {
           setStatusMessage('Code not found');
         }
-
-
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
         setStatusMessage('Error fetching data');
       });
   };
-  
+
   const handleSendMessage = () => {
-    
     if (messageToBatman.trim() === '') {
       console.log('Message is empty.');
       return;
     }
-  
+
     const payload = { feedbackMessage: messageToBatman };
-  
+
     fetch('http://localhost:4000/Feedback', {
       method: 'POST',
       headers: {
@@ -51,15 +48,13 @@ const CheckStatus = () => {
     })
       .then((response) => {
         if (response.ok) {
-         toast.success('Feedback message sent successfully.');
-          setMessageToBatman(''); 
+          toast.success('Feedback message sent successfully.');
+          setMessageToBatman('');
         } else {
           console.error('Error sending feedback message.');
         }
       })
-
   };
-  
 
   return (
     <div className="container1">
