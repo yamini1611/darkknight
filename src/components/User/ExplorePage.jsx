@@ -32,7 +32,7 @@ const ExplorePage = () => {
           </div>
           </div>
         </div>
-      <Link to="/"> <button className="back-to-home-btn">Back to Home</button></Link> 
+      <Link to="/Homepage"> <button className="back-to-home-btn">Back to Home</button></Link> 
       </div>
     </div>
   );
