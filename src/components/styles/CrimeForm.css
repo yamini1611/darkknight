@@ -1,43 +1,42 @@
 /* CrimeForm.css */
 
-/* Apply styles to the modal body */
-.modal-content {
-    background-color: black; /* Set the background color to black */
-    color: white; /* Set the text color to white */
-    border-radius: 8px; /* Optional: Add some border-radius for rounded corners */
-  }
-  
-  /* Apply styles to the modal title */
-  .modal-title {
-    color: white; /* Set the text color of the modal title to white */
-  }
-  
-  /* Apply styles to the close button */
-  .close {
-    color: white; /* Set the text color of the close button to white */
-  }
-  
-  /* Set the label color to a lighter color for better visibility */
-  .form-label {
-    color: #ffffffcc; /* A semi-transparent white color */
-  }
-  
-  /* Set the background color of the form controls to ensure visibility */
-  .form-control {
-    background-color: #222; /* A dark gray color for form controls */
-    color: white; /* Set the text color to white for form controls */
-    border: 1px solid #444; /* Add a border for form controls */
-  }
-  
-  /* Optional: Style the submit button */
-  .modal-footer .btn-primary {
-    background-color: #007bff; /* Set the background color of the submit button */
-    border-color: #007bff; /* Set the border color of the submit button */
-  }
-  
-  /* Optional: Style the close button */
-  .modal-footer .btn-secondary {
-    background-color: #6c757d; /* Set the background color of the close button */
-    border-color: #6c757d; /* Set the border color of the close button */
-  }
-  
+/* Apply styles to the modal content */
+#customModal .modal-content {
+  background-color: black; /* Set the background color to black */
+  color: white; /* Set the text color to white */
+  border-radius: 8px; /* Optional: Add some border-radius for rounded corners */
+}
+
+/* Apply styles to the modal title */
+#customModal .modal-title {
+  color: white; /* Set the text color of the modal title to white */
+}
+
+/* Apply styles to the close button */
+#customModal .close {
+  color: white; /* Set the text color of the close button to white */
+}
+
+/* Set the label color to a lighter color for better visibility */
+#customModal .form-label {
+  color: #ffffffcc; /* A semi-transparent white color */
+}
+
+/* Set the background color of the form controls to ensure visibility */
+#customModal .form-control {
+  background-color: #222; /* A dark gray color for form controls */
+  color: white; /* Set the text color to white for form controls */
+  border: 1px solid #444; /* Add a border for form controls */
+}
+
+/* Optional: Style the submit button */
+#customModal .modal-footer .btn-primary {
+  background-color: #007bff; /* Set the background color of the submit button */
+  border-color: #007bff; /* Set the border color of the submit button */
+}
+
+/* Optional: Style the close button */
+#customModal .modal-footer .btn-secondary {
+  background-color: #6c757d; /* Set the background color of the close button */
+  border-color: #6c757d; /* Set the border color of the close button */
+}
