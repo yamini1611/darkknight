@@ -34,7 +34,7 @@ const UserProvider = ({ children }) => {
                     code,
 
                 });
-                <Navigate to="/" />
+                <Navigate to="/Homepage" />
             } else {
                 toast.error('Login failed', {
                     position: 'top-right',
@@ -80,7 +80,7 @@ const UserProvider = ({ children }) => {
             email: '',
             code: '',
         });
-        <Navigate to="/" />
+        <Navigate to="/Homepage" />
     };
 
 

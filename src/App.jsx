@@ -11,7 +11,7 @@ import Weapons from "./components/SelectWeapons/Weapons";
 import CheckStatus from "./components/User/CheckStatus";
 import { CoinsProvider } from "./components/Context/darkcoins";
 import Purchase from "./components/Admin/Purchase";
-import ExplorePage from "./components/User/ExplorePage";
+import SearchPage from "./components/Google/Google";import ExplorePage from "./components/User/ExplorePage";
 import ExploreWeapons from "./components/User/ExploreWeapons";
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" active element={<UserPage />} />
+           <Route path="/" active element={<SearchPage />} />
+            <Route path="/Homepage"  element={<UserPage />} />
             <Route path="/adminpage" element={<Homepage />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Login" element={<Login />} />
